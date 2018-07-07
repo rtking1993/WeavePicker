@@ -1,0 +1,956 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD3CF21B20EFD798009C5BAB /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3CF21A20EFD798009C5BAB /* LoadingViewController.swift */; };
+		BD3CF21D20EFD7BA009C5BAB /* LoadingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD3CF21C20EFD7BA009C5BAB /* LoadingViewController.storyboard */; };
+		BD3CF22520F02AE2009C5BAB /* EditedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3CF22420F02AE2009C5BAB /* EditedImage.swift */; };
+		BD3CF22720F02BCD009C5BAB /* EditStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3CF22620F02BCD009C5BAB /* EditStep.swift */; };
+		BD3CF22B20F14C6B009C5BAB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD3CF22D20F14C6B009C5BAB /* Localizable.strings */; };
+		BDD35E6120E8CD7F00AF71C4 /* WeavePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD35E5720E8CD7F00AF71C4 /* WeavePicker.framework */; };
+		BDD35E6620E8CD7F00AF71C4 /* WeavePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E6520E8CD7F00AF71C4 /* WeavePickerTests.swift */; };
+		BDD35E6820E8CD7F00AF71C4 /* WeavePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = BDD35E5A20E8CD7F00AF71C4 /* WeavePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDD35E7420E8CE4500AF71C4 /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E7220E8CE4400AF71C4 /* ImagePickerViewController.swift */; };
+		BDD35E7520E8CE4500AF71C4 /* ImageEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E7320E8CE4500AF71C4 /* ImageEditViewController.swift */; };
+		BDD35E7920E8CE7800AF71C4 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E7820E8CE7800AF71C4 /* Image.swift */; };
+		BDD35E7D20E8CE8B00AF71C4 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E7B20E8CE8B00AF71C4 /* ImagePickerView.swift */; };
+		BDD35E7E20E8CE8B00AF71C4 /* ImagePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD35E7C20E8CE8B00AF71C4 /* ImagePickerView.xib */; };
+		BDD35E8120E8CECE00AF71C4 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E8020E8CECE00AF71C4 /* View.swift */; };
+		BDD35E8320E8CEDB00AF71C4 /* AssetSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E8220E8CEDB00AF71C4 /* AssetSession.swift */; };
+		BDD35E8520E8CF3900AF71C4 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E8420E8CF3900AF71C4 /* Album.swift */; };
+		BDD35E8720E8CF4300AF71C4 /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E8620E8CF4300AF71C4 /* AlbumViewModel.swift */; };
+		BDD35E8B20E8CF6600AF71C4 /* AlbumPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E8A20E8CF6600AF71C4 /* AlbumPickerViewController.swift */; };
+		BDD35E8E20E8CF8700AF71C4 /* AlbumPickerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E8D20E8CF8700AF71C4 /* AlbumPickerInteractor.swift */; };
+		BDD35E9020E8CF9600AF71C4 /* AlbumPickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E8F20E8CF9600AF71C4 /* AlbumPickerPresenter.swift */; };
+		BDD35E9720E8CFD000AF71C4 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E9520E8CFD000AF71C4 /* AlbumCell.swift */; };
+		BDD35E9820E8CFD000AF71C4 /* AlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD35E9620E8CFD000AF71C4 /* AlbumCell.xib */; };
+		BDD35E9C20E8D00500AF71C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD35E9B20E8D00500AF71C4 /* Assets.xcassets */; };
+		BDD35EA020E8D1C100AF71C4 /* AssetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E9E20E8D1C100AF71C4 /* AssetCell.swift */; };
+		BDD35EA120E8D1C100AF71C4 /* AssetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD35E9F20E8D1C100AF71C4 /* AssetCell.xib */; };
+		BDD35EA720E8D2EB00AF71C4 /* AlbumPickerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD35EA420E8D2EB00AF71C4 /* AlbumPickerViewController.storyboard */; };
+		BDD35EA820E8D2EB00AF71C4 /* ImagePickerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD35EA520E8D2EB00AF71C4 /* ImagePickerViewController.storyboard */; };
+		BDD35EA920E8D2EB00AF71C4 /* ImageEditViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD35EA620E8D2EB00AF71C4 /* ImageEditViewController.storyboard */; };
+		BDD35EAB20E8D30A00AF71C4 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35EAA20E8D30A00AF71C4 /* ListCollectionViewCell.swift */; };
+		BDD35EB120E8D32400AF71C4 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35EAD20E8D32400AF71C4 /* NibLoadable.swift */; };
+		BDD35EB220E8D32400AF71C4 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35EAE20E8D32400AF71C4 /* ConfigurableCell.swift */; };
+		BDD35EB320E8D32400AF71C4 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35EAF20E8D32400AF71C4 /* ReusableView.swift */; };
+		BDD35EB420E8D32400AF71C4 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35EB020E8D32400AF71C4 /* ReusableCell.swift */; };
+		BDD35EB820E8D45600AF71C4 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35EB620E8D45600AF71C4 /* FilterCell.swift */; };
+		BDD35EB920E8D45600AF71C4 /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD35EB720E8D45600AF71C4 /* FilterCell.xib */; };
+		BDD35EBD20E8D46600AF71C4 /* FilterOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35EBB20E8D46600AF71C4 /* FilterOptionsView.swift */; };
+		BDD35EBE20E8D46600AF71C4 /* FilterOptionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD35EBC20E8D46600AF71C4 /* FilterOptionsView.xib */; };
+		BDD35EC120E8D49000AF71C4 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35EC020E8D49000AF71C4 /* UIFont+Extension.swift */; };
+		BDD35EC320E8D49A00AF71C4 /* UIFont+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35EC220E8D49A00AF71C4 /* UIFont+Constants.swift */; };
+		BDD35EC820E8D54600AF71C4 /* FilteredImagesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD35EC620E8D54500AF71C4 /* FilteredImagesView.xib */; };
+		BDD35EC920E8D54600AF71C4 /* FilteredImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35EC720E8D54500AF71C4 /* FilteredImagesView.swift */; };
+		BDD35ECD20E8D56700AF71C4 /* FilterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35ECB20E8D56700AF71C4 /* FilterViewCell.swift */; };
+		BDD35ECE20E8D56700AF71C4 /* FilterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD35ECC20E8D56700AF71C4 /* FilterViewCell.xib */; };
+		BDD35ED220E8D57200AF71C4 /* ColorViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35ED020E8D57200AF71C4 /* ColorViewCell.swift */; };
+		BDD35ED320E8D57200AF71C4 /* ColorViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD35ED120E8D57200AF71C4 /* ColorViewCell.xib */; };
+		BDD35ED520E8D61600AF71C4 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35ED420E8D61600AF71C4 /* Filters.swift */; };
+		BDD35EDA20E8D63300AF71C4 /* CollectionViewListLayoutInvalidationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35ED720E8D63300AF71C4 /* CollectionViewListLayoutInvalidationContext.swift */; };
+		BDD35EDB20E8D63300AF71C4 /* CollectionViewListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35ED820E8D63300AF71C4 /* CollectionViewListLayout.swift */; };
+		BDD35EDC20E8D63300AF71C4 /* CollectionViewListLayoutAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35ED920E8D63300AF71C4 /* CollectionViewListLayoutAttribute.swift */; };
+		BDD35EE020E8D70C00AF71C4 /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD35EDE20E8D70C00AF71C4 /* EmptyView.xib */; };
+		BDD35EE120E8D70C00AF71C4 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35EDF20E8D70C00AF71C4 /* EmptyView.swift */; };
+		BDD35EE320E8D72200AF71C4 /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35EE220E8D72200AF71C4 /* UIStoryboard+Extension.swift */; };
+		BDD35EE520E8D74100AF71C4 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35EE420E8D74100AF71C4 /* UIImage+Extension.swift */; };
+		BDD35EE920E8D75900AF71C4 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD35EE720E8D75900AF71C4 /* ImageCell.xib */; };
+		BDD35EEA20E8D75900AF71C4 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35EE820E8D75900AF71C4 /* ImageCell.swift */; };
+		BDD35F0320E8DC7300AF71C4 /* WeavePickerNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35F0220E8DC7300AF71C4 /* WeavePickerNavigationController.swift */; };
+		BDD35F0520E9222500AF71C4 /* UIAlertController+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35F0420E9222500AF71C4 /* UIAlertController+Constants.swift */; };
+		BDD35F0C20E943E400AF71C4 /* AdjustmentsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35F0B20E943E400AF71C4 /* AdjustmentsViewCell.swift */; };
+		BDD35F0E20E943EF00AF71C4 /* AdjustmentsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD35F0D20E943EF00AF71C4 /* AdjustmentsViewCell.xib */; };
+		BDD35F1420EA034D00AF71C4 /* ColorAdjustment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35F1320EA034D00AF71C4 /* ColorAdjustment.swift */; };
+		BDD35F1620ECB10200AF71C4 /* ImageFilterSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35F1520ECB10200AF71C4 /* ImageFilterSession.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BDD35E6220E8CD7F00AF71C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDD35E4E20E8CD7F00AF71C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDD35E5620E8CD7F00AF71C4;
+			remoteInfo = WeavePicker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BD3CF21A20EFD798009C5BAB /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		BD3CF21C20EFD7BA009C5BAB /* LoadingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoadingViewController.storyboard; sourceTree = "<group>"; };
+		BD3CF22420F02AE2009C5BAB /* EditedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditedImage.swift; sourceTree = "<group>"; };
+		BD3CF22620F02BCD009C5BAB /* EditStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStep.swift; sourceTree = "<group>"; };
+		BD3CF22C20F14C6B009C5BAB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BD3CF22E20F14C8F009C5BAB /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BDD35E5720E8CD7F00AF71C4 /* WeavePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeavePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDD35E5A20E8CD7F00AF71C4 /* WeavePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeavePicker.h; sourceTree = "<group>"; };
+		BDD35E5B20E8CD7F00AF71C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDD35E6020E8CD7F00AF71C4 /* WeavePickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeavePickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDD35E6520E8CD7F00AF71C4 /* WeavePickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeavePickerTests.swift; sourceTree = "<group>"; };
+		BDD35E6720E8CD7F00AF71C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDD35E7220E8CE4400AF71C4 /* ImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
+		BDD35E7320E8CE4500AF71C4 /* ImageEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageEditViewController.swift; sourceTree = "<group>"; };
+		BDD35E7820E8CE7800AF71C4 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		BDD35E7B20E8CE8B00AF71C4 /* ImagePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		BDD35E7C20E8CE8B00AF71C4 /* ImagePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagePickerView.xib; sourceTree = "<group>"; };
+		BDD35E8020E8CECE00AF71C4 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		BDD35E8220E8CEDB00AF71C4 /* AssetSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetSession.swift; sourceTree = "<group>"; };
+		BDD35E8420E8CF3900AF71C4 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		BDD35E8620E8CF4300AF71C4 /* AlbumViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
+		BDD35E8A20E8CF6600AF71C4 /* AlbumPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumPickerViewController.swift; sourceTree = "<group>"; };
+		BDD35E8D20E8CF8700AF71C4 /* AlbumPickerInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumPickerInteractor.swift; sourceTree = "<group>"; };
+		BDD35E8F20E8CF9600AF71C4 /* AlbumPickerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumPickerPresenter.swift; sourceTree = "<group>"; };
+		BDD35E9520E8CFD000AF71C4 /* AlbumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
+		BDD35E9620E8CFD000AF71C4 /* AlbumCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumCell.xib; sourceTree = "<group>"; };
+		BDD35E9B20E8D00500AF71C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BDD35E9E20E8D1C100AF71C4 /* AssetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetCell.swift; sourceTree = "<group>"; };
+		BDD35E9F20E8D1C100AF71C4 /* AssetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssetCell.xib; sourceTree = "<group>"; };
+		BDD35EA420E8D2EB00AF71C4 /* AlbumPickerViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AlbumPickerViewController.storyboard; sourceTree = "<group>"; };
+		BDD35EA520E8D2EB00AF71C4 /* ImagePickerViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImagePickerViewController.storyboard; sourceTree = "<group>"; };
+		BDD35EA620E8D2EB00AF71C4 /* ImageEditViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageEditViewController.storyboard; sourceTree = "<group>"; };
+		BDD35EAA20E8D30A00AF71C4 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
+		BDD35EAD20E8D32400AF71C4 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		BDD35EAE20E8D32400AF71C4 /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
+		BDD35EAF20E8D32400AF71C4 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		BDD35EB020E8D32400AF71C4 /* ReusableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
+		BDD35EB620E8D45600AF71C4 /* FilterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
+		BDD35EB720E8D45600AF71C4 /* FilterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
+		BDD35EBB20E8D46600AF71C4 /* FilterOptionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterOptionsView.swift; sourceTree = "<group>"; };
+		BDD35EBC20E8D46600AF71C4 /* FilterOptionsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterOptionsView.xib; sourceTree = "<group>"; };
+		BDD35EC020E8D49000AF71C4 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		BDD35EC220E8D49A00AF71C4 /* UIFont+Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Constants.swift"; sourceTree = "<group>"; };
+		BDD35EC620E8D54500AF71C4 /* FilteredImagesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilteredImagesView.xib; sourceTree = "<group>"; };
+		BDD35EC720E8D54500AF71C4 /* FilteredImagesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredImagesView.swift; sourceTree = "<group>"; };
+		BDD35ECB20E8D56700AF71C4 /* FilterViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewCell.swift; sourceTree = "<group>"; };
+		BDD35ECC20E8D56700AF71C4 /* FilterViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterViewCell.xib; sourceTree = "<group>"; };
+		BDD35ED020E8D57200AF71C4 /* ColorViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewCell.swift; sourceTree = "<group>"; };
+		BDD35ED120E8D57200AF71C4 /* ColorViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorViewCell.xib; sourceTree = "<group>"; };
+		BDD35ED420E8D61600AF71C4 /* Filters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
+		BDD35ED720E8D63300AF71C4 /* CollectionViewListLayoutInvalidationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewListLayoutInvalidationContext.swift; sourceTree = "<group>"; };
+		BDD35ED820E8D63300AF71C4 /* CollectionViewListLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewListLayout.swift; sourceTree = "<group>"; };
+		BDD35ED920E8D63300AF71C4 /* CollectionViewListLayoutAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewListLayoutAttribute.swift; sourceTree = "<group>"; };
+		BDD35EDE20E8D70C00AF71C4 /* EmptyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
+		BDD35EDF20E8D70C00AF71C4 /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		BDD35EE220E8D72200AF71C4 /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		BDD35EE420E8D74100AF71C4 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		BDD35EE720E8D75900AF71C4 /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		BDD35EE820E8D75900AF71C4 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		BDD35F0220E8DC7300AF71C4 /* WeavePickerNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeavePickerNavigationController.swift; sourceTree = "<group>"; };
+		BDD35F0420E9222500AF71C4 /* UIAlertController+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Constants.swift"; sourceTree = "<group>"; };
+		BDD35F0B20E943E400AF71C4 /* AdjustmentsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustmentsViewCell.swift; sourceTree = "<group>"; };
+		BDD35F0D20E943EF00AF71C4 /* AdjustmentsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdjustmentsViewCell.xib; sourceTree = "<group>"; };
+		BDD35F1320EA034D00AF71C4 /* ColorAdjustment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAdjustment.swift; sourceTree = "<group>"; };
+		BDD35F1520ECB10200AF71C4 /* ImageFilterSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFilterSession.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BDD35E5320E8CD7F00AF71C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDD35E5D20E8CD7F00AF71C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDD35E6120E8CD7F00AF71C4 /* WeavePicker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BD3CF22820F14AAE009C5BAB /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				BD3CF22D20F14C6B009C5BAB /* Localizable.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		BDD35E4D20E8CD7F00AF71C4 = {
+			isa = PBXGroup;
+			children = (
+				BDD35E5920E8CD7F00AF71C4 /* WeavePicker */,
+				BDD35E6420E8CD7F00AF71C4 /* WeavePickerTests */,
+				BDD35E5820E8CD7F00AF71C4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BDD35E5820E8CD7F00AF71C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35E5720E8CD7F00AF71C4 /* WeavePicker.framework */,
+				BDD35E6020E8CD7F00AF71C4 /* WeavePickerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BDD35E5920E8CD7F00AF71C4 /* WeavePicker */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35E9A20E8CFE500AF71C4 /* Resources */,
+				BDD35E9920E8CFE100AF71C4 /* Source */,
+			);
+			path = WeavePicker;
+			sourceTree = "<group>";
+		};
+		BDD35E6420E8CD7F00AF71C4 /* WeavePickerTests */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35E6520E8CD7F00AF71C4 /* WeavePickerTests.swift */,
+				BDD35E6720E8CD7F00AF71C4 /* Info.plist */,
+			);
+			path = WeavePickerTests;
+			sourceTree = "<group>";
+		};
+		BDD35E7120E8CE3400AF71C4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BD3CF21A20EFD798009C5BAB /* LoadingViewController.swift */,
+				BDD35E8A20E8CF6600AF71C4 /* AlbumPickerViewController.swift */,
+				BDD35E7320E8CE4500AF71C4 /* ImageEditViewController.swift */,
+				BDD35E7220E8CE4400AF71C4 /* ImagePickerViewController.swift */,
+				BDD35F0220E8DC7300AF71C4 /* WeavePickerNavigationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BDD35E7620E8CE5800AF71C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35E8920E8CF4D00AF71C4 /* Data Model */,
+				BDD35E8820E8CF4600AF71C4 /* View Model */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BDD35E7720E8CE6500AF71C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35E9320E8CFB900AF71C4 /* Views */,
+				BDD35E9220E8CFB400AF71C4 /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BDD35E7A20E8CE8B00AF71C4 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35E7B20E8CE8B00AF71C4 /* ImagePickerView.swift */,
+				BDD35E7C20E8CE8B00AF71C4 /* ImagePickerView.xib */,
+			);
+			path = ImagePicker;
+			sourceTree = "<group>";
+		};
+		BDD35E7F20E8CEB300AF71C4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35F1520ECB10200AF71C4 /* ImageFilterSession.swift */,
+				BDD35ED420E8D61600AF71C4 /* Filters.swift */,
+				BDD35E8220E8CEDB00AF71C4 /* AssetSession.swift */,
+				BDD35E8020E8CECE00AF71C4 /* View.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BDD35E8820E8CF4600AF71C4 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35E8620E8CF4300AF71C4 /* AlbumViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		BDD35E8920E8CF4D00AF71C4 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				BD3CF22620F02BCD009C5BAB /* EditStep.swift */,
+				BDD35E8420E8CF3900AF71C4 /* Album.swift */,
+				BDD35F1320EA034D00AF71C4 /* ColorAdjustment.swift */,
+				BDD35E7820E8CE7800AF71C4 /* Image.swift */,
+				BD3CF22420F02AE2009C5BAB /* EditedImage.swift */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
+		BDD35E8C20E8CF7300AF71C4 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35E8D20E8CF8700AF71C4 /* AlbumPickerInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		BDD35E9120E8CF9900AF71C4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35E8F20E8CF9600AF71C4 /* AlbumPickerPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BDD35E9220E8CFB400AF71C4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35EAA20E8D30A00AF71C4 /* ListCollectionViewCell.swift */,
+				BDD35F0820E9439F00AF71C4 /* OptionsViewCell */,
+				BDD35E9420E8CFD000AF71C4 /* AlbumCell */,
+				BDD35E9D20E8D1C100AF71C4 /* AssetCell */,
+				BDD35EB520E8D45600AF71C4 /* FilterCell */,
+				BDD35EE620E8D75900AF71C4 /* ImageCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BDD35E9320E8CFB900AF71C4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35EDD20E8D70C00AF71C4 /* Empty */,
+				BDD35EC520E8D54500AF71C4 /* FilteredImages */,
+				BDD35EBA20E8D46600AF71C4 /* FilterOptions */,
+				BDD35E7A20E8CE8B00AF71C4 /* ImagePicker */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BDD35E9420E8CFD000AF71C4 /* AlbumCell */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35E9520E8CFD000AF71C4 /* AlbumCell.swift */,
+				BDD35E9620E8CFD000AF71C4 /* AlbumCell.xib */,
+			);
+			path = AlbumCell;
+			sourceTree = "<group>";
+		};
+		BDD35E9920E8CFE100AF71C4 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35E7120E8CE3400AF71C4 /* Controller */,
+				BDD35EC420E8D4A200AF71C4 /* Extension */,
+				BDD35E8C20E8CF7300AF71C4 /* Interactor */,
+				BDD35EA220E8D1DC00AF71C4 /* Layout */,
+				BDD35E7620E8CE5800AF71C4 /* Model */,
+				BDD35E9120E8CF9900AF71C4 /* Presenter */,
+				BDD35EAC20E8D30F00AF71C4 /* Protocol */,
+				BDD35E7F20E8CEB300AF71C4 /* Utils */,
+				BDD35E7720E8CE6500AF71C4 /* View */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		BDD35E9A20E8CFE500AF71C4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BD3CF22820F14AAE009C5BAB /* Strings */,
+				BDD35EBF20E8D47800AF71C4 /* Constants */,
+				BDD35EA320E8D23500AF71C4 /* Storyboard */,
+				BDD35E5A20E8CD7F00AF71C4 /* WeavePicker.h */,
+				BDD35E5B20E8CD7F00AF71C4 /* Info.plist */,
+				BDD35E9B20E8D00500AF71C4 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BDD35E9D20E8D1C100AF71C4 /* AssetCell */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35E9E20E8D1C100AF71C4 /* AssetCell.swift */,
+				BDD35E9F20E8D1C100AF71C4 /* AssetCell.xib */,
+			);
+			path = AssetCell;
+			sourceTree = "<group>";
+		};
+		BDD35EA220E8D1DC00AF71C4 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35ED620E8D63300AF71C4 /* List */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		BDD35EA320E8D23500AF71C4 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35EA420E8D2EB00AF71C4 /* AlbumPickerViewController.storyboard */,
+				BDD35EA620E8D2EB00AF71C4 /* ImageEditViewController.storyboard */,
+				BDD35EA520E8D2EB00AF71C4 /* ImagePickerViewController.storyboard */,
+				BD3CF21C20EFD7BA009C5BAB /* LoadingViewController.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		BDD35EAC20E8D30F00AF71C4 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35EAE20E8D32400AF71C4 /* ConfigurableCell.swift */,
+				BDD35EAD20E8D32400AF71C4 /* NibLoadable.swift */,
+				BDD35EB020E8D32400AF71C4 /* ReusableCell.swift */,
+				BDD35EAF20E8D32400AF71C4 /* ReusableView.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		BDD35EB520E8D45600AF71C4 /* FilterCell */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35EB620E8D45600AF71C4 /* FilterCell.swift */,
+				BDD35EB720E8D45600AF71C4 /* FilterCell.xib */,
+			);
+			path = FilterCell;
+			sourceTree = "<group>";
+		};
+		BDD35EBA20E8D46600AF71C4 /* FilterOptions */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35EBB20E8D46600AF71C4 /* FilterOptionsView.swift */,
+				BDD35EBC20E8D46600AF71C4 /* FilterOptionsView.xib */,
+			);
+			path = FilterOptions;
+			sourceTree = "<group>";
+		};
+		BDD35EBF20E8D47800AF71C4 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35EC220E8D49A00AF71C4 /* UIFont+Constants.swift */,
+				BDD35F0420E9222500AF71C4 /* UIAlertController+Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		BDD35EC420E8D4A200AF71C4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35EC020E8D49000AF71C4 /* UIFont+Extension.swift */,
+				BDD35EE220E8D72200AF71C4 /* UIStoryboard+Extension.swift */,
+				BDD35EE420E8D74100AF71C4 /* UIImage+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		BDD35EC520E8D54500AF71C4 /* FilteredImages */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35EC720E8D54500AF71C4 /* FilteredImagesView.swift */,
+				BDD35EC620E8D54500AF71C4 /* FilteredImagesView.xib */,
+			);
+			path = FilteredImages;
+			sourceTree = "<group>";
+		};
+		BDD35ECA20E8D56700AF71C4 /* FilterViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35ECB20E8D56700AF71C4 /* FilterViewCell.swift */,
+				BDD35ECC20E8D56700AF71C4 /* FilterViewCell.xib */,
+			);
+			path = FilterViewCell;
+			sourceTree = "<group>";
+		};
+		BDD35ECF20E8D57200AF71C4 /* ColorViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35ED020E8D57200AF71C4 /* ColorViewCell.swift */,
+				BDD35ED120E8D57200AF71C4 /* ColorViewCell.xib */,
+			);
+			path = ColorViewCell;
+			sourceTree = "<group>";
+		};
+		BDD35ED620E8D63300AF71C4 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35ED720E8D63300AF71C4 /* CollectionViewListLayoutInvalidationContext.swift */,
+				BDD35ED820E8D63300AF71C4 /* CollectionViewListLayout.swift */,
+				BDD35ED920E8D63300AF71C4 /* CollectionViewListLayoutAttribute.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		BDD35EDD20E8D70C00AF71C4 /* Empty */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35EDF20E8D70C00AF71C4 /* EmptyView.swift */,
+				BDD35EDE20E8D70C00AF71C4 /* EmptyView.xib */,
+			);
+			path = Empty;
+			sourceTree = "<group>";
+		};
+		BDD35EE620E8D75900AF71C4 /* ImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35EE820E8D75900AF71C4 /* ImageCell.swift */,
+				BDD35EE720E8D75900AF71C4 /* ImageCell.xib */,
+			);
+			path = ImageCell;
+			sourceTree = "<group>";
+		};
+		BDD35F0820E9439F00AF71C4 /* OptionsViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35F0920E943AE00AF71C4 /* AdjustmentsViewCell */,
+				BDD35ECF20E8D57200AF71C4 /* ColorViewCell */,
+				BDD35ECA20E8D56700AF71C4 /* FilterViewCell */,
+			);
+			path = OptionsViewCell;
+			sourceTree = "<group>";
+		};
+		BDD35F0920E943AE00AF71C4 /* AdjustmentsViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35F0B20E943E400AF71C4 /* AdjustmentsViewCell.swift */,
+				BDD35F0D20E943EF00AF71C4 /* AdjustmentsViewCell.xib */,
+			);
+			path = AdjustmentsViewCell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		BDD35E5420E8CD7F00AF71C4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDD35E6820E8CD7F00AF71C4 /* WeavePicker.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		BDD35E5620E8CD7F00AF71C4 /* WeavePicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDD35E6B20E8CD7F00AF71C4 /* Build configuration list for PBXNativeTarget "WeavePicker" */;
+			buildPhases = (
+				BDD35E5220E8CD7F00AF71C4 /* Sources */,
+				BDD35E5320E8CD7F00AF71C4 /* Frameworks */,
+				BDD35E5420E8CD7F00AF71C4 /* Headers */,
+				BDD35E5520E8CD7F00AF71C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WeavePicker;
+			productName = WeavePicker;
+			productReference = BDD35E5720E8CD7F00AF71C4 /* WeavePicker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BDD35E5F20E8CD7F00AF71C4 /* WeavePickerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDD35E6E20E8CD7F00AF71C4 /* Build configuration list for PBXNativeTarget "WeavePickerTests" */;
+			buildPhases = (
+				BDD35E5C20E8CD7F00AF71C4 /* Sources */,
+				BDD35E5D20E8CD7F00AF71C4 /* Frameworks */,
+				BDD35E5E20E8CD7F00AF71C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BDD35E6320E8CD7F00AF71C4 /* PBXTargetDependency */,
+			);
+			name = WeavePickerTests;
+			productName = WeavePickerTests;
+			productReference = BDD35E6020E8CD7F00AF71C4 /* WeavePickerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BDD35E4E20E8CD7F00AF71C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = RTK;
+				TargetAttributes = {
+					BDD35E5620E8CD7F00AF71C4 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					BDD35E5F20E8CD7F00AF71C4 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = BDD35E5120E8CD7F00AF71C4 /* Build configuration list for PBXProject "WeavePicker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				fr,
+			);
+			mainGroup = BDD35E4D20E8CD7F00AF71C4;
+			productRefGroup = BDD35E5820E8CD7F00AF71C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BDD35E5620E8CD7F00AF71C4 /* WeavePicker */,
+				BDD35E5F20E8CD7F00AF71C4 /* WeavePickerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BDD35E5520E8CD7F00AF71C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD3CF21D20EFD7BA009C5BAB /* LoadingViewController.storyboard in Resources */,
+				BDD35ED320E8D57200AF71C4 /* ColorViewCell.xib in Resources */,
+				BDD35F0E20E943EF00AF71C4 /* AdjustmentsViewCell.xib in Resources */,
+				BDD35E7E20E8CE8B00AF71C4 /* ImagePickerView.xib in Resources */,
+				BDD35EC820E8D54600AF71C4 /* FilteredImagesView.xib in Resources */,
+				BDD35E9C20E8D00500AF71C4 /* Assets.xcassets in Resources */,
+				BDD35EA120E8D1C100AF71C4 /* AssetCell.xib in Resources */,
+				BDD35ECE20E8D56700AF71C4 /* FilterViewCell.xib in Resources */,
+				BDD35EA720E8D2EB00AF71C4 /* AlbumPickerViewController.storyboard in Resources */,
+				BDD35E9820E8CFD000AF71C4 /* AlbumCell.xib in Resources */,
+				BDD35EB920E8D45600AF71C4 /* FilterCell.xib in Resources */,
+				BD3CF22B20F14C6B009C5BAB /* Localizable.strings in Resources */,
+				BDD35EE920E8D75900AF71C4 /* ImageCell.xib in Resources */,
+				BDD35EE020E8D70C00AF71C4 /* EmptyView.xib in Resources */,
+				BDD35EA920E8D2EB00AF71C4 /* ImageEditViewController.storyboard in Resources */,
+				BDD35EBE20E8D46600AF71C4 /* FilterOptionsView.xib in Resources */,
+				BDD35EA820E8D2EB00AF71C4 /* ImagePickerViewController.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDD35E5E20E8CD7F00AF71C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BDD35E5220E8CD7F00AF71C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDD35F0320E8DC7300AF71C4 /* WeavePickerNavigationController.swift in Sources */,
+				BDD35ECD20E8D56700AF71C4 /* FilterViewCell.swift in Sources */,
+				BDD35F0C20E943E400AF71C4 /* AdjustmentsViewCell.swift in Sources */,
+				BDD35EE320E8D72200AF71C4 /* UIStoryboard+Extension.swift in Sources */,
+				BDD35EEA20E8D75900AF71C4 /* ImageCell.swift in Sources */,
+				BDD35EDA20E8D63300AF71C4 /* CollectionViewListLayoutInvalidationContext.swift in Sources */,
+				BDD35EC120E8D49000AF71C4 /* UIFont+Extension.swift in Sources */,
+				BDD35EB820E8D45600AF71C4 /* FilterCell.swift in Sources */,
+				BDD35F1620ECB10200AF71C4 /* ImageFilterSession.swift in Sources */,
+				BDD35E7D20E8CE8B00AF71C4 /* ImagePickerView.swift in Sources */,
+				BDD35EDC20E8D63300AF71C4 /* CollectionViewListLayoutAttribute.swift in Sources */,
+				BDD35ED220E8D57200AF71C4 /* ColorViewCell.swift in Sources */,
+				BDD35EDB20E8D63300AF71C4 /* CollectionViewListLayout.swift in Sources */,
+				BDD35ED520E8D61600AF71C4 /* Filters.swift in Sources */,
+				BD3CF22520F02AE2009C5BAB /* EditedImage.swift in Sources */,
+				BD3CF22720F02BCD009C5BAB /* EditStep.swift in Sources */,
+				BDD35F0520E9222500AF71C4 /* UIAlertController+Constants.swift in Sources */,
+				BDD35EB320E8D32400AF71C4 /* ReusableView.swift in Sources */,
+				BDD35E7520E8CE4500AF71C4 /* ImageEditViewController.swift in Sources */,
+				BDD35EB220E8D32400AF71C4 /* ConfigurableCell.swift in Sources */,
+				BDD35EA020E8D1C100AF71C4 /* AssetCell.swift in Sources */,
+				BDD35EB120E8D32400AF71C4 /* NibLoadable.swift in Sources */,
+				BDD35E8120E8CECE00AF71C4 /* View.swift in Sources */,
+				BDD35E8320E8CEDB00AF71C4 /* AssetSession.swift in Sources */,
+				BDD35EE120E8D70C00AF71C4 /* EmptyView.swift in Sources */,
+				BDD35EB420E8D32400AF71C4 /* ReusableCell.swift in Sources */,
+				BDD35E8E20E8CF8700AF71C4 /* AlbumPickerInteractor.swift in Sources */,
+				BDD35EBD20E8D46600AF71C4 /* FilterOptionsView.swift in Sources */,
+				BD3CF21B20EFD798009C5BAB /* LoadingViewController.swift in Sources */,
+				BDD35E8720E8CF4300AF71C4 /* AlbumViewModel.swift in Sources */,
+				BDD35E7920E8CE7800AF71C4 /* Image.swift in Sources */,
+				BDD35EC920E8D54600AF71C4 /* FilteredImagesView.swift in Sources */,
+				BDD35EAB20E8D30A00AF71C4 /* ListCollectionViewCell.swift in Sources */,
+				BDD35E8520E8CF3900AF71C4 /* Album.swift in Sources */,
+				BDD35E8B20E8CF6600AF71C4 /* AlbumPickerViewController.swift in Sources */,
+				BDD35EE520E8D74100AF71C4 /* UIImage+Extension.swift in Sources */,
+				BDD35F1420EA034D00AF71C4 /* ColorAdjustment.swift in Sources */,
+				BDD35EC320E8D49A00AF71C4 /* UIFont+Constants.swift in Sources */,
+				BDD35E7420E8CE4500AF71C4 /* ImagePickerViewController.swift in Sources */,
+				BDD35E9020E8CF9600AF71C4 /* AlbumPickerPresenter.swift in Sources */,
+				BDD35E9720E8CFD000AF71C4 /* AlbumCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDD35E5C20E8CD7F00AF71C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDD35E6620E8CD7F00AF71C4 /* WeavePickerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BDD35E6320E8CD7F00AF71C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BDD35E5620E8CD7F00AF71C4 /* WeavePicker */;
+			targetProxy = BDD35E6220E8CD7F00AF71C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BD3CF22D20F14C6B009C5BAB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD3CF22C20F14C6B009C5BAB /* en */,
+				BD3CF22E20F14C8F009C5BAB /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BDD35E6920E8CD7F00AF71C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BDD35E6A20E8CD7F00AF71C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BDD35E6C20E8CD7F00AF71C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = NNHRRF86PU;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/WeavePicker/Resources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RTK.WeavePicker;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BDD35E6D20E8CD7F00AF71C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = NNHRRF86PU;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/WeavePicker/Resources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RTK.WeavePicker;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BDD35E6F20E8CD7F00AF71C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NNHRRF86PU;
+				INFOPLIST_FILE = WeavePickerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RTK.WeavePickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BDD35E7020E8CD7F00AF71C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NNHRRF86PU;
+				INFOPLIST_FILE = WeavePickerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RTK.WeavePickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BDD35E5120E8CD7F00AF71C4 /* Build configuration list for PBXProject "WeavePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDD35E6920E8CD7F00AF71C4 /* Debug */,
+				BDD35E6A20E8CD7F00AF71C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDD35E6B20E8CD7F00AF71C4 /* Build configuration list for PBXNativeTarget "WeavePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDD35E6C20E8CD7F00AF71C4 /* Debug */,
+				BDD35E6D20E8CD7F00AF71C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDD35E6E20E8CD7F00AF71C4 /* Build configuration list for PBXNativeTarget "WeavePickerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDD35E6F20E8CD7F00AF71C4 /* Debug */,
+				BDD35E7020E8CD7F00AF71C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BDD35E4E20E8CD7F00AF71C4 /* Project object */;
+}

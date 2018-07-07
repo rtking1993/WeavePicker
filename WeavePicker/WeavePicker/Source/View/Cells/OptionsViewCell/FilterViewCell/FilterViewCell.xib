@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="FilterViewCell" reuseIdentifier="FilterViewCell" id="GTT-9P-brN" customClass="FilterViewCell" customModule="WeavePicker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="275"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="275"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Hiz-Iu-BzK">
+                        <rect key="frame" x="0.0" y="32" width="375" height="211"/>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZYX-ZC-f4A">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="GTT-9P-brN" id="hqS-7J-BhI"/>
+                            <outlet property="delegate" destination="GTT-9P-brN" id="6NI-Gx-97s"/>
+                        </connections>
+                    </collectionView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Hiz-Iu-BzK" firstAttribute="centerY" secondItem="GTT-9P-brN" secondAttribute="centerY" id="1A9-1p-KPB"/>
+                <constraint firstAttribute="bottom" secondItem="Hiz-Iu-BzK" secondAttribute="bottom" constant="32" id="DPS-RJ-yhE"/>
+                <constraint firstAttribute="trailing" secondItem="Hiz-Iu-BzK" secondAttribute="trailing" id="Ely-cU-cmv"/>
+                <constraint firstItem="Hiz-Iu-BzK" firstAttribute="top" secondItem="GTT-9P-brN" secondAttribute="top" constant="32" id="NMP-7v-Di4"/>
+                <constraint firstItem="Hiz-Iu-BzK" firstAttribute="leading" secondItem="GTT-9P-brN" secondAttribute="leading" id="vRa-rX-J3v"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fgZ-bD-QUL"/>
+            <connections>
+                <outlet property="collectionView" destination="Hiz-Iu-BzK" id="KnB-Ut-CPP"/>
+            </connections>
+            <point key="canvasLocation" x="26" y="-85"/>
+        </collectionViewCell>
+    </objects>
+</document>

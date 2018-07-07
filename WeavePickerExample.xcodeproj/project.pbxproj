@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD3CF21520EDF72F009C5BAB /* WeavePicker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BDD35EFB20E8D90100AF71C4 /* WeavePicker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BDD35DFC20E8CACB00AF71C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35DFB20E8CACB00AF71C4 /* AppDelegate.swift */; };
+		BDD35DFE20E8CACB00AF71C4 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35DFD20E8CACB00AF71C4 /* ImageViewController.swift */; };
+		BDD35E0120E8CACB00AF71C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD35DFF20E8CACB00AF71C4 /* Main.storyboard */; };
+		BDD35E0320E8CACC00AF71C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD35E0220E8CACC00AF71C4 /* Assets.xcassets */; };
+		BDD35E0620E8CACC00AF71C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD35E0420E8CACC00AF71C4 /* LaunchScreen.storyboard */; };
+		BDD35E1120E8CACC00AF71C4 /* WeavePickerExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E1020E8CACC00AF71C4 /* WeavePickerExampleTests.swift */; };
+		BDD35F0120E8DB1200AF71C4 /* WeavePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD35EFB20E8D90100AF71C4 /* WeavePicker.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BD3CF21620EDF72F009C5BAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDD35EF520E8D90100AF71C4 /* WeavePicker.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BDD35E5620E8CD7F00AF71C4;
+			remoteInfo = WeavePicker;
+		};
+		BDD35E0D20E8CACC00AF71C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDD35DF020E8CACB00AF71C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDD35DF720E8CACB00AF71C4;
+			remoteInfo = WeavePickerExample;
+		};
+		BDD35EFA20E8D90100AF71C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDD35EF520E8D90100AF71C4 /* WeavePicker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BDD35E5720E8CD7F00AF71C4;
+			remoteInfo = WeavePicker;
+		};
+		BDD35EFC20E8D90100AF71C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDD35EF520E8D90100AF71C4 /* WeavePicker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BDD35E6020E8CD7F00AF71C4;
+			remoteInfo = WeavePickerTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BD3CF21820EDF72F009C5BAB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BD3CF21520EDF72F009C5BAB /* WeavePicker.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BDD35DF820E8CACB00AF71C4 /* WeavePickerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeavePickerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDD35DFB20E8CACB00AF71C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BDD35DFD20E8CACB00AF71C4 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		BDD35E0020E8CACB00AF71C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BDD35E0220E8CACC00AF71C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BDD35E0520E8CACC00AF71C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BDD35E0720E8CACC00AF71C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDD35E0C20E8CACC00AF71C4 /* WeavePickerExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeavePickerExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDD35E1020E8CACC00AF71C4 /* WeavePickerExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeavePickerExampleTests.swift; sourceTree = "<group>"; };
+		BDD35E1220E8CACC00AF71C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDD35EF520E8D90100AF71C4 /* WeavePicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WeavePicker.xcodeproj; path = WeavePicker/WeavePicker.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BDD35DF520E8CACB00AF71C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDD35F0120E8DB1200AF71C4 /* WeavePicker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDD35E0920E8CACC00AF71C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BDD35DEF20E8CACB00AF71C4 = {
+			isa = PBXGroup;
+			children = (
+				BDD35EF520E8D90100AF71C4 /* WeavePicker.xcodeproj */,
+				BDD35DFA20E8CACB00AF71C4 /* WeavePickerExample */,
+				BDD35E0F20E8CACC00AF71C4 /* WeavePickerExampleTests */,
+				BDD35DF920E8CACB00AF71C4 /* Products */,
+				BDD35EEB20E8D85900AF71C4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BDD35DF920E8CACB00AF71C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35DF820E8CACB00AF71C4 /* WeavePickerExample.app */,
+				BDD35E0C20E8CACC00AF71C4 /* WeavePickerExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BDD35DFA20E8CACB00AF71C4 /* WeavePickerExample */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35DFB20E8CACB00AF71C4 /* AppDelegate.swift */,
+				BDD35DFD20E8CACB00AF71C4 /* ImageViewController.swift */,
+				BDD35DFF20E8CACB00AF71C4 /* Main.storyboard */,
+				BDD35E0220E8CACC00AF71C4 /* Assets.xcassets */,
+				BDD35E0420E8CACC00AF71C4 /* LaunchScreen.storyboard */,
+				BDD35E0720E8CACC00AF71C4 /* Info.plist */,
+			);
+			path = WeavePickerExample;
+			sourceTree = "<group>";
+		};
+		BDD35E0F20E8CACC00AF71C4 /* WeavePickerExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35E1020E8CACC00AF71C4 /* WeavePickerExampleTests.swift */,
+				BDD35E1220E8CACC00AF71C4 /* Info.plist */,
+			);
+			path = WeavePickerExampleTests;
+			sourceTree = "<group>";
+		};
+		BDD35EEB20E8D85900AF71C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BDD35EF620E8D90100AF71C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35EFB20E8D90100AF71C4 /* WeavePicker.framework */,
+				BDD35EFD20E8D90100AF71C4 /* WeavePickerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BDD35DF720E8CACB00AF71C4 /* WeavePickerExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDD35E1520E8CACC00AF71C4 /* Build configuration list for PBXNativeTarget "WeavePickerExample" */;
+			buildPhases = (
+				BDD35DF420E8CACB00AF71C4 /* Sources */,
+				BDD35DF520E8CACB00AF71C4 /* Frameworks */,
+				BDD35DF620E8CACB00AF71C4 /* Resources */,
+				BD3CF21820EDF72F009C5BAB /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD3CF21720EDF72F009C5BAB /* PBXTargetDependency */,
+			);
+			name = WeavePickerExample;
+			productName = WeavePickerExample;
+			productReference = BDD35DF820E8CACB00AF71C4 /* WeavePickerExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BDD35E0B20E8CACC00AF71C4 /* WeavePickerExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDD35E1820E8CACC00AF71C4 /* Build configuration list for PBXNativeTarget "WeavePickerExampleTests" */;
+			buildPhases = (
+				BDD35E0820E8CACC00AF71C4 /* Sources */,
+				BDD35E0920E8CACC00AF71C4 /* Frameworks */,
+				BDD35E0A20E8CACC00AF71C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BDD35E0E20E8CACC00AF71C4 /* PBXTargetDependency */,
+			);
+			name = WeavePickerExampleTests;
+			productName = WeavePickerExampleTests;
+			productReference = BDD35E0C20E8CACC00AF71C4 /* WeavePickerExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BDD35DF020E8CACB00AF71C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = RTK;
+				TargetAttributes = {
+					BDD35DF720E8CACB00AF71C4 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					BDD35E0B20E8CACC00AF71C4 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = BDD35DF720E8CACB00AF71C4;
+					};
+				};
+			};
+			buildConfigurationList = BDD35DF320E8CACB00AF71C4 /* Build configuration list for PBXProject "WeavePickerExample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BDD35DEF20E8CACB00AF71C4;
+			productRefGroup = BDD35DF920E8CACB00AF71C4 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BDD35EF620E8D90100AF71C4 /* Products */;
+					ProjectRef = BDD35EF520E8D90100AF71C4 /* WeavePicker.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				BDD35DF720E8CACB00AF71C4 /* WeavePickerExample */,
+				BDD35E0B20E8CACC00AF71C4 /* WeavePickerExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BDD35EFB20E8D90100AF71C4 /* WeavePicker.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = WeavePicker.framework;
+			remoteRef = BDD35EFA20E8D90100AF71C4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BDD35EFD20E8D90100AF71C4 /* WeavePickerTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = WeavePickerTests.xctest;
+			remoteRef = BDD35EFC20E8D90100AF71C4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BDD35DF620E8CACB00AF71C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDD35E0620E8CACC00AF71C4 /* LaunchScreen.storyboard in Resources */,
+				BDD35E0320E8CACC00AF71C4 /* Assets.xcassets in Resources */,
+				BDD35E0120E8CACB00AF71C4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDD35E0A20E8CACC00AF71C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BDD35DF420E8CACB00AF71C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDD35DFE20E8CACB00AF71C4 /* ImageViewController.swift in Sources */,
+				BDD35DFC20E8CACB00AF71C4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDD35E0820E8CACC00AF71C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDD35E1120E8CACC00AF71C4 /* WeavePickerExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD3CF21720EDF72F009C5BAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WeavePicker;
+			targetProxy = BD3CF21620EDF72F009C5BAB /* PBXContainerItemProxy */;
+		};
+		BDD35E0E20E8CACC00AF71C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BDD35DF720E8CACB00AF71C4 /* WeavePickerExample */;
+			targetProxy = BDD35E0D20E8CACC00AF71C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BDD35DFF20E8CACB00AF71C4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDD35E0020E8CACB00AF71C4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BDD35E0420E8CACC00AF71C4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDD35E0520E8CACC00AF71C4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BDD35E1320E8CACC00AF71C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BDD35E1420E8CACC00AF71C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BDD35E1620E8CACC00AF71C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NNHRRF86PU;
+				INFOPLIST_FILE = WeavePickerExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RTK.WeavePickerExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BDD35E1720E8CACC00AF71C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NNHRRF86PU;
+				INFOPLIST_FILE = WeavePickerExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RTK.WeavePickerExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BDD35E1920E8CACC00AF71C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NNHRRF86PU;
+				INFOPLIST_FILE = WeavePickerExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RTK.WeavePickerExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeavePickerExample.app/WeavePickerExample";
+			};
+			name = Debug;
+		};
+		BDD35E1A20E8CACC00AF71C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NNHRRF86PU;
+				INFOPLIST_FILE = WeavePickerExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RTK.WeavePickerExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeavePickerExample.app/WeavePickerExample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BDD35DF320E8CACB00AF71C4 /* Build configuration list for PBXProject "WeavePickerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDD35E1320E8CACC00AF71C4 /* Debug */,
+				BDD35E1420E8CACC00AF71C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDD35E1520E8CACC00AF71C4 /* Build configuration list for PBXNativeTarget "WeavePickerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDD35E1620E8CACC00AF71C4 /* Debug */,
+				BDD35E1720E8CACC00AF71C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDD35E1820E8CACC00AF71C4 /* Build configuration list for PBXNativeTarget "WeavePickerExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDD35E1920E8CACC00AF71C4 /* Debug */,
+				BDD35E1A20E8CACC00AF71C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BDD35DF020E8CACB00AF71C4 /* Project object */;
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="AssetCell" reuseIdentifier="AssetCell" id="6jH-5l-qW4" customClass="AssetCell" customModule="Weave" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="364" height="364"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="364" height="364"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ceb-Uf-UFu">
+                        <rect key="frame" x="0.0" y="0.0" width="364" height="364"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Ceb-Uf-UFu" secondAttribute="trailing" id="0SM-XI-yjB"/>
+                <constraint firstAttribute="bottom" secondItem="Ceb-Uf-UFu" secondAttribute="bottom" id="FB2-qa-zHy"/>
+                <constraint firstItem="Ceb-Uf-UFu" firstAttribute="top" secondItem="6jH-5l-qW4" secondAttribute="top" id="P2z-t3-6Cr"/>
+                <constraint firstItem="Ceb-Uf-UFu" firstAttribute="leading" secondItem="6jH-5l-qW4" secondAttribute="leading" id="YO0-7k-z5h"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="8Zq-Oc-b8W"/>
+            <size key="customSize" width="318" height="142"/>
+            <connections>
+                <outlet property="imageView" destination="Ceb-Uf-UFu" id="HMR-KP-KOC"/>
+            </connections>
+            <point key="canvasLocation" x="80" y="226"/>
+        </collectionViewCell>
+    </objects>
+</document>

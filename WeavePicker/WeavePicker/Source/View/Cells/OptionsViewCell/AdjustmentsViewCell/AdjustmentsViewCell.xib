@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="AdjustmentsViewCell" reuseIdentifier="AdjustmentsViewCell" id="FeQ-y8-Gmu" customClass="AdjustmentsViewCell" customModule="WeavePicker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="275"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="275"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="WgP-di-2lg">
+                        <rect key="frame" x="16" y="16" width="343" height="243"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cMI-hL-MWt" userLabel="Brightness View">
+                                <rect key="frame" x="0.0" y="0.0" width="343" height="70.5"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IpU-ig-NBf" userLabel="Blue Dot">
+                                        <rect key="frame" x="169.5" y="0.0" width="4" height="4"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="4" id="R2c-0n-UHW"/>
+                                            <constraint firstAttribute="height" constant="4" id="lNB-6g-aJa"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-0.5" maxValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PAf-t4-ax9">
+                                        <rect key="frame" x="-2" y="4" width="347" height="48"/>
+                                        <connections>
+                                            <action selector="changeBrightness:" destination="FeQ-y8-Gmu" eventType="valueChanged" id="mKZ-Sn-p0U"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brightness" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ii-Wy-Gdd">
+                                        <rect key="frame" x="139" y="51" width="65.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                        <color key="textColor" red="0.019607843140000001" green="0.1843137255" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5ci-jZ-nPD" userLabel="Contrast View">
+                                <rect key="frame" x="0.0" y="86.5" width="343" height="70"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4g0-TV-6fW" userLabel="Blue Dot">
+                                        <rect key="frame" x="169.5" y="0.0" width="4" height="4"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="4" id="Ibu-K7-GiX"/>
+                                            <constraint firstAttribute="height" constant="4" id="oH1-x2-VL2"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.5" maxValue="1.5" translatesAutoresizingMaskIntoConstraints="NO" id="RHY-ur-HEg">
+                                        <rect key="frame" x="22" y="4" width="299" height="47.5"/>
+                                        <connections>
+                                            <action selector="changeContrast:" destination="FeQ-y8-Gmu" eventType="valueChanged" id="LEY-n2-iS6"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contrast" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7D-O2-okp">
+                                        <rect key="frame" x="145" y="50.5" width="53.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                        <color key="textColor" red="0.019607843140000001" green="0.1843137255" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="erV-sc-OW6" userLabel="Sharpness View">
+                                <rect key="frame" x="0.0" y="172.5" width="343" height="70.5"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mun-Ht-KF7" userLabel="Blue Dot">
+                                        <rect key="frame" x="169.5" y="0.0" width="4" height="4"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="4" id="fB9-BY-AW8"/>
+                                            <constraint firstAttribute="width" constant="4" id="sbx-cg-qGt"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.40000000000000002" minValue="0.0" maxValue="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="pMX-MW-pFl">
+                                        <rect key="frame" x="28" y="4" width="287" height="48"/>
+                                        <connections>
+                                            <action selector="changeSharpness:" destination="FeQ-y8-Gmu" eventType="valueChanged" id="vqC-1J-G1k"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sharpness" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjx-Db-can">
+                                        <rect key="frame" x="139.5" y="51" width="64" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                        <color key="textColor" red="0.019607843140000001" green="0.1843137255" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="WgP-di-2lg" firstAttribute="leading" secondItem="FeQ-y8-Gmu" secondAttribute="leadingMargin" id="DNQ-9I-ows"/>
+                <constraint firstItem="WgP-di-2lg" firstAttribute="top" secondItem="FeQ-y8-Gmu" secondAttribute="top" constant="16" id="Off-Dw-BSa"/>
+                <constraint firstAttribute="trailingMargin" secondItem="WgP-di-2lg" secondAttribute="trailing" id="WRY-aH-Jo1"/>
+                <constraint firstAttribute="bottom" secondItem="WgP-di-2lg" secondAttribute="bottom" constant="16" id="ewy-C0-kvK"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="DBO-5g-R7x"/>
+            <size key="customSize" width="235" height="147"/>
+            <connections>
+                <outlet property="brightnessLabel" destination="4Ii-Wy-Gdd" id="YXx-v2-KlZ"/>
+                <outlet property="brightnessSlider" destination="PAf-t4-ax9" id="KLd-jA-YZ8"/>
+                <outlet property="contrastLabel" destination="J7D-O2-okp" id="uhs-rw-dg4"/>
+                <outlet property="contrastSlider" destination="RHY-ur-HEg" id="5iE-a4-Tab"/>
+                <outlet property="sharpnessLabel" destination="hjx-Db-can" id="Mkw-mO-m8f"/>
+                <outlet property="sharpnessSlider" destination="pMX-MW-pFl" id="Phe-La-jlc"/>
+            </connections>
+            <point key="canvasLocation" x="50" y="-287"/>
+        </collectionViewCell>
+    </objects>
+</document>

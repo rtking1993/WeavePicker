@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Edit Photo-->
+        <scene sceneID="EtU-AD-8cx">
+            <objects>
+                <viewController storyboardIdentifier="ImageEditViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="n0Q-u5-bC4" customClass="ImageEditViewController" customModule="WeavePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Dn-X9-FEl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" restorationIdentifier="FilteredImagesView" translatesAutoresizingMaskIntoConstraints="NO" id="BEh-zm-LKm" customClass="FilteredImagesView" customModule="WeavePicker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="312.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BEh-zm-LKm" secondAttribute="height" multiplier="6:5" id="X4h-BF-gee"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" restorationIdentifier="FilterOptionsView" translatesAutoresizingMaskIntoConstraints="NO" id="DVK-kb-c13" customClass="FilterOptionsView" customModule="WeavePicker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="272.5" width="375" height="394.5"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n85-KM-Vle">
+                                <rect key="frame" x="16" y="36" width="44" height="44"/>
+                                <state key="normal" image="ic_undo"/>
+                                <connections>
+                                    <action selector="undo:" destination="n0Q-u5-bC4" eventType="touchUpInside" id="MAl-aQ-TvU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="BEh-zm-LKm" firstAttribute="leading" secondItem="bY0-5R-Qjx" secondAttribute="leading" id="JzF-id-pUl"/>
+                            <constraint firstItem="DVK-kb-c13" firstAttribute="top" secondItem="BEh-zm-LKm" secondAttribute="bottom" constant="-60" id="KDY-t5-S2S"/>
+                            <constraint firstItem="bY0-5R-Qjx" firstAttribute="bottom" secondItem="DVK-kb-c13" secondAttribute="bottom" id="L0f-Qp-K3I"/>
+                            <constraint firstItem="BEh-zm-LKm" firstAttribute="top" secondItem="bY0-5R-Qjx" secondAttribute="top" id="ShE-sn-cRL"/>
+                            <constraint firstItem="bY0-5R-Qjx" firstAttribute="trailing" secondItem="BEh-zm-LKm" secondAttribute="trailing" id="fJq-TJ-8t1"/>
+                            <constraint firstItem="DVK-kb-c13" firstAttribute="leading" secondItem="bY0-5R-Qjx" secondAttribute="leading" id="iTV-wI-5S6"/>
+                            <constraint firstItem="DVK-kb-c13" firstAttribute="trailing" secondItem="bY0-5R-Qjx" secondAttribute="trailing" id="o6h-Th-zxR"/>
+                            <constraint firstItem="n85-KM-Vle" firstAttribute="leading" secondItem="bY0-5R-Qjx" secondAttribute="leading" constant="16" id="qwt-rO-6VQ"/>
+                            <constraint firstItem="n85-KM-Vle" firstAttribute="top" secondItem="bY0-5R-Qjx" secondAttribute="top" constant="16" id="uF2-z2-QYm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bY0-5R-Qjx"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Photo" id="pB7-ZM-tMI">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="Xbx-mE-fsu">
+                            <connections>
+                                <action selector="done:" destination="n0Q-u5-bC4" id="l26-0n-GfL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="filterOptionsView" destination="DVK-kb-c13" id="dPj-b9-d8z"/>
+                        <outlet property="filteredImagesView" destination="BEh-zm-LKm" id="q8m-Yx-JZd"/>
+                        <outlet property="undoButton" destination="n85-KM-Vle" id="knl-Ef-2j8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lYX-bC-p38" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3604" y="-1553.0734632683659"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_undo" width="44" height="44"/>
+    </resources>
+</document>

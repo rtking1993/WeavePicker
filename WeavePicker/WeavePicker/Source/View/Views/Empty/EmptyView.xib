@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="EmptyView" customClass="EmptyView" customModule="WeavePicker" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="PKC-qQ-nQl" id="l3f-QJ-Z8s"/>
+                <outlet property="messageLabel" destination="5wB-XQ-gkB" id="HB8-fC-f8m"/>
+                <outlet property="titleLabel" destination="Z1M-Gn-bzP" id="Y08-ku-jzg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="PKC-qQ-nQl" userLabel="Empty View">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pRN-43-NhG" userLabel="Label View">
+                    <rect key="frame" x="20.5" y="263.5" width="334.5" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing to see here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1M-Gn-bzP" userLabel="Title">
+                            <rect key="frame" x="10" y="10" width="314.5" height="22"/>
+                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
+                            <color key="textColor" red="0.59999999999999998" green="0.61960784313725492" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wB-XQ-gkB" userLabel="Caption">
+                            <rect key="frame" x="10" y="52" width="314.5" height="0.0"/>
+                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                            <color key="textColor" red="0.59999999999999998" green="0.61960784310000006" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Z1M-Gn-bzP" firstAttribute="top" secondItem="pRN-43-NhG" secondAttribute="top" constant="10" id="3dk-PW-TLN"/>
+                        <constraint firstItem="Z1M-Gn-bzP" firstAttribute="leading" secondItem="pRN-43-NhG" secondAttribute="leading" constant="10" id="VrY-MT-fgv"/>
+                        <constraint firstAttribute="trailing" secondItem="Z1M-Gn-bzP" secondAttribute="trailing" constant="10" id="kjX-sW-MWF"/>
+                        <constraint firstItem="5wB-XQ-gkB" firstAttribute="leading" secondItem="pRN-43-NhG" secondAttribute="leading" constant="10" id="lNt-MC-7tg"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="syI-r1-ZVd"/>
+                        <constraint firstAttribute="bottom" secondItem="5wB-XQ-gkB" secondAttribute="bottom" constant="8" id="udf-Is-98x"/>
+                        <constraint firstItem="Z1M-Gn-bzP" firstAttribute="bottom" secondItem="5wB-XQ-gkB" secondAttribute="top" constant="-20" id="vsB-m8-IKY"/>
+                        <constraint firstAttribute="trailing" secondItem="5wB-XQ-gkB" secondAttribute="trailing" constant="10" id="znQ-A3-fk7"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="pRN-43-NhG" secondAttribute="trailing" priority="750" constant="20" id="De1-ga-Z4b"/>
+                <constraint firstItem="pRN-43-NhG" firstAttribute="centerY" secondItem="PKC-qQ-nQl" secondAttribute="centerY" constant="-40" id="Ixv-0b-9Wy"/>
+                <constraint firstItem="pRN-43-NhG" firstAttribute="centerX" secondItem="PKC-qQ-nQl" secondAttribute="centerX" id="Mul-3P-fsJ"/>
+                <constraint firstItem="pRN-43-NhG" firstAttribute="leading" secondItem="PKC-qQ-nQl" secondAttribute="leading" priority="750" constant="20" id="dN0-UI-je1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="WUs-aT-D4d"/>
+        </view>
+    </objects>
+</document>

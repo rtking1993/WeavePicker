@@ -1,0 +1,27 @@
+"Albums" = "Albums";
+"Cancel" = "Cancel";
+"Go to settings and allow Weave to access photos to continue." = "Go to settings and allow Weave to access photos to continue.";
+"Nothing to see here" = "Nothing to see here";
+"Photo Permission Warning" = "Photo Permission Warning";
+"Settings" = "Settings";
+"Something went wrong and no photo albums could be found." = "Something went wrong and no photo albums could be found.";
+
+// Adjustments
+
+"Brightness" = "Brightness";
+"Contrast" = "Contrast";
+"Hue" = "Hue";
+"Saturation" = "Saturation";
+"Sharpness" = "Sharpness";
+
+// Filters
+
+"Chrome" = "Chrome";
+"Fade" = "Fade";
+"Instant" = "Instant";
+"Noir" = "Noir";
+"Original" = "Original";
+"Process" = "Process";
+"Tonal" = "Tonal";
+"Transfer" = "Transfer";
+"Sepia" = "Sepia";

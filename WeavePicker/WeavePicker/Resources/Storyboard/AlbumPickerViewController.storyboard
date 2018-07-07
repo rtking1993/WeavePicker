@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="c0r-VY-4pf">
+            <objects>
+                <viewController storyboardIdentifier="AlbumPickerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CtB-lb-Qql" customClass="AlbumPickerViewController" customModule="WeavePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oRc-mp-qMK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDM-dy-fNt" userLabel="Empty View" customClass="EmptyView" customModule="WeavePicker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f5g-4J-AeL">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="okn-SR-kDp">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="CtB-lb-Qql" id="gea-SM-sP2"/>
+                                    <outlet property="delegate" destination="CtB-lb-Qql" id="woG-mf-SCn"/>
+                                    <outlet property="prefetchDataSource" destination="CtB-lb-Qql" id="UWQ-9u-wIR"/>
+                                </connections>
+                            </collectionView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iKY-qV-zDO">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                    <color key="textColor" red="0.20000000000000001" green="0.23921568630000001" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="40"/>
+                                    <color key="textColor" red="0.20000000000000001" green="0.23921568630000001" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Albums" id="hgh-BF-RgD">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Kzc-fm-hZy">
+                                            <connections>
+                                                <action selector="cancel:" destination="CtB-lb-Qql" id="rNO-QC-lSz"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QDM-dy-fNt" firstAttribute="top" secondItem="f5g-4J-AeL" secondAttribute="top" id="68Y-fa-Z5l"/>
+                            <constraint firstItem="QDM-dy-fNt" firstAttribute="bottom" secondItem="f5g-4J-AeL" secondAttribute="bottom" id="9Ek-De-TSB"/>
+                            <constraint firstItem="8VM-mJ-yTT" firstAttribute="bottom" secondItem="f5g-4J-AeL" secondAttribute="bottom" id="BTI-b3-TGQ"/>
+                            <constraint firstItem="iKY-qV-zDO" firstAttribute="trailing" secondItem="8VM-mJ-yTT" secondAttribute="trailing" id="FeC-fu-laY"/>
+                            <constraint firstItem="iKY-qV-zDO" firstAttribute="leading" secondItem="8VM-mJ-yTT" secondAttribute="leading" id="HLE-JF-HNk"/>
+                            <constraint firstItem="f5g-4J-AeL" firstAttribute="leading" secondItem="8VM-mJ-yTT" secondAttribute="leading" id="P7B-Bz-bsq"/>
+                            <constraint firstItem="QDM-dy-fNt" firstAttribute="leading" secondItem="f5g-4J-AeL" secondAttribute="leading" id="efQ-tQ-PC7"/>
+                            <constraint firstItem="f5g-4J-AeL" firstAttribute="top" secondItem="8VM-mJ-yTT" secondAttribute="top" id="iXW-Jz-gUv"/>
+                            <constraint firstItem="iKY-qV-zDO" firstAttribute="top" secondItem="8VM-mJ-yTT" secondAttribute="top" id="ntU-rJ-dMQ"/>
+                            <constraint firstItem="QDM-dy-fNt" firstAttribute="trailing" secondItem="f5g-4J-AeL" secondAttribute="trailing" id="u61-9k-uAQ"/>
+                            <constraint firstItem="8VM-mJ-yTT" firstAttribute="trailing" secondItem="f5g-4J-AeL" secondAttribute="trailing" id="wYA-4R-JmI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8VM-mJ-yTT"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="dvO-y2-ssE"/>
+                    <connections>
+                        <outlet property="collectionView" destination="f5g-4J-AeL" id="vB3-6i-Cuv"/>
+                        <outlet property="emptyView" destination="QDM-dy-fNt" id="Cz6-u9-AQa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nCQ-b9-5db" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="449" y="-2968"/>
+        </scene>
+    </scenes>
+</document>

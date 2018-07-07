@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="FilterOptionsView" customClass="FilterOptionsView" customModule="WeavePicker" customModuleProvider="target">
+            <connections>
+                <outlet property="adjustmentsButton" destination="h9H-hN-mU8" id="tQd-BA-bYV"/>
+                <outlet property="collectionView" destination="r5y-8v-ogq" id="Yet-KC-r1j"/>
+                <outlet property="colorsButton" destination="52U-Uu-6q1" id="k31-bK-33E"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="7ZA-78-pky"/>
+                <outlet property="filtersButton" destination="UQ1-gx-lg3" id="w2x-aO-sgg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="309"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQA-Uz-Xop" userLabel="Selector View">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="EtZ-WL-zHM">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQ1-gx-lg3">
+                                    <rect key="frame" x="0.0" y="0.0" width="125" height="60"/>
+                                    <inset key="contentEdgeInsets" minX="0.0" minY="8" maxX="0.0" maxY="8"/>
+                                    <state key="normal" image="ic_filter"/>
+                                    <state key="selected" image="ic_filter_selected"/>
+                                    <connections>
+                                        <action selector="optionsChange:" destination="-1" eventType="touchUpInside" id="cnS-jF-9VE"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9H-hN-mU8">
+                                    <rect key="frame" x="125" y="0.0" width="125" height="60"/>
+                                    <inset key="contentEdgeInsets" minX="0.0" minY="8" maxX="0.0" maxY="8"/>
+                                    <state key="normal" image="ic_adjustments"/>
+                                    <state key="selected" image="ic_adjustments_selected"/>
+                                    <connections>
+                                        <action selector="optionsChange:" destination="-1" eventType="touchUpInside" id="CHc-8L-lqN"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52U-Uu-6q1">
+                                    <rect key="frame" x="250" y="0.0" width="125" height="60"/>
+                                    <inset key="contentEdgeInsets" minX="0.0" minY="8" maxX="0.0" maxY="8"/>
+                                    <state key="normal" image="ic_colors">
+                                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <state key="selected" image="ic_colors_selected"/>
+                                    <connections>
+                                        <action selector="optionsChange:" destination="-1" eventType="touchUpInside" id="GkL-qV-5aj"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="WUs-Y1-s6C"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="EtZ-WL-zHM" firstAttribute="top" secondItem="mQA-Uz-Xop" secondAttribute="top" id="8X4-db-g5w"/>
+                        <constraint firstAttribute="trailing" secondItem="EtZ-WL-zHM" secondAttribute="trailing" id="WSM-T2-kt8"/>
+                        <constraint firstItem="EtZ-WL-zHM" firstAttribute="leading" secondItem="mQA-Uz-Xop" secondAttribute="leading" id="ayL-7a-QJ7"/>
+                        <constraint firstAttribute="bottom" secondItem="EtZ-WL-zHM" secondAttribute="bottom" id="j9Q-tG-N3P"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5y-8v-ogq">
+                    <rect key="frame" x="0.0" y="60" width="375" height="249"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="V3h-ta-VLs">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="PAY-aq-7MX"/>
+                        <outlet property="delegate" destination="-1" id="Hm0-3r-Dqb"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="r5y-8v-ogq" firstAttribute="top" secondItem="mQA-Uz-Xop" secondAttribute="bottom" id="0Jj-S3-WFs"/>
+                <constraint firstItem="mQA-Uz-Xop" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="LcJ-jK-mzg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mQA-Uz-Xop" secondAttribute="trailing" id="Nj7-be-2BC"/>
+                <constraint firstItem="mQA-Uz-Xop" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bQ8-gS-vyY"/>
+                <constraint firstItem="r5y-8v-ogq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dVK-7V-hPL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="r5y-8v-ogq" secondAttribute="trailing" id="lg3-DC-QsL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="r5y-8v-ogq" secondAttribute="bottom" id="szX-Xq-P2I"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="34.5" y="233.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_adjustments" width="44" height="44"/>
+        <image name="ic_adjustments_selected" width="44" height="44"/>
+        <image name="ic_colors" width="44" height="44"/>
+        <image name="ic_colors_selected" width="44" height="44"/>
+        <image name="ic_filter" width="44" height="44"/>
+        <image name="ic_filter_selected" width="44" height="44"/>
+    </resources>
+</document>
