@@ -23,11 +23,11 @@
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="WgP-di-2lg">
                         <rect key="frame" x="16" y="16" width="343" height="243"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cMI-hL-MWt" userLabel="Brightness View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2aW-YY-grd" userLabel="Brightness View">
                                 <rect key="frame" x="0.0" y="0.0" width="343" height="70.5"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IpU-ig-NBf" userLabel="Blue Dot">
-                                        <rect key="frame" x="169.5" y="0.0" width="4" height="4"/>
+                                        <rect key="frame" x="165.5" y="1" width="4" height="4"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="4" id="R2c-0n-UHW"/>
@@ -40,28 +40,38 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-0.5" maxValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PAf-t4-ax9">
-                                        <rect key="frame" x="-2" y="4" width="347" height="48"/>
+                                        <rect key="frame" x="-2" y="0.0" width="339" height="71.5"/>
                                         <connections>
                                             <action selector="changeBrightness:" destination="FeQ-y8-Gmu" eventType="valueChanged" id="mKZ-Sn-p0U"/>
                                         </connections>
                                     </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brightness" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ii-Wy-Gdd">
-                                        <rect key="frame" x="139" y="51" width="65.5" height="19.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brightness" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ii-Wy-Gdd">
+                                        <rect key="frame" x="135" y="57.5" width="65.5" height="19.5"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                         <color key="textColor" red="0.019607843140000001" green="0.1843137255" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5ci-jZ-nPD" userLabel="Contrast View">
+                                <constraints>
+                                    <constraint firstItem="PAf-t4-ax9" firstAttribute="top" secondItem="2aW-YY-grd" secondAttribute="top" id="5Iq-xB-jNu"/>
+                                    <constraint firstItem="4Ii-Wy-Gdd" firstAttribute="centerY" secondItem="PAf-t4-ax9" secondAttribute="centerY" constant="32" id="Ebc-AN-82M"/>
+                                    <constraint firstItem="4Ii-Wy-Gdd" firstAttribute="centerX" secondItem="PAf-t4-ax9" secondAttribute="centerX" id="OY7-KS-gCk"/>
+                                    <constraint firstItem="IpU-ig-NBf" firstAttribute="centerY" secondItem="PAf-t4-ax9" secondAttribute="centerY" constant="-32" id="R3m-VG-8vu"/>
+                                    <constraint firstAttribute="trailing" secondItem="PAf-t4-ax9" secondAttribute="trailing" constant="8" id="UCb-47-dM0"/>
+                                    <constraint firstItem="PAf-t4-ax9" firstAttribute="centerX" secondItem="IpU-ig-NBf" secondAttribute="centerX" id="ksE-rX-aeR"/>
+                                    <constraint firstItem="PAf-t4-ax9" firstAttribute="leading" secondItem="2aW-YY-grd" secondAttribute="leading" id="ok9-33-Mpf"/>
+                                    <constraint firstAttribute="bottom" secondItem="PAf-t4-ax9" secondAttribute="bottom" id="zbY-og-dp0"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GlI-Ls-oJd" userLabel="Contrast View">
                                 <rect key="frame" x="0.0" y="86.5" width="343" height="70"/>
                                 <subviews>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4g0-TV-6fW" userLabel="Blue Dot">
-                                        <rect key="frame" x="169.5" y="0.0" width="4" height="4"/>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ltz-sg-kMk" userLabel="Blue Dot">
+                                        <rect key="frame" x="165.5" y="1" width="4" height="4"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="4" id="Ibu-K7-GiX"/>
-                                            <constraint firstAttribute="height" constant="4" id="oH1-x2-VL2"/>
+                                            <constraint firstAttribute="height" constant="4" id="5qu-Ol-YcZ"/>
+                                            <constraint firstAttribute="width" constant="4" id="ghJ-Xg-L6e"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -69,25 +79,35 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.5" maxValue="1.5" translatesAutoresizingMaskIntoConstraints="NO" id="RHY-ur-HEg">
-                                        <rect key="frame" x="22" y="4" width="299" height="47.5"/>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.5" maxValue="1.5" translatesAutoresizingMaskIntoConstraints="NO" id="OA2-bC-G1N">
+                                        <rect key="frame" x="-2" y="0.0" width="339" height="71"/>
                                         <connections>
-                                            <action selector="changeContrast:" destination="FeQ-y8-Gmu" eventType="valueChanged" id="LEY-n2-iS6"/>
+                                            <action selector="changeContrast:" destination="FeQ-y8-Gmu" eventType="valueChanged" id="PxG-Ay-8uq"/>
                                         </connections>
                                     </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contrast" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7D-O2-okp">
-                                        <rect key="frame" x="145" y="50.5" width="53.5" height="19.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contrast" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dun-jh-PDc">
+                                        <rect key="frame" x="141" y="57.5" width="53.5" height="19.5"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                         <color key="textColor" red="0.019607843140000001" green="0.1843137255" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="erV-sc-OW6" userLabel="Sharpness View">
+                                <constraints>
+                                    <constraint firstItem="dun-jh-PDc" firstAttribute="centerX" secondItem="OA2-bC-G1N" secondAttribute="centerX" id="63h-HE-KEd"/>
+                                    <constraint firstItem="OA2-bC-G1N" firstAttribute="top" secondItem="GlI-Ls-oJd" secondAttribute="top" id="71u-T6-8MY"/>
+                                    <constraint firstItem="dun-jh-PDc" firstAttribute="centerY" secondItem="OA2-bC-G1N" secondAttribute="centerY" constant="32" id="J21-XX-02O"/>
+                                    <constraint firstAttribute="trailing" secondItem="OA2-bC-G1N" secondAttribute="trailing" constant="8" id="cSv-uo-KAM"/>
+                                    <constraint firstAttribute="bottom" secondItem="OA2-bC-G1N" secondAttribute="bottom" id="gHj-tg-F4r"/>
+                                    <constraint firstItem="OA2-bC-G1N" firstAttribute="leading" secondItem="GlI-Ls-oJd" secondAttribute="leading" id="n1d-e9-lld"/>
+                                    <constraint firstItem="Ltz-sg-kMk" firstAttribute="centerY" secondItem="OA2-bC-G1N" secondAttribute="centerY" constant="-32" id="uBO-ra-8uO"/>
+                                    <constraint firstItem="OA2-bC-G1N" firstAttribute="centerX" secondItem="Ltz-sg-kMk" secondAttribute="centerX" id="ywu-pe-L9J"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y4z-x1-Dm6" userLabel="Sharpness View">
                                 <rect key="frame" x="0.0" y="172.5" width="343" height="70.5"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mun-Ht-KF7" userLabel="Blue Dot">
-                                        <rect key="frame" x="169.5" y="0.0" width="4" height="4"/>
+                                        <rect key="frame" x="165.5" y="1.5" width="4" height="4"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="4" id="fB9-BY-AW8"/>
@@ -99,20 +119,30 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.40000000000000002" minValue="0.0" maxValue="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="pMX-MW-pFl">
-                                        <rect key="frame" x="28" y="4" width="287" height="48"/>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.40000000000000002" minValue="0.0" maxValue="0.80000000000000004" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMX-MW-pFl">
+                                        <rect key="frame" x="-2" y="0.0" width="339" height="71.5"/>
                                         <connections>
                                             <action selector="changeSharpness:" destination="FeQ-y8-Gmu" eventType="valueChanged" id="vqC-1J-G1k"/>
                                         </connections>
                                     </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sharpness" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjx-Db-can">
-                                        <rect key="frame" x="139.5" y="51" width="64" height="19.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sharpness" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjx-Db-can">
+                                        <rect key="frame" x="135.5" y="57.5" width="64" height="19.5"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                         <color key="textColor" red="0.019607843140000001" green="0.1843137255" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                            </stackView>
+                                <constraints>
+                                    <constraint firstItem="pMX-MW-pFl" firstAttribute="centerX" secondItem="Mun-Ht-KF7" secondAttribute="centerX" id="3LR-jT-o1r"/>
+                                    <constraint firstItem="hjx-Db-can" firstAttribute="centerY" secondItem="pMX-MW-pFl" secondAttribute="centerY" constant="32" id="8q1-6z-2Ou"/>
+                                    <constraint firstItem="Mun-Ht-KF7" firstAttribute="centerY" secondItem="pMX-MW-pFl" secondAttribute="centerY" constant="-32" id="IXR-bh-y7z"/>
+                                    <constraint firstItem="pMX-MW-pFl" firstAttribute="leading" secondItem="y4z-x1-Dm6" secondAttribute="leading" id="Rju-Gp-EBV"/>
+                                    <constraint firstAttribute="trailing" secondItem="pMX-MW-pFl" secondAttribute="trailing" constant="8" id="lrI-V5-jKc"/>
+                                    <constraint firstAttribute="bottom" secondItem="pMX-MW-pFl" secondAttribute="bottom" id="qMw-Mr-LxA"/>
+                                    <constraint firstItem="hjx-Db-can" firstAttribute="centerX" secondItem="pMX-MW-pFl" secondAttribute="centerX" id="stn-wt-z7v"/>
+                                    <constraint firstItem="pMX-MW-pFl" firstAttribute="top" secondItem="y4z-x1-Dm6" secondAttribute="top" id="uRs-8g-lM0"/>
+                                </constraints>
+                            </view>
                         </subviews>
                     </stackView>
                 </subviews>
@@ -129,8 +159,8 @@
             <connections>
                 <outlet property="brightnessLabel" destination="4Ii-Wy-Gdd" id="YXx-v2-KlZ"/>
                 <outlet property="brightnessSlider" destination="PAf-t4-ax9" id="KLd-jA-YZ8"/>
-                <outlet property="contrastLabel" destination="J7D-O2-okp" id="uhs-rw-dg4"/>
-                <outlet property="contrastSlider" destination="RHY-ur-HEg" id="5iE-a4-Tab"/>
+                <outlet property="contrastLabel" destination="dun-jh-PDc" id="zD4-FC-9H2"/>
+                <outlet property="contrastSlider" destination="OA2-bC-G1N" id="pcl-Zz-dl6"/>
                 <outlet property="sharpnessLabel" destination="hjx-Db-can" id="Mkw-mO-m8f"/>
                 <outlet property="sharpnessSlider" destination="pMX-MW-pFl" id="Phe-La-jlc"/>
             </connections>

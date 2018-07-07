@@ -27,7 +27,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="343" height="105.5"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1hJ-oF-4kK" userLabel="Blue Dot">
-                                        <rect key="frame" x="214" y="19" width="4" height="4"/>
+                                        <rect key="frame" x="166" y="19" width="4" height="4"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="4" id="Hcd-Aq-GxW"/>
@@ -39,17 +39,14 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-3.1400000000000001" maxValue="3.1400000000000001" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fk9-LV-sjz">
-                                        <rect key="frame" x="94" y="0.0" width="243" height="106.5"/>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-3.1400000000000001" maxValue="3.1400000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Fk9-LV-sjz">
+                                        <rect key="frame" x="-2" y="0.0" width="339" height="106.5"/>
                                         <connections>
                                             <action selector="changeHue:" destination="NiO-yM-PPb" eventType="valueChanged" id="Z1S-MP-3fR"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hue" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZB-tv-V31">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="105.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="OmW-Wt-iQh"/>
-                                        </constraints>
+                                        <rect key="frame" x="154.5" y="75" width="26" height="19.5"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                         <color key="textColor" red="0.019607843140000001" green="0.1843137255" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -57,21 +54,20 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Fk9-LV-sjz" secondAttribute="bottom" id="GvF-fc-Wpm"/>
-                                    <constraint firstItem="OZB-tv-V31" firstAttribute="top" secondItem="8bd-hY-Hqv" secondAttribute="top" id="OT5-Oc-FML"/>
-                                    <constraint firstItem="OZB-tv-V31" firstAttribute="leading" secondItem="8bd-hY-Hqv" secondAttribute="leading" id="QMu-IZ-GKx"/>
                                     <constraint firstItem="Fk9-LV-sjz" firstAttribute="centerX" secondItem="1hJ-oF-4kK" secondAttribute="centerX" id="Xm8-b9-5pZ"/>
                                     <constraint firstAttribute="trailing" secondItem="Fk9-LV-sjz" secondAttribute="trailing" constant="8" id="eWn-v6-dg7"/>
+                                    <constraint firstItem="Fk9-LV-sjz" firstAttribute="centerX" secondItem="OZB-tv-V31" secondAttribute="centerX" id="f2l-ZE-qhY"/>
+                                    <constraint firstItem="Fk9-LV-sjz" firstAttribute="leading" secondItem="8bd-hY-Hqv" secondAttribute="leading" id="j5R-PT-w5y"/>
                                     <constraint firstItem="Fk9-LV-sjz" firstAttribute="top" secondItem="8bd-hY-Hqv" secondAttribute="top" id="qaE-9X-6wL"/>
-                                    <constraint firstItem="Fk9-LV-sjz" firstAttribute="leading" secondItem="OZB-tv-V31" secondAttribute="trailing" constant="16" id="wop-9C-Wy0"/>
+                                    <constraint firstItem="OZB-tv-V31" firstAttribute="centerY" secondItem="Fk9-LV-sjz" secondAttribute="centerY" constant="32" id="tTI-PI-IA9"/>
                                     <constraint firstItem="1hJ-oF-4kK" firstAttribute="centerY" secondItem="Fk9-LV-sjz" secondAttribute="centerY" constant="-32" id="x9u-eL-xlp"/>
-                                    <constraint firstAttribute="bottom" secondItem="OZB-tv-V31" secondAttribute="bottom" id="z0L-Jq-y4S"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a01-qU-HVG" userLabel="Saturation View">
                                 <rect key="frame" x="0.0" y="105.5" width="343" height="105.5"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jMq-eg-si5" userLabel="Blue Dot">
-                                        <rect key="frame" x="213.5" y="19" width="4" height="4"/>
+                                        <rect key="frame" x="165.5" y="19" width="4" height="4"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="4" id="1Li-kN-Tol"/>
@@ -83,32 +79,28 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C79-mB-Fmj">
-                                        <rect key="frame" x="94" y="0.0" width="243" height="106.5"/>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="C79-mB-Fmj">
+                                        <rect key="frame" x="-2" y="0.0" width="339" height="106.5"/>
                                         <connections>
                                             <action selector="changeSaturation:" destination="NiO-yM-PPb" eventType="valueChanged" id="bVx-8I-9hh"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saturation" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wyz-qh-d6x">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="105.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="p8s-7h-3a2"/>
-                                        </constraints>
+                                        <rect key="frame" x="136" y="75" width="63.5" height="19.5"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                         <color key="textColor" red="0.019607843140000001" green="0.1843137255" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="C79-mB-Fmj" firstAttribute="leading" secondItem="a01-qU-HVG" secondAttribute="leading" id="6rl-0K-pep"/>
+                                    <constraint firstItem="Wyz-qh-d6x" firstAttribute="centerY" secondItem="C79-mB-Fmj" secondAttribute="centerY" constant="32" id="DG8-kG-7qB"/>
                                     <constraint firstItem="jMq-eg-si5" firstAttribute="centerY" secondItem="C79-mB-Fmj" secondAttribute="centerY" constant="-32" id="Gx2-sk-PuP"/>
                                     <constraint firstItem="C79-mB-Fmj" firstAttribute="top" secondItem="a01-qU-HVG" secondAttribute="top" id="Pe4-va-CjX"/>
                                     <constraint firstAttribute="bottom" secondItem="C79-mB-Fmj" secondAttribute="bottom" id="XcA-T1-Sgx"/>
-                                    <constraint firstItem="Wyz-qh-d6x" firstAttribute="top" secondItem="a01-qU-HVG" secondAttribute="top" id="aSF-rq-tzD"/>
-                                    <constraint firstItem="Wyz-qh-d6x" firstAttribute="leading" secondItem="a01-qU-HVG" secondAttribute="leading" id="hcm-72-rP1"/>
                                     <constraint firstAttribute="trailing" secondItem="C79-mB-Fmj" secondAttribute="trailing" constant="8" id="lIC-Yi-TGd"/>
-                                    <constraint firstAttribute="bottom" secondItem="Wyz-qh-d6x" secondAttribute="bottom" id="qxd-M8-YoE"/>
                                     <constraint firstItem="jMq-eg-si5" firstAttribute="centerX" secondItem="C79-mB-Fmj" secondAttribute="centerX" id="sA0-q6-Kz6"/>
-                                    <constraint firstItem="C79-mB-Fmj" firstAttribute="leading" secondItem="Wyz-qh-d6x" secondAttribute="trailing" constant="16" id="sE8-Mf-mWg"/>
+                                    <constraint firstItem="Wyz-qh-d6x" firstAttribute="centerX" secondItem="C79-mB-Fmj" secondAttribute="centerX" id="wrD-iw-NBA"/>
                                 </constraints>
                             </view>
                         </subviews>
