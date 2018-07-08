@@ -47,7 +47,7 @@ class ImageEditViewController: UIViewController {
     }
     
     @IBAction func undo(_ sender: Any?) {
-        imageFilterSession.removeLastEditStep()
+        imageFilterSession.removeLastStep()
     }
     
     // MARK: Helper Methods
