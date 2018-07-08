@@ -1,7 +1,7 @@
 // MARK: FilterOptionsViewDelegate
 
 protocol FilterOptionsViewDelegate: class {
-    func filterOptionsView(_ filterOptionsView: FilterOptionsView, didAdjust filterType: FilterType?)
+    func filterOptionsView(_ filterOptionsView: FilterOptionsView, didAdjust filterType: FilterType)
     
     func filterOptionsView(_ filterOptionsView: FilterOptionsView, didAdjustBrightness brightness: Float)
     func filterOptionsView(_ filterOptionsView: FilterOptionsView, didAdjustContrast contrast: Float)

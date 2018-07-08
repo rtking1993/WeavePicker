@@ -6,7 +6,7 @@ import CoreImage
 
 protocol ImageFilterSessionDelegate: class {
     func imageFilterSession(_ imageFilterSession: ImageFilterSession, didFinishEditing image: Image?)
-    func imageFilterSession(_ imageFilterSession: ImageFilterSession, didUndoEditStep editStep: EditStep)
+    func imageFilterSession(_ imageFilterSession: ImageFilterSession, didUndo editStep: EditStep)
 }
 
 // MARK: ImageFilterSession
@@ -19,21 +19,17 @@ class ImageFilterSession {
     
     // MARK: Variables
     
-    var image: Image?
+    var editSteps: [EditStep] = []
     var cachedImage: UIImage?
-    var editSteps: [EditStep] = [] {
-        didSet {
-            processEditSteps()
-        }
-    }
+    var image: Image?
 
     // MARK: Constants
     
+    static let kCIColorControls: String = "CIColorControls"
+    static let kCIHueAdjust: String = "CIHueAdjust"
+    static let kCISharpenLuminance: String = "CISharpenLuminance"
     let context: CIContext!
-    let kCIColorControls: String = "CIColorControls"
-    let kCIHueAdjust: String = "CIHueAdjust"
-    let kCISharpenLuminance: String = "CISharpenLuminance"
-    
+
     // MARK: Init Methods
     
     init() {
@@ -46,69 +42,103 @@ class ImageFilterSession {
     
     // MARK: Helper Methods
 
-    func removeLastEditStep() {
-        if !editSteps.isEmpty {
-            let editStep = editSteps.removeLast()
-            delegate?.imageFilterSession(self, didUndoEditStep: editStep)
+    func addStep(newEditStep: EditStep) {
+        if editSteps.contains(where: { $0.type == newEditStep.type }) {
+            editSteps = editSteps.filter({$0.type != newEditStep.type})
+            editSteps.append(newEditStep)
+            processLastEditStep()
+        } else {
+            editSteps.append(newEditStep)
+            processAllEditSteps()
         }
     }
     
-    func adjustImage(with type: EditStepType, value: Any) {
-        let editStep = EditStep(type: type,
-                                value: value)
-        appendOrReplace(newEditStep: editStep)
+    func removeLastStep() {
+        if !editSteps.isEmpty {
+            let editStep = editSteps.removeLast()
+            delegate?.imageFilterSession(self, didUndo: editStep)
+        }
     }
     
-    private func appendOrReplace(newEditStep: EditStep) {
-        editSteps = editSteps.filter({$0.type != newEditStep.type})
-        editSteps.append(newEditStep)
+    private func processLastEditStep() {
+        if let lastEditStep = editSteps.last {
+            image?.finalImage = self.processEditStep(editStep: lastEditStep,
+                                                     on: cachedImage)
+            delegate?.imageFilterSession(self, didFinishEditing: image)
+        }
     }
     
-    private func processEditSteps() {
-        cachedImage = image?.originalImage
+    private func processAllEditSteps() {
+        var outputImage = image?.originalImage
         
         editSteps.forEach({
-            switch $0.type {
-            case .filter:
-                if let filterValue = $0.value as? FilterType {
-                    cachedImage = adjustWithFilter(filterValue, image: cachedImage)
-                }
-            case .brightness:
-                if let brightnessValue = $0.value as? Float {
-                    cachedImage = adjustBrightness(brightnessValue, of: cachedImage)
-                }
-            case .contrast:
-                if let contrastValue = $0.value as? Float {
-                    cachedImage = adjustContrast(contrastValue, of: cachedImage)
-                }
-            case .sharpness:
-                if let sharpnessValue = $0.value as? Float {
-                        cachedImage = adjustSharpness(sharpnessValue, of: cachedImage)
-                }
-            case .hue:
-                if let hueValue = $0.value as? Float {
-                    cachedImage = adjustHue(hueValue, of: cachedImage)
-                }
-            case .saturation:
-                if let saturationValue = $0.value as? Float {
-                    cachedImage = adjustSaturation(saturationValue, of: cachedImage)
-                }
-            }
+            outputImage = self.processEditStep(editStep: $0,
+                                               on: outputImage)
         })
         
-        image?.finalImage = cachedImage
+        cachedImage = outputImage
+        image?.finalImage = outputImage
         delegate?.imageFilterSession(self, didFinishEditing: image)
+    }
+    
+    private func processEditStep(editStep: EditStep,
+                                 on inputImage: UIImage?) -> UIImage? {
+        var outputImage: UIImage?
+        
+        switch editStep.type {
+        case .filter:
+            if let filterValue = editStep.value as? FilterType,
+               let cgCachedImage = inputImage?.cgImage {
+                outputImage = adjustFilter(of: cgCachedImage,
+                                           filterType: filterValue)
+            }
+        case .brightness:
+            if let brightnessValue = editStep.value as? Float,
+               let cgCachedImage = inputImage?.cgImage {
+                outputImage = adjustColorControls(of: cgCachedImage,
+                                                  with: kCIInputBrightnessKey,
+                                                  to: brightnessValue)
+            }
+        case .contrast:
+            if let contrastValue = editStep.value as? Float,
+               let cgCachedImage = inputImage?.cgImage {
+                outputImage = adjustColorControls(of: cgCachedImage,
+                                                  with: kCIInputContrastKey,
+                                                  to: contrastValue)
+            }
+        case .sharpness:
+            if let sharpnessValue = editStep.value as? Float,
+               let cgCachedImage = inputImage?.cgImage {
+                outputImage = adjustSharpness(of: cgCachedImage,
+                                              to: sharpnessValue)
+            }
+        case .hue:
+            if let hueValue = editStep.value as? Float,
+               let cgCachedImage = inputImage?.cgImage {
+                outputImage = adjustHue(of: cgCachedImage,
+                                        to: hueValue)
+            }
+        case .saturation:
+            if let saturationValue = editStep.value as? Float,
+               let cgCachedImage = inputImage?.cgImage {
+                outputImage = adjustColorControls(of: cgCachedImage,
+                                                  with: kCIInputSaturationKey,
+                                                  to: saturationValue)
+            }
+        }
+        
+        return outputImage
     }
 }
 
 // MARK: Image Processing Methods
 
 extension ImageFilterSession {
-    private func adjustWithFilter(_ filterType: FilterType, image: UIImage?) -> UIImage? {
-        guard let cgImage = image?.cgImage else {
-            return image
-        }
-        
+    
+    // MARK: Filter Methods
+
+    private func adjustFilter(of cgImage: CGImage,
+                              filterType: FilterType) -> UIImage? {
         let coreImage = CIImage(cgImage: cgImage)
         let filter = CIFilter(name: filterType.rawValue)
         filter?.setValue(coreImage, forKey: kCIInputImageKey)
@@ -116,71 +146,38 @@ extension ImageFilterSession {
         return processFilter(filter, cgImage: cgImage)
     }
     
-    private func adjustBrightness(_ brightness: Float, of image: UIImage?) -> UIImage? {
-        guard let cgImage = image?.cgImage else {
-            return image
-        }
-        
+    private func adjustColorControls(of cgImage: CGImage,
+                                     with key: String,
+                                     to value: Float) -> UIImage? {
         let coreImage = CIImage(cgImage: cgImage)
-        let filter = CIFilter(name: kCIColorControls)
+        let filter = CIFilter(name: ImageFilterSession.kCIColorControls)
         filter?.setValue(coreImage, forKey: kCIInputImageKey)
-        filter?.setValue(brightness, forKey: kCIInputBrightnessKey)
+        filter?.setValue(value, forKey: key)
         
         return processFilter(filter, cgImage: cgImage)
     }
     
-    private func adjustContrast(_ contrast: Float, of image: UIImage?) -> UIImage? {
-        guard let cgImage = image?.cgImage else {
-            return image
-        }
-        
+    private func adjustSharpness(of cgImage: CGImage,
+                                 to sharpness: Float) -> UIImage? {
         let coreImage = CIImage(cgImage: cgImage)
-        let filter = CIFilter(name: kCIColorControls)
-        filter?.setValue(coreImage, forKey: kCIInputImageKey)
-        filter?.setValue(contrast, forKey: kCIInputContrastKey)
-        
-        return processFilter(filter, cgImage: cgImage)
-    }
-    
-    
-    private func adjustSharpness(_ sharpness: Float, of image: UIImage?) -> UIImage? {
-        guard let cgImage = image?.cgImage else {
-            return image
-        }
-        
-        let coreImage = CIImage(cgImage: cgImage)
-        let filter = CIFilter(name: kCISharpenLuminance)
+        let filter = CIFilter(name: ImageFilterSession.kCISharpenLuminance)
         filter?.setValue(coreImage, forKey: kCIInputImageKey)
         filter?.setValue(sharpness, forKey: kCIInputSharpnessKey)
         
         return processFilter(filter, cgImage: cgImage)
     }
     
-    private func adjustHue(_ hue: Float, of image: UIImage?) -> UIImage? {
-        guard let cgImage = image?.cgImage else {
-            return image
-        }
-        
+    private func adjustHue(of cgImage: CGImage,
+                           to hue: Float) -> UIImage? {
         let coreImage = CIImage(cgImage: cgImage)
-        let filter = CIFilter(name: kCIHueAdjust)
+        let filter = CIFilter(name: ImageFilterSession.kCIHueAdjust)
         filter?.setValue(coreImage, forKey: kCIInputImageKey)
         filter?.setValue(hue, forKey: kCIInputAngleKey)
         
         return processFilter(filter, cgImage: cgImage)
     }
     
-    private func adjustSaturation(_ saturation: Float, of image: UIImage?) -> UIImage? {
-        guard let cgImage = image?.cgImage else {
-            return image
-        }
-        
-        let coreImage = CIImage(cgImage: cgImage)
-        let filter = CIFilter(name: kCIColorControls)
-        filter?.setValue(coreImage, forKey: kCIInputImageKey)
-        filter?.setValue(saturation, forKey: kCIInputSaturationKey)
-        
-        return processFilter(filter, cgImage: cgImage)
-    }
+    // MARK: Helper Methods
     
     private func processFilter(_ filter: CIFilter?, cgImage: CGImage) -> UIImage? {
         guard let output = filter?.value(forKey: kCIOutputImageKey) as? CIImage,
