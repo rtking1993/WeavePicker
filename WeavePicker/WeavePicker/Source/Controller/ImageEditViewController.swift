@@ -85,7 +85,7 @@ extension ImageEditViewController: FilteredImagesViewDelegate {
 // MARK: ImageFilterSessionDelegate Methods
 
 extension ImageEditViewController: ImageFilterSessionDelegate {
-    func imageFilterSession(_ imageFilterSession: ImageFilterSession, didUndoEditStep editStep: EditStep) {
+    func imageFilterSession(_ imageFilterSession: ImageFilterSession, didUndo editStep: EditStep) {
         filterOptionsView.resetSlider(for: editStep)
     }
     
@@ -97,33 +97,39 @@ extension ImageEditViewController: ImageFilterSessionDelegate {
 // MARK: FilterViewDelegate Methods
 
 extension ImageEditViewController: FilterOptionsViewDelegate {
-    func filterOptionsView(_ filterOptionsView: FilterOptionsView, didAdjust filterType: FilterType?) {
-        imageFilterSession.adjustImage(with: .filter,
-                                       value: filterType)
+    func filterOptionsView(_ filterOptionsView: FilterOptionsView, didAdjust filterType: FilterType) {
+        let filterStep: EditStep = EditStep(type: .filter,
+                                          value: filterType)
+        imageFilterSession.addStep(newEditStep: filterStep)
     }
     
     func filterOptionsView(_ filterOptionsView: FilterOptionsView, didAdjustBrightness brightness: Float) {
-        imageFilterSession.adjustImage(with: .brightness,
-                                       value: brightness)
+        let brightnessStep: EditStep = EditStep(type: .brightness,
+                                            value: brightness)
+        imageFilterSession.addStep(newEditStep: brightnessStep)
     }
     
     func filterOptionsView(_ filterOptionsView: FilterOptionsView, didAdjustContrast contrast: Float) {
-        imageFilterSession.adjustImage(with: .contrast,
-                                       value: contrast)
+        let contrastStep: EditStep = EditStep(type: .contrast,
+                                            value: contrast)
+        imageFilterSession.addStep(newEditStep: contrastStep)
     }
     
     func filterOptionsView(_ filterOptionsView: FilterOptionsView, didAdjustSharpness sharpness: Float) {
-        imageFilterSession.adjustImage(with: .sharpness,
-                                       value: sharpness)
+        let sharpnessStep: EditStep = EditStep(type: .sharpness,
+                                            value: sharpness)
+        imageFilterSession.addStep(newEditStep: sharpnessStep)
     }
     
     func filterOptionsView(_ filterOptionsView: FilterOptionsView, didAdjustHue hue: Float) {
-        imageFilterSession.adjustImage(with: .hue,
-                                       value: hue)
+        let hueStep: EditStep = EditStep(type: .hue,
+                                            value: hue)
+        imageFilterSession.addStep(newEditStep: hueStep)
     }
     
     func filterOptionsView(_ filterOptionsView: FilterOptionsView, didAdjustSaturation saturation: Float) {
-        imageFilterSession.adjustImage(with: .saturation,
-                                       value: saturation)
+        let saturationStep: EditStep = EditStep(type: .saturation,
+                                            value: saturation)
+        imageFilterSession.addStep(newEditStep: saturationStep)
     }
 }
