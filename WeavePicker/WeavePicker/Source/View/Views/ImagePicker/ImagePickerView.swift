@@ -98,6 +98,6 @@ extension ImagePickerView: UICollectionViewDelegateFlowLayout {
     }
     
     @objc func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return sectionInsets.top
+        return 0
     }
 }

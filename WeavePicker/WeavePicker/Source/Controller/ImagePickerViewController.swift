@@ -79,16 +79,20 @@ class ImagePickerViewController: UIViewController, LoadingViewControllerPresente
     // MARK: Helper Methods
     
     private func showImageFilterViewController() {
-        let imageEditViewController: ImageEditViewController = UIStoryboard.instantiateViewController()
-        imageEditViewController.delegate = navigationController as? ImageEditViewControllerDelegate
-        imageEditViewController.images = selectedImages
-        show(imageEditViewController, sender: self)
+        DispatchQueue.main.async {
+            let imageEditViewController: ImageEditViewController = UIStoryboard.instantiateViewController()
+            imageEditViewController.delegate = self.navigationController as? ImageEditViewControllerDelegate
+            imageEditViewController.images = self.selectedImages
+            self.show(imageEditViewController, sender: self)
+        }
     }
     
     private func presentAlbumPickerViewController() {
-        let albumPickerViewController: AlbumPickerViewController = UIStoryboard.instantiateViewController()
-        albumPickerViewController.delegate = self
-        present(albumPickerViewController, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            let albumPickerViewController: AlbumPickerViewController = UIStoryboard.instantiateViewController()
+            albumPickerViewController.delegate = self
+            self.present(albumPickerViewController, animated: true, completion: nil)
+        }
     }
     
     private func checkPhotoLibraryPermission() {
@@ -130,12 +134,13 @@ extension ImagePickerViewController: ImagePickerViewDelegate {
 // MARK: AlbumPickerViewControllerDelegate Methods
 
 extension ImagePickerViewController: AlbumPickerViewControllerDelegate {
-    func albumPickerViewControllerDidSelectCancel(_ albumPickerViewController: AlbumPickerViewController) {
+    func albumPickerViewController(_ albumPickerViewController: AlbumPickerViewController, didSelect album: Album) {
+        pickerView.album = album
+        title = album.title
         albumPickerViewController.dismiss(animated: true, completion: nil)
     }
     
-    func albumPickerViewController(_ albumPickerViewController: AlbumPickerViewController, didSelect album: Album) {
-        pickerView.album = album
+    func albumPickerViewControllerDidSelectCancel(_ albumPickerViewController: AlbumPickerViewController) {
         albumPickerViewController.dismiss(animated: true, completion: nil)
     }
 }

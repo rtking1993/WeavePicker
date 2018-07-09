@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,24 +18,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xdq-wn-JGD">
-                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="xdq-wn-JGD" secondAttribute="height" multiplier="1:1" id="B2B-Vh-B26"/>
-                                </constraints>
-                            </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="etJ-q8-6cR">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading albums" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h76-YX-eAK">
+                                <rect key="frame" x="130.5" y="368" width="114" height="22"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="xdq-wn-JGD" firstAttribute="centerY" secondItem="dC0-Za-YE2" secondAttribute="centerY" id="40u-BW-CMS"/>
-                            <constraint firstItem="tiF-Zt-BeE" firstAttribute="trailing" secondItem="xdq-wn-JGD" secondAttribute="trailing" id="cas-wL-d3J"/>
-                            <constraint firstItem="xdq-wn-JGD" firstAttribute="leading" secondItem="tiF-Zt-BeE" secondAttribute="leading" id="j24-yM-yS4"/>
+                            <constraint firstItem="etJ-q8-6cR" firstAttribute="centerX" secondItem="dC0-Za-YE2" secondAttribute="centerX" id="07q-h0-7bz"/>
+                            <constraint firstItem="etJ-q8-6cR" firstAttribute="centerY" secondItem="dC0-Za-YE2" secondAttribute="centerY" id="EN3-Mr-69R"/>
+                            <constraint firstItem="h76-YX-eAK" firstAttribute="centerX" secondItem="dC0-Za-YE2" secondAttribute="centerX" id="QQB-GL-IKm"/>
+                            <constraint firstItem="h76-YX-eAK" firstAttribute="top" secondItem="etJ-q8-6cR" secondAttribute="bottom" constant="16" id="aaD-cW-1kq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tiF-Zt-BeE"/>
                     </view>
-                    <connections>
-                        <outlet property="loadingSpinnerView" destination="xdq-wn-JGD" id="K6G-hH-PfO"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbI-SW-cEG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -19,7 +19,7 @@ class FilterViewCell: UICollectionViewCell, NibLoadable, ReusableCell {
     // MARK: Constants
     
     static let suggestedSize: CGSize = CGSize(width: 375, height: 275)
-    private let sectionInsets = UIEdgeInsets(top: 4.0, left: 4.0, bottom: 4.0, right: 4.0)
+    private let sectionInsets = UIEdgeInsets(top: 8.0, left: 8.0, bottom: 8.0, right: 8.0)
     
     // MARK: Variables
     

@@ -181,7 +181,7 @@ extension ImageFilterSession {
     
     private func processFilter(_ filter: CIFilter?, cgImage: CGImage) -> UIImage? {
         guard let output = filter?.value(forKey: kCIOutputImageKey) as? CIImage,
-              let imageResult = context.createCGImage(output, from: output.extent) else {
+              let imageResult = self.context.createCGImage(output, from: output.extent) else {
             return UIImage(cgImage: cgImage)
         }
         

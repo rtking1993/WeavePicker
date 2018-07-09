@@ -13,7 +13,7 @@ public struct Image {
     public var coordinate: CLLocationCoordinate2D?
     
     public var sampleImage: UIImage? {
-        return originalImage?.resized(toWidth: 210)
+        return originalImage?.resized(toWidth: 400)
     }
     
     // MARK: Init Methods

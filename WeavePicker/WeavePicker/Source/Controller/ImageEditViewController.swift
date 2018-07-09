@@ -71,6 +71,13 @@ class ImageEditViewController: UIViewController {
     private func registerCells() {
         filterOptionsView.collectionView.register(cellClass: FilterCell.self)
     }
+    
+    private func setupNavigationBar() {
+        title = NSLocalizedString("Edit Photo", comment: "")
+        let titleAttributes: [NSAttributedStringKey: Any] = [.font: UIFont.actionScaled,
+                                                             .foregroundColor: #colorLiteral(red: 0.01960784314, green: 0.1843137255, blue: 0.3725490196, alpha: 1)]
+        navigationController?.navigationBar.titleTextAttributes = titleAttributes
+    }
 }
 
 // MARK: FilteredImagesViewDelegate Methods

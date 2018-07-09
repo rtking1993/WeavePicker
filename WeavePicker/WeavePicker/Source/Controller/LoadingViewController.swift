@@ -13,7 +13,6 @@ class LoadingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupLoadingSpinnerView()
     }
     
     // MARK: Helper Methods
@@ -34,33 +33,38 @@ class LoadingViewController: UIViewController {
         modalTransitionStyle = .crossDissolve
         modalPresentationStyle = .overCurrentContext
     }
-    
-    private func setupLoadingSpinnerView() {
-        let shape = CAShapeLayer()
-        
-        let shapeWidth = loadingSpinnerView.frame.width / 20
-        let shapeHeight = loadingSpinnerView.frame.width / 4
-        shape.frame.size = CGSize(width: shapeWidth, height: shapeHeight)
-        shape.anchorPoint = CGPoint(x: 0.5, y: 1)
-        
-        shape.path = CGPath(ellipseIn: shape.frame, transform: nil)
-        shape.fillColor = UIColor.white.cgColor
-        
-        let replicator = CAReplicatorLayer()
-        replicator.instanceCount = 20
-        
-        let fullCircle = CGFloat.pi * 2
-        let angle = fullCircle / CGFloat(replicator.instanceCount)
-        
-        replicator.instanceTransform = CATransform3DMakeRotation(angle, 0, 0, 1)
-        
-        replicator.bounds.size = CGSize(width: shape.frame.height * .pi,
-                                        height: shape.frame.height)
-        
-        replicator.addSublayer(shape)
-        
-        loadingSpinnerView.layer.addSublayer(replicator)
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
+    
+//    private func setupLoadingSpinnerView() {
+//        let shape = CAShapeLayer()
+//
+//        let shapeWidth = loadingSpinnerView.frame.width / 25
+//        let shapeHeight = loadingSpinnerView.frame.width / 5
+//        shape.frame.size = CGSize(width: shapeWidth, height: shapeHeight)
+//        shape.anchorPoint = CGPoint(x: 0.5, y: 1)
+//
+//        shape.path = CGPath(ellipseIn: shape.frame, transform: nil)
+//        shape.fillColor = UIColor.white.cgColor
+//
+//        let replicator = CAReplicatorLayer()
+//        replicator.instanceCount = 20
+//
+//        let fullCircle = CGFloat.pi * 2
+//        let angle = fullCircle / CGFloat(replicator.instanceCount)
+//
+//        replicator.instanceTransform = CATransform3DMakeRotation(angle, 0, 0, 1)
+//
+//        replicator.frame = loadingSpinnerView.frame
+//        replicator.bounds.size = CGSize(width: shape.frame.height * .pi,
+//                                        height: shape.frame.height)
+//
+//        replicator.addSublayer(shape)
+//
+//        loadingSpinnerView.layer.addSublayer(replicator)
+//    }
 }
 
 /// MARK: LoadingViewControllerPresenter protocol.
@@ -73,25 +77,25 @@ protocol LoadingViewControllerPresenter: class {
 extension LoadingViewControllerPresenter where Self: UIViewController {
     
     func presentLoadingViewController(completionHandler completion: (() -> Void)?) {
-        guard loadingViewController == nil else {
-            return
-        }
-        
-        loadingViewController = UIStoryboard.instantiateViewController()
         DispatchQueue.main.async {
+            guard self.loadingViewController == nil else {
+                return
+            }
+        
+            self.loadingViewController = UIStoryboard.instantiateViewController()
             self.present(self.loadingViewController!, animated: true, completion: completion)
         }
     }
     
     func dismissLoadingViewController(completionHandler completion: (() -> Void)?) {
-        guard let loadingViewController = loadingViewController else {
-            return
-        }
-        
         DispatchQueue.main.async {
+            guard let loadingViewController = self.loadingViewController else {
+                return
+            }
+            
             loadingViewController.dismiss(animated: true, completion: completion)
+            self.loadingViewController = nil
         }
-        self.loadingViewController = nil
     }
 }
 

@@ -63,7 +63,7 @@ class AlbumCell: ListCollectionViewCell {
     
     private func updateSelection() {
         if isHighlighted || isSelected {
-            backgroundColor = .lightGray
+            backgroundColor = #colorLiteral(red: 0.92, green: 0.92, blue: 0.93, alpha: 1)
         } else {
             backgroundColor = .white
         }

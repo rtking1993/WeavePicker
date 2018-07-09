@@ -14,9 +14,11 @@ class ImageViewController: UIViewController {
     // MARK: Action Methods
     
     @IBAction func imagePicker(_ sender: Any?) {
-        let weavePickerNavigationController: WeavePickerNavigationController = WeavePickerNavigationController(startIndex: 0)
-        weavePickerNavigationController.weavePickerDelegate = self
-        present(weavePickerNavigationController, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            let weavePickerNavigationController: WeavePickerNavigationController = WeavePickerNavigationController(startIndex: 0)
+            weavePickerNavigationController.weavePickerDelegate = self
+            self.present(weavePickerNavigationController, animated: true, completion: nil)
+        }
     }
 }
 
