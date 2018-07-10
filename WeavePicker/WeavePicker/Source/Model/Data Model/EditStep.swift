@@ -4,7 +4,7 @@ enum EditStepType {
     case filter
     case brightness
     case contrast
-    case sharpness
+    case exposure
     case hue
     case saturation
 }

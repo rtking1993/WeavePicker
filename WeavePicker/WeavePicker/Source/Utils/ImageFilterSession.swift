@@ -28,6 +28,8 @@ class ImageFilterSession {
     static let kCIColorControls: String = "CIColorControls"
     static let kCIHueAdjust: String = "CIHueAdjust"
     static let kCISharpenLuminance: String = "CISharpenLuminance"
+    static let kCIExposureAdjust: String = "CIExposureAdjust"
+    static let kInputEV: String = "inputEV"
     let context: CIContext!
 
     // MARK: Init Methods
@@ -107,11 +109,11 @@ class ImageFilterSession {
                                                   with: kCIInputContrastKey,
                                                   to: contrastValue)
             }
-        case .sharpness:
+        case .exposure:
             if let sharpnessValue = editStep.value as? Float,
                let cgCachedImage = inputImage?.cgImage {
-                outputImage = adjustSharpness(of: cgCachedImage,
-                                              to: sharpnessValue)
+                outputImage = adjustExposure(of: cgCachedImage,
+                                             to: sharpnessValue)
             }
         case .hue:
             if let hueValue = editStep.value as? Float,
@@ -158,12 +160,12 @@ extension ImageFilterSession {
         return processFilter(filter, cgImage: cgImage)
     }
     
-    private func adjustSharpness(of cgImage: CGImage,
-                                 to sharpness: Float) -> UIImage? {
+    private func adjustExposure(of cgImage: CGImage,
+                                to exposure: Float) -> UIImage? {
         let coreImage = CIImage(cgImage: cgImage)
-        let filter = CIFilter(name: ImageFilterSession.kCISharpenLuminance)
+        let filter = CIFilter(name: ImageFilterSession.kCIExposureAdjust)
         filter?.setValue(coreImage, forKey: kCIInputImageKey)
-        filter?.setValue(sharpness, forKey: kCIInputSharpnessKey)
+        filter?.setValue(exposure, forKey: ImageFilterSession.kInputEV)
         
         return processFilter(filter, cgImage: cgImage)
     }

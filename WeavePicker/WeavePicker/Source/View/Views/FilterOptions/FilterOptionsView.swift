@@ -5,7 +5,7 @@ protocol FilterOptionsViewDelegate: class {
     
     func filterOptionsView(_ filterOptionsView: FilterOptionsView, didAdjustBrightness brightness: Float)
     func filterOptionsView(_ filterOptionsView: FilterOptionsView, didAdjustContrast contrast: Float)
-    func filterOptionsView(_ filterOptionsView: FilterOptionsView, didAdjustSharpness sharpness: Float)
+    func filterOptionsView(_ filterOptionsView: FilterOptionsView, didAdjustExposure exposure: Float)
     
     func filterOptionsView(_ filterOptionsView: FilterOptionsView, didAdjustHue hue: Float)
     func filterOptionsView(_ filterOptionsView: FilterOptionsView, didAdjustSaturation saturation: Float)
@@ -76,8 +76,8 @@ class FilterOptionsView: View {
                 adjustmentViewCell.resetBrightness()
             case .contrast:
                 adjustmentViewCell.resetContrast()
-            case .sharpness:
-                adjustmentViewCell.resetSharpness()
+            case .exposure:
+                adjustmentViewCell.resetExposure()
             default:
                 break
             }
@@ -175,8 +175,8 @@ extension FilterOptionsView: AdjustmentsViewCellDelegate {
         delegate?.filterOptionsView(self, didAdjustContrast: contrast)
     }
     
-    func adjustmentsViewCell(_ adjustmentsViewCell: AdjustmentsViewCell, didChangeSharpness sharpness: Float) {
-        delegate?.filterOptionsView(self, didAdjustSharpness: sharpness)
+    func adjustmentsViewCell(_ adjustmentsViewCell: AdjustmentsViewCell, didChangeExposure exposure: Float) {
+        delegate?.filterOptionsView(self, didAdjustExposure: exposure)
     }
 }
 

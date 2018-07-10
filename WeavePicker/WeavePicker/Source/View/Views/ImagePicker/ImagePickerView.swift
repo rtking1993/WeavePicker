@@ -6,7 +6,6 @@ import Photos
 
 protocol ImagePickerViewDelegate: class {
     func imagePickerView(_ imagePickerView: ImagePickerView, didSelect image: Image?)
-    func imagePickerView(_ imagePickerView: ImagePickerView, didDeselect image: Image?)
 }
 
 // MARK: ImagePickerView
@@ -22,9 +21,11 @@ class ImagePickerView: View {
     @IBOutlet var collectionView: UICollectionView!
     
     // MARK: Variables
-    
+
+    var selectedImages: [Image] = []
     var assetSession = AssetSession()
     var assets = [PHAsset]()
+    
     var album: Album? {
         didSet {
             setupImagesArray()
@@ -50,12 +51,6 @@ class ImagePickerView: View {
         }
     }
     
-    func deselectImage(at index: Int) {
-        assetSession.fetchImageAt(index: index, in: assets) { image in
-            self.delegate?.imagePickerView(self, didDeselect: image)
-        }
-    }
-    
     func allowMultipleSelection(_ allow: Bool) {
         collectionView.allowsMultipleSelection = allow
     }
@@ -63,6 +58,23 @@ class ImagePickerView: View {
     private func refreshCollectionView() {
         DispatchQueue.main.async {
             self.collectionView.reloadData()
+        }
+    }
+    
+    private func setSelectedImages() {
+        guard let selectedIndexPaths = collectionView.indexPathsForSelectedItems else {
+            return
+        }
+        
+        var images: [Image] = []
+        let selectedRows = selectedIndexPaths.compactMap({$0.row})
+        for (index, _) in selectedRows.enumerated() {
+            assetSession.fetchImageAt(index: index, in: assets) { image in
+                if let image = image {
+                    images.append(image)
+                }
+                self.selectedImages = images
+            }
         }
     }
 }
@@ -83,10 +95,11 @@ extension ImagePickerView: UICollectionViewDataSource, UICollectionViewDelegate 
     
     @objc func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectImage(at: indexPath.row)
+        setSelectedImages()
     }
     
     @objc func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        deselectImage(at: indexPath.row)
+        setSelectedImages()
     }
 }
 

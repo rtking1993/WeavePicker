@@ -2,8 +2,8 @@
 
 protocol AdjustmentsViewCellDelegate: class {
     func adjustmentsViewCell(_ adjustmentsViewCell: AdjustmentsViewCell, didChangeBrightness brightness: Float)
+    func adjustmentsViewCell(_ adjustmentsViewCell: AdjustmentsViewCell, didChangeExposure exposure: Float)
     func adjustmentsViewCell(_ adjustmentsViewCell: AdjustmentsViewCell, didChangeContrast contrast: Float)
-    func adjustmentsViewCell(_ adjustmentsViewCell: AdjustmentsViewCell, didChangeSharpness sharpness: Float)
 }
 
 // MARK: AdjustmentsViewCell
@@ -19,11 +19,11 @@ class AdjustmentsViewCell: UICollectionViewCell, NibLoadable, ReusableCell {
     @IBOutlet var brightnessLabel: UILabel!
     @IBOutlet var brightnessSlider: UISlider!
     
+    @IBOutlet var exposureLabel: UILabel!
+    @IBOutlet var exposureSlider: UISlider!
+    
     @IBOutlet var contrastLabel: UILabel!
     @IBOutlet var contrastSlider: UISlider!
-    
-    @IBOutlet var sharpnessLabel: UILabel!
-    @IBOutlet var sharpnessSlider: UISlider!
     
     // MARK: Constants
     
@@ -37,8 +37,8 @@ class AdjustmentsViewCell: UICollectionViewCell, NibLoadable, ReusableCell {
         setFonts()
         
         brightnessLabel.text = NSLocalizedString("Brightness", comment: "")
+        exposureLabel.text = NSLocalizedString("Exposure", comment: "")
         contrastLabel.text = NSLocalizedString("Contrast", comment: "")
-        sharpnessLabel.text = NSLocalizedString("Sharpness", comment: "")
     }
     
     // MARK: Action Methods
@@ -47,12 +47,12 @@ class AdjustmentsViewCell: UICollectionViewCell, NibLoadable, ReusableCell {
         delegate?.adjustmentsViewCell(self, didChangeBrightness: brightnessSlider.value)
     }
     
-    @IBAction func changeContrast(_ sender: Any?) {
-        delegate?.adjustmentsViewCell(self, didChangeContrast: contrastSlider.value)
+    @IBAction func changeExposure(_ sender: Any?) {
+        delegate?.adjustmentsViewCell(self, didChangeExposure: exposureSlider.value)
     }
     
-    @IBAction func changeSharpness(_ sender: Any?) {
-        delegate?.adjustmentsViewCell(self, didChangeSharpness: sharpnessSlider.value)
+    @IBAction func changeContrast(_ sender: Any?) {
+        delegate?.adjustmentsViewCell(self, didChangeContrast: contrastSlider.value)
     }
     
     // MARK: Helper Methods
@@ -61,17 +61,17 @@ class AdjustmentsViewCell: UICollectionViewCell, NibLoadable, ReusableCell {
         brightnessSlider.value = 0
     }
     
+    func resetExposure() {
+        exposureSlider.value = 0
+    }
+    
     func resetContrast() {
         contrastSlider.value = 1
     }
     
-    func resetSharpness() {
-        sharpnessSlider.value = 0.4
-    }
-    
     private func setFonts() {
         brightnessLabel.font = .bodyScaled
+        exposureLabel.font = .bodyScaled
         contrastLabel.font = .bodyScaled
-        sharpnessLabel.font = .bodyScaled
     }
 }

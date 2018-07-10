@@ -27,10 +27,9 @@ class ImagePickerViewController: UIViewController, LoadingViewControllerPresente
     
     var startIndex: Int?
     var loadingViewController: LoadingViewController?
-
-    var selectedImages: [Image] = [] {
+    var selectedImage: Image? {
         didSet {
-            imageView.image = selectedImages.last?.originalImage
+            setMainImage()
         }
     }
     
@@ -82,7 +81,7 @@ class ImagePickerViewController: UIViewController, LoadingViewControllerPresente
         DispatchQueue.main.async {
             let imageEditViewController: ImageEditViewController = UIStoryboard.instantiateViewController()
             imageEditViewController.delegate = self.navigationController as? ImageEditViewControllerDelegate
-            imageEditViewController.images = self.selectedImages
+            imageEditViewController.images = self.pickerView.selectedImages
             self.show(imageEditViewController, sender: self)
         }
     }
@@ -115,26 +114,19 @@ class ImagePickerViewController: UIViewController, LoadingViewControllerPresente
             })
         }
     }
+    
+    private func setMainImage() {
+        DispatchQueue.main.async {
+            self.imageView.image = self.selectedImage?.originalImage
+        }
+    }
 }
 
 // MARK: PickerViewDelegate Methods
 
 extension ImagePickerViewController: ImagePickerViewDelegate {
     func imagePickerView(_ imagePickerView: ImagePickerView, didSelect image: Image?) {
-        if !multipleSelectButton.isSelected {
-            selectedImages.removeAll()
-        }
-        
-        if let image = image {
-            selectedImages.append(image)
-        }
-    }
-    
-    func imagePickerView(_ imagePickerView: ImagePickerView, didDeselect image: Image?) {
-        if let image = image,
-           let index = selectedImages.index(where: { $0.originalImage == image.originalImage }) {
-                selectedImages.remove(at: index)
-        }
+        selectedImage = image
     }
 }
 

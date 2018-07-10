@@ -123,10 +123,10 @@ extension ImageEditViewController: FilterOptionsViewDelegate {
         imageFilterSession.addStep(newEditStep: contrastStep)
     }
     
-    func filterOptionsView(_ filterOptionsView: FilterOptionsView, didAdjustSharpness sharpness: Float) {
-        let sharpnessStep: EditStep = EditStep(type: .sharpness,
-                                            value: sharpness)
-        imageFilterSession.addStep(newEditStep: sharpnessStep)
+    func filterOptionsView(_ filterOptionsView: FilterOptionsView, didAdjustExposure exposure: Float) {
+        let exposureStep: EditStep = EditStep(type: .exposure,
+                                            value: exposure)
+        imageFilterSession.addStep(newEditStep: exposureStep)
     }
     
     func filterOptionsView(_ filterOptionsView: FilterOptionsView, didAdjustHue hue: Float) {
