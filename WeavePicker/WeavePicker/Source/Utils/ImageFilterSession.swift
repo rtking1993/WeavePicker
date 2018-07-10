@@ -56,6 +56,7 @@ class ImageFilterSession {
     func removeLastStep() {
         if !editSteps.isEmpty {
             let editStep = editSteps.removeLast()
+            processAllEditSteps()
             delegate?.imageFilterSession(self, didUndo: editStep)
         }
     }

@@ -34,7 +34,8 @@ class ImageEditViewController: UIViewController {
         super.viewDidLoad()
 
         registerCells()
-
+        setupNavigationBar()
+        
         setupImageFilterSession()
         setupFilteredImagesView()
         setupFilterOptionsView()

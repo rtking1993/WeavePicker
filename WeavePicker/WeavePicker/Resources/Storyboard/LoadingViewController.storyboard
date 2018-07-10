@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,26 +15,53 @@
         <scene sceneID="l3q-fd-kJv">
             <objects>
                 <viewController storyboardIdentifier="LoadingViewController" title="LoadingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WXy-RA-u4G" customClass="LoadingViewController" customModule="WeavePicker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" alpha="0.90000000000000002" contentMode="scaleToFill" id="dC0-Za-YE2">
+                    <view key="view" contentMode="scaleToFill" id="dC0-Za-YE2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="etJ-q8-6cR">
-                                <rect key="frame" x="169" y="315" width="37" height="37"/>
-                            </activityIndicatorView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading albums" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h76-YX-eAK">
-                                <rect key="frame" x="130.5" y="368" width="114" height="22"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdG-4w-TFe" userLabel="Loading View">
+                                <rect key="frame" x="114" y="260.5" width="146" height="146"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="26i-D0-1uH" userLabel="Container View">
+                                        <rect key="frame" x="16" y="39.5" width="114" height="67"/>
+                                        <subviews>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="etJ-q8-6cR">
+                                                <rect key="frame" x="38.5" y="0.0" width="37" height="37"/>
+                                            </activityIndicatorView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading albums" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h76-YX-eAK">
+                                                <rect key="frame" x="0.0" y="45" width="114" height="22"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="etJ-q8-6cR" firstAttribute="centerX" secondItem="26i-D0-1uH" secondAttribute="centerX" id="04c-Uv-v4Q"/>
+                                            <constraint firstAttribute="trailing" secondItem="h76-YX-eAK" secondAttribute="trailing" id="1bA-85-vQC"/>
+                                            <constraint firstAttribute="bottom" secondItem="h76-YX-eAK" secondAttribute="bottom" id="AIe-tN-Wja"/>
+                                            <constraint firstItem="h76-YX-eAK" firstAttribute="leading" secondItem="26i-D0-1uH" secondAttribute="leading" id="MMp-Rc-GhQ"/>
+                                            <constraint firstItem="h76-YX-eAK" firstAttribute="top" secondItem="etJ-q8-6cR" secondAttribute="bottom" constant="8" id="WRv-ca-d9H"/>
+                                            <constraint firstItem="etJ-q8-6cR" firstAttribute="top" secondItem="26i-D0-1uH" secondAttribute="top" id="vYO-hq-RoO"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jdG-4w-TFe" secondAttribute="height" multiplier="1:1" id="UbL-bT-73Y"/>
+                                    <constraint firstItem="26i-D0-1uH" firstAttribute="leading" secondItem="jdG-4w-TFe" secondAttribute="leading" constant="16" id="Uzy-x2-TUm"/>
+                                    <constraint firstAttribute="trailing" secondItem="26i-D0-1uH" secondAttribute="trailing" constant="16" id="WuL-Eb-uXz"/>
+                                    <constraint firstItem="26i-D0-1uH" firstAttribute="centerY" secondItem="jdG-4w-TFe" secondAttribute="centerY" id="lBF-P2-kPz"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="etJ-q8-6cR" firstAttribute="centerX" secondItem="dC0-Za-YE2" secondAttribute="centerX" id="07q-h0-7bz"/>
-                            <constraint firstItem="etJ-q8-6cR" firstAttribute="centerY" secondItem="dC0-Za-YE2" secondAttribute="centerY" id="EN3-Mr-69R"/>
-                            <constraint firstItem="h76-YX-eAK" firstAttribute="centerX" secondItem="dC0-Za-YE2" secondAttribute="centerX" id="QQB-GL-IKm"/>
-                            <constraint firstItem="h76-YX-eAK" firstAttribute="top" secondItem="etJ-q8-6cR" secondAttribute="bottom" constant="16" id="aaD-cW-1kq"/>
+                            <constraint firstItem="jdG-4w-TFe" firstAttribute="centerY" secondItem="dC0-Za-YE2" secondAttribute="centerY" id="0yT-9O-Wp2"/>
+                            <constraint firstItem="jdG-4w-TFe" firstAttribute="centerX" secondItem="dC0-Za-YE2" secondAttribute="centerX" id="bgv-Z8-9hi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tiF-Zt-BeE"/>
                     </view>

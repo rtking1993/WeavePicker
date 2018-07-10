@@ -6,6 +6,7 @@ import Photos
 
 protocol ImagePickerViewDelegate: class {
     func imagePickerView(_ imagePickerView: ImagePickerView, didSelect image: Image?)
+    func imagePickerView(_ imagePickerView: ImagePickerView, didDeselect image: Image?)
 }
 
 // MARK: ImagePickerView
@@ -49,6 +50,12 @@ class ImagePickerView: View {
         }
     }
     
+    func deselectImage(at index: Int) {
+        assetSession.fetchImageAt(index: index, in: assets) { image in
+            self.delegate?.imagePickerView(self, didDeselect: image)
+        }
+    }
+    
     func allowMultipleSelection(_ allow: Bool) {
         collectionView.allowsMultipleSelection = allow
     }
@@ -76,6 +83,10 @@ extension ImagePickerView: UICollectionViewDataSource, UICollectionViewDelegate 
     
     @objc func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectImage(at: indexPath.row)
+    }
+    
+    @objc func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        deselectImage(at: indexPath.row)
     }
 }
 

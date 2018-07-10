@@ -129,6 +129,13 @@ extension ImagePickerViewController: ImagePickerViewDelegate {
             selectedImages.append(image)
         }
     }
+    
+    func imagePickerView(_ imagePickerView: ImagePickerView, didDeselect image: Image?) {
+        if let image = image,
+           let index = selectedImages.index(where: { $0.originalImage == image.originalImage }) {
+                selectedImages.remove(at: index)
+        }
+    }
 }
 
 // MARK: AlbumPickerViewControllerDelegate Methods
