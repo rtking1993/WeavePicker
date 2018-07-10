@@ -1,1 +1,11 @@
-This is a readme
+# WeavePicker
+
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Platform](https://img.shields.io/cocoapods/p/Frames.svg?style=flat)]()
+[![codebeat badge](https://codebeat.co/badges/d9bae177-78c1-40bb-94a7-187a7759d549)](https://codebeat.co/projects/github-com-rtking1993-weavepicker-master)
+
+## Requirements
+
+- iOS 11.0+
+- Xcode 9.0+
+- Swift 4.1+
