@@ -53,7 +53,7 @@ extension WeavePickerNavigationController: ImagePickerViewControllerDelegate {
 // MARK: ImageEditViewControllerDelegate Methods
 
 extension WeavePickerNavigationController: ImageEditViewControllerDelegate {
-    func imageEditViewController(_ imageEditViewController: ImageEditViewController, didFinishEditing images: [Image]) {
+    func imageEditViewController(_ imageEditViewController: ImageEditViewController, didFinishEditing images: [Image]) {        
         weavePickerDelegate?.weavePickerNavigationController(self, didFinishSelecting: images)
     }
 }

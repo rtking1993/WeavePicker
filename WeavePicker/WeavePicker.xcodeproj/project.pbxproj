@@ -12,6 +12,7 @@
 		BD3CF22520F02AE2009C5BAB /* EditedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3CF22420F02AE2009C5BAB /* EditedImage.swift */; };
 		BD3CF22720F02BCD009C5BAB /* EditStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3CF22620F02BCD009C5BAB /* EditStep.swift */; };
 		BD3CF22B20F14C6B009C5BAB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD3CF22D20F14C6B009C5BAB /* Localizable.strings */; };
+		BD3CF23020F53B55009C5BAB /* WeavePhotoAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3CF22F20F53B55009C5BAB /* WeavePhotoAlbum.swift */; };
 		BDD35E6120E8CD7F00AF71C4 /* WeavePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD35E5720E8CD7F00AF71C4 /* WeavePicker.framework */; };
 		BDD35E6620E8CD7F00AF71C4 /* WeavePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E6520E8CD7F00AF71C4 /* WeavePickerTests.swift */; };
 		BDD35E6820E8CD7F00AF71C4 /* WeavePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = BDD35E5A20E8CD7F00AF71C4 /* WeavePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -87,6 +88,7 @@
 		BD3CF22620F02BCD009C5BAB /* EditStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStep.swift; sourceTree = "<group>"; };
 		BD3CF22C20F14C6B009C5BAB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BD3CF22E20F14C8F009C5BAB /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BD3CF22F20F53B55009C5BAB /* WeavePhotoAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeavePhotoAlbum.swift; sourceTree = "<group>"; };
 		BDD35E5720E8CD7F00AF71C4 /* WeavePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeavePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD35E5A20E8CD7F00AF71C4 /* WeavePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeavePicker.h; sourceTree = "<group>"; };
 		BDD35E5B20E8CD7F00AF71C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 		BDD35E7F20E8CEB300AF71C4 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				BD3CF22F20F53B55009C5BAB /* WeavePhotoAlbum.swift */,
 				BDD35F1520ECB10200AF71C4 /* ImageFilterSession.swift */,
 				BDD35ED420E8D61600AF71C4 /* Filters.swift */,
 				BDD35E8220E8CEDB00AF71C4 /* AssetSession.swift */,
@@ -658,6 +661,7 @@
 				BDD35EA020E8D1C100AF71C4 /* AssetCell.swift in Sources */,
 				BDD35EB120E8D32400AF71C4 /* NibLoadable.swift in Sources */,
 				BDD35E8120E8CECE00AF71C4 /* View.swift in Sources */,
+				BD3CF23020F53B55009C5BAB /* WeavePhotoAlbum.swift in Sources */,
 				BDD35E8320E8CEDB00AF71C4 /* AssetSession.swift in Sources */,
 				BDD35EE120E8D70C00AF71C4 /* EmptyView.swift in Sources */,
 				BDD35EB420E8D32400AF71C4 /* ReusableCell.swift in Sources */,

@@ -82,7 +82,7 @@
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pMX-MW-pFl">
                                         <rect key="frame" x="6" y="0.0" width="331" height="71"/>
                                         <connections>
-                                            <action selector="changeExposure:" destination="FeQ-y8-Gmu" eventType="touchUpInside" id="VQz-Wu-WAR"/>
+                                            <action selector="changeExposure:" destination="FeQ-y8-Gmu" eventType="valueChanged" id="xt5-pG-wFw"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exposure" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjx-Db-can">
