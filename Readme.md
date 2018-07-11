@@ -4,6 +4,12 @@
 [![codebeat badge](https://codebeat.co/badges/d9bae177-78c1-40bb-94a7-187a7759d549)](https://codebeat.co/projects/github-com-rtking1993-weavepicker-master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+<p align="center">
+    <img src="https://github.com/rtking1993/WeavePicker/blob/master/IMG_1342.PNG" width="320" alt="All Photos"/>
+    <img src="https://github.com/rtking1993/WeavePicker/blob/master/IMG_1341.PNG" width="320" alt="Edit Photos"/>
+	<img src="https://github.com/rtking1993/WeavePicker/blob/master/IMG_1343.PNG" width="320" alt="Album Picker"/>
+</p>
+
 ## Requirements
 
 - iOS 11.0+
