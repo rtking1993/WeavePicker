@@ -130,7 +130,7 @@ extension AlbumPickerViewController: UICollectionViewDelegateFlowLayout {
 
 extension AlbumPickerViewController: AlbumPickerPresenterDelegate {
     func albumPickerPresenter(_ albumPickerPresenter: AlbumPickerPresenter, show albums: [Album]) {
-        self.albums = albums
         dismissLoadingViewController(completionHandler: nil)
+        self.albums = albums
     }
 }

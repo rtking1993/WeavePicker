@@ -47,7 +47,10 @@ class ImagePickerView: View {
     
     func selectImage(at index: Int) {
         assetSession.fetchImageAt(index: index, in: assets) { image in
-            self.delegate?.imagePickerView(self, didSelect: image)
+            if let image = image {
+                self.selectedImages = [image]
+                self.delegate?.imagePickerView(self, didSelect: image)
+            }
         }
     }
     
@@ -58,23 +61,6 @@ class ImagePickerView: View {
     private func refreshCollectionView() {
         DispatchQueue.main.async {
             self.collectionView.reloadData()
-        }
-    }
-    
-    private func setSelectedImages() {
-        guard let selectedIndexPaths = collectionView.indexPathsForSelectedItems else {
-            return
-        }
-        
-        var images: [Image] = []
-        let selectedRows = selectedIndexPaths.compactMap({$0.row})
-        for (index, _) in selectedRows.enumerated() {
-            assetSession.fetchImageAt(index: index, in: assets) { image in
-                if let image = image {
-                    images.append(image)
-                }
-                self.selectedImages = images
-            }
         }
     }
 }
@@ -95,11 +81,6 @@ extension ImagePickerView: UICollectionViewDataSource, UICollectionViewDelegate 
     
     @objc func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectImage(at: indexPath.row)
-        setSelectedImages()
-    }
-    
-    @objc func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        setSelectedImages()
     }
 }
 

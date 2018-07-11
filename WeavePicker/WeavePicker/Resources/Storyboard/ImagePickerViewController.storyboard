@@ -26,18 +26,6 @@
                                     <constraint firstAttribute="width" secondItem="BAP-16-5Qx" secondAttribute="height" multiplier="6:5" id="eyg-EL-UK2"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eca-2x-yYC">
-                                <rect key="frame" x="315" y="273" width="44" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="UmW-kt-z9k"/>
-                                    <constraint firstAttribute="width" constant="44" id="qVe-lG-iew"/>
-                                </constraints>
-                                <state key="normal" image="ic_multiple_images"/>
-                                <state key="selected" image="ic_multiple_images_selected"/>
-                                <connections>
-                                    <action selector="multipleSelect:" destination="iqM-Oc-QsZ" eventType="touchUpInside" id="J4t-KO-r9u"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LXI-fX-HN6" customClass="ImagePickerView" customModule="WeavePicker" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="333" width="375" height="334"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -49,9 +37,7 @@
                             <constraint firstItem="LXI-fX-HN6" firstAttribute="leading" secondItem="3nB-By-7PK" secondAttribute="leading" id="2c2-hx-UOm"/>
                             <constraint firstItem="BAP-16-5Qx" firstAttribute="leading" secondItem="3nB-By-7PK" secondAttribute="leading" id="7AR-RX-KoN"/>
                             <constraint firstItem="LXI-fX-HN6" firstAttribute="trailing" secondItem="3nB-By-7PK" secondAttribute="trailing" id="8Fy-Ng-XUT"/>
-                            <constraint firstItem="LXI-fX-HN6" firstAttribute="top" secondItem="eca-2x-yYC" secondAttribute="bottom" constant="16" id="DDW-Lz-3ev"/>
                             <constraint firstItem="LXI-fX-HN6" firstAttribute="top" secondItem="BAP-16-5Qx" secondAttribute="bottom" id="DUB-lN-9m6"/>
-                            <constraint firstItem="3nB-By-7PK" firstAttribute="trailing" secondItem="eca-2x-yYC" secondAttribute="trailing" constant="16" id="TCy-7g-OMg"/>
                             <constraint firstItem="BAP-16-5Qx" firstAttribute="top" secondItem="3nB-By-7PK" secondAttribute="top" id="Vuv-Vj-bYu"/>
                             <constraint firstItem="BAP-16-5Qx" firstAttribute="trailing" secondItem="3nB-By-7PK" secondAttribute="trailing" id="lhy-so-KW0"/>
                         </constraints>
@@ -83,7 +69,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="BAP-16-5Qx" id="goV-Tf-ctF"/>
-                        <outlet property="multipleSelectButton" destination="eca-2x-yYC" id="oIL-oK-MZ9"/>
                         <outlet property="pickerView" destination="LXI-fX-HN6" id="GyR-zv-7gO"/>
                     </connections>
                 </viewController>
@@ -92,8 +77,4 @@
             <point key="canvasLocation" x="2000.8" y="-1556.6716641679161"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="ic_multiple_images" width="44" height="44"/>
-        <image name="ic_multiple_images_selected" width="44" height="44"/>
-    </resources>
 </document>

@@ -53,7 +53,11 @@ extension WeavePickerNavigationController: ImagePickerViewControllerDelegate {
 // MARK: ImageEditViewControllerDelegate Methods
 
 extension WeavePickerNavigationController: ImageEditViewControllerDelegate {
-    func imageEditViewController(_ imageEditViewController: ImageEditViewController, didFinishEditing images: [Image]) {        
+    func imageEditViewController(_ imageEditViewController: ImageEditViewController, didFinishEditing images: [Image]) {
+        images.forEach({
+            WeavePhotoAlbum.shared.save(image: $0.finalImage)
+        })
+        
         weavePickerDelegate?.weavePickerNavigationController(self, didFinishSelecting: images)
     }
 }

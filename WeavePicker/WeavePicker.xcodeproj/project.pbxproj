@@ -216,10 +216,10 @@
 		BDD35E7120E8CE3400AF71C4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BD3CF21A20EFD798009C5BAB /* LoadingViewController.swift */,
 				BDD35E8A20E8CF6600AF71C4 /* AlbumPickerViewController.swift */,
 				BDD35E7320E8CE4500AF71C4 /* ImageEditViewController.swift */,
 				BDD35E7220E8CE4400AF71C4 /* ImagePickerViewController.swift */,
+				BD3CF21A20EFD798009C5BAB /* LoadingViewController.swift */,
 				BDD35F0220E8DC7300AF71C4 /* WeavePickerNavigationController.swift */,
 			);
 			path = Controller;

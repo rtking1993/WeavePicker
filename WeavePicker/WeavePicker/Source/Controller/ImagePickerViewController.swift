@@ -134,8 +134,8 @@ extension ImagePickerViewController: ImagePickerViewDelegate {
 
 extension ImagePickerViewController: AlbumPickerViewControllerDelegate {
     func albumPickerViewController(_ albumPickerViewController: AlbumPickerViewController, didSelect album: Album) {
-        pickerView.album = album
         title = album.title
+        pickerView.album = album
         albumPickerViewController.dismiss(animated: true, completion: nil)
     }
     

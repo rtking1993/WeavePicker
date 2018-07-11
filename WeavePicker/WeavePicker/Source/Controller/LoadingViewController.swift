@@ -6,13 +6,20 @@ class LoadingViewController: UIViewController {
     
     // MARK: Outlets
     
-    @IBOutlet var loadingSpinnerView: UIView!
-    
+    @IBOutlet var loadingActivityView: UIActivityIndicatorView!
+    @IBOutlet var loadingLabel: UILabel!
+
     // MARK: View Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setFonts()
+        loadingLabel.text = NSLocalizedString("Loading", comment: "")
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     // MARK: Helper Methods
@@ -33,9 +40,9 @@ class LoadingViewController: UIViewController {
         modalTransitionStyle = .crossDissolve
         modalPresentationStyle = .overCurrentContext
     }
-
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+    
+    private func setFonts() {
+        loadingLabel.font = .bodyScaled
     }
     
 //    private func setupLoadingSpinnerView() {

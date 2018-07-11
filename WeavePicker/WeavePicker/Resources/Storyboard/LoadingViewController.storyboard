@@ -20,16 +20,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdG-4w-TFe" userLabel="Loading View">
-                                <rect key="frame" x="114" y="260.5" width="146" height="146"/>
+                                <rect key="frame" x="138.5" y="285" width="98.5" height="98.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="26i-D0-1uH" userLabel="Container View">
-                                        <rect key="frame" x="16" y="39.5" width="114" height="67"/>
+                                        <rect key="frame" x="20" y="15.5" width="58.5" height="67"/>
                                         <subviews>
                                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="etJ-q8-6cR">
-                                                <rect key="frame" x="38.5" y="0.0" width="37" height="37"/>
+                                                <rect key="frame" x="10" y="0.0" width="37" height="37"/>
                                             </activityIndicatorView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading albums" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h76-YX-eAK">
-                                                <rect key="frame" x="0.0" y="45" width="114" height="22"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h76-YX-eAK">
+                                                <rect key="frame" x="0.0" y="45" width="58.5" height="22"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -48,8 +48,8 @@
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="jdG-4w-TFe" secondAttribute="height" multiplier="1:1" id="UbL-bT-73Y"/>
-                                    <constraint firstItem="26i-D0-1uH" firstAttribute="leading" secondItem="jdG-4w-TFe" secondAttribute="leading" constant="16" id="Uzy-x2-TUm"/>
-                                    <constraint firstAttribute="trailing" secondItem="26i-D0-1uH" secondAttribute="trailing" constant="16" id="WuL-Eb-uXz"/>
+                                    <constraint firstItem="26i-D0-1uH" firstAttribute="leading" secondItem="jdG-4w-TFe" secondAttribute="leading" constant="20" id="Uzy-x2-TUm"/>
+                                    <constraint firstAttribute="trailing" secondItem="26i-D0-1uH" secondAttribute="trailing" constant="20" id="WuL-Eb-uXz"/>
                                     <constraint firstItem="26i-D0-1uH" firstAttribute="centerY" secondItem="jdG-4w-TFe" secondAttribute="centerY" id="lBF-P2-kPz"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -65,6 +65,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tiF-Zt-BeE"/>
                     </view>
+                    <connections>
+                        <outlet property="loadingActivityView" destination="etJ-q8-6cR" id="KdU-gv-6cI"/>
+                        <outlet property="loadingLabel" destination="h76-YX-eAK" id="EVI-bK-NXa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbI-SW-cEG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
