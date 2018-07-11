@@ -4,10 +4,21 @@
 [![codebeat badge](https://codebeat.co/badges/d9bae177-78c1-40bb-94a7-187a7759d549)](https://codebeat.co/projects/github-com-rtking1993-weavepicker-master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+WeavePicker allows the user to select photos from their photo library and then edit the selected photos.
+
+## Features
+
+- 100% Swift
+- Localised Strings: English, French, German, Spanish, Portuguese, Italian, Russian, Japanease, Chinese Traditional, Hindi.
+- Brightness, Contrast, Exposure, Hue and Saturation editing.
+- Album picker option.
+- Default filter options.
+- Dynamic type supported.
+	
 <p align="center">
-    <img src="https://github.com/rtking1993/WeavePicker/blob/master/IMG_1342.PNG" width="320" alt="All Photos"/>
-    <img src="https://github.com/rtking1993/WeavePicker/blob/master/IMG_1341.PNG" width="320" alt="Edit Photos"/>
-	<img src="https://github.com/rtking1993/WeavePicker/blob/master/IMG_1343.PNG" width="320" alt="Album Picker"/>
+    <img src="https://github.com/rtking1993/WeavePicker/blob/master/IMG_1342.PNG" width="260" alt="All Photos"/>
+    <img src="https://github.com/rtking1993/WeavePicker/blob/master/IMG_1341.PNG" width="260" alt="Edit Photos"/>
+    <img src="https://github.com/rtking1993/WeavePicker/blob/master/IMG_1343.PNG" width="260" alt="Album Picker"/>
 </p>
 
 ## Requirements
@@ -82,6 +93,37 @@ extension ImageViewController: WeavePickerNavigationControllerDelegate {
     
     func weavePickerNavigationControllerDidCancel(_ weavePickerNavigationController: WeavePickerNavigationController) {
         weavePickerNavigationController.dismiss(animated: true, completion: nil)
+    }
+}
+```
+
+### Using `Image`
+
+```swift
+// MARK: Frameworks
+
+import CoreLocation
+
+// MARK: Image
+
+public struct Image {
+    
+    // MARK: Variables
+    
+    public var originalImage: UIImage?
+    public var finalImage: UIImage?
+    public var coordinate: CLLocationCoordinate2D?
+    
+    public var sampleImage: UIImage? {
+        return originalImage?.resized(toWidth: 400)
+    }
+    
+    // MARK: Init Methods
+    
+    init(originalImage: UIImage?, coordinate: CLLocationCoordinate2D?) {
+        self.originalImage = originalImage
+        self.finalImage = originalImage
+        self.coordinate = coordinate
     }
 }
 ```
