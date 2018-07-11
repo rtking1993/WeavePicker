@@ -4,7 +4,7 @@ import Photos
 
 // MARK: AlbumViewModel
 
-class AlbumCell: ListCollectionViewCell {
+class AlbumCell: UICollectionViewCell, NibLoadable, ReusableCell {
     
     // MARK: Outlets
     

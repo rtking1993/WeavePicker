@@ -4,7 +4,7 @@ import Photos
 
 // MARK: AssetCell
 
-class AssetCell: ListCollectionViewCell {
+class AssetCell: UICollectionViewCell, NibLoadable, ReusableCell {
     
     // MARK: Outlets
 
