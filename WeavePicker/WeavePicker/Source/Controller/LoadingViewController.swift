@@ -1,12 +1,10 @@
-import UIKit
-
 // MARK: LoadingViewController
 
 class LoadingViewController: UIViewController {
     
     // MARK: Outlets
     
-    @IBOutlet var loadingSpinnerView: UIView!
+    @IBOutlet var loadingActivityIndicatorView: UIActivityIndicatorView!
     @IBOutlet var loadingLabel: UILabel!
 
     // MARK: View Methods
@@ -16,12 +14,6 @@ class LoadingViewController: UIViewController {
         
         setFonts()
         loadingLabel.text = NSLocalizedString("Loading", comment: "")
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        setupLoadingSpinnerView()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -49,52 +41,6 @@ class LoadingViewController: UIViewController {
     
     private func setFonts() {
         loadingLabel.font = .bodyScaled
-    }
-    
-    private func setupLoadingSpinnerView() {
-        let shapeWidth: CGFloat = loadingSpinnerView.frame.width / 16
-        let shapeHeight: CGFloat = loadingSpinnerView.frame.width / 4
-        let animationDuration: TimeInterval = 1.2
-        let instanceCount: Int = 12
-
-        let shape = CAShapeLayer()
-        shape.frame.size = CGSize(width: shapeWidth, height: shapeHeight)
-        shape.anchorPoint = CGPoint(x: 0.5, y: 1)
-
-        shape.path = CGPath(ellipseIn: shape.frame, transform: nil)
-        shape.fillColor = UIColor.white.cgColor
-
-        let replicator = CAReplicatorLayer()
-        replicator.instanceCount = instanceCount
-
-        let fullCircle = CGFloat.pi * 2
-        let angle = fullCircle / CGFloat(instanceCount)
-
-        replicator.instanceTransform = CATransform3DMakeRotation(-angle, 0, 0, 1)
-        replicator.instanceDelay = CFTimeInterval(animationDuration / TimeInterval(instanceCount))
-        
-        replicator.frame = loadingSpinnerView.frame
-        replicator.bounds.size = CGSize(width: shape.frame.height * .pi,
-                                        height: shape.frame.height)
-
-        replicator.addSublayer(shape)
-        replicator.position = CGPoint(x: loadingSpinnerView.bounds.midX,
-                                      y: loadingSpinnerView.bounds.midY)
-        
-        rotateAnimation(animationDuration: animationDuration, layer: shape)
-        loadingSpinnerView.layer.addSublayer(replicator)
-    }
-    
-    func rotateAnimation(animationDuration: TimeInterval, layer: CALayer) {
-        layer.opacity = 0.0
-        DispatchQueue.main.async {
-            let rotateAnimation = CABasicAnimation(keyPath: "opacity")
-            rotateAnimation.fromValue = 1.0
-            rotateAnimation.toValue = 0.0
-            rotateAnimation.duration = animationDuration
-            rotateAnimation.repeatCount = .infinity
-            layer.add(rotateAnimation, forKey: nil)
-        }
     }
 }
 

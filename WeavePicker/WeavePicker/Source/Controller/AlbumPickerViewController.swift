@@ -108,7 +108,6 @@ extension AlbumPickerViewController: UICollectionViewDelegate, UICollectionViewD
 // MARK: UICollectionViewDelegateFlowLayout Methods
 
 extension AlbumPickerViewController: UICollectionViewDelegateFlowLayout {
-    
     @objc func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: AlbumCell.suggestedSize.height)
     }

@@ -1,7 +1,3 @@
-// MARK: Frameworks
-
-import UIKit
-
 // MARK: WeavePickerNavigationControllerDelegate
 
 public protocol WeavePickerNavigationControllerDelegate: class {
