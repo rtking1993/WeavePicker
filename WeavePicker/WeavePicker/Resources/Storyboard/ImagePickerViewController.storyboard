@@ -30,6 +30,14 @@
                                 <rect key="frame" x="0.0" y="333" width="375" height="334"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAq-uq-JmA">
+                                <rect key="frame" x="315" y="273" width="44" height="44"/>
+                                <state key="normal" image="ic_multiple_images"/>
+                                <state key="selected" image="ic_multiple_images_selected"/>
+                                <connections>
+                                    <action selector="multipleSelect:" destination="iqM-Oc-QsZ" eventType="touchUpInside" id="l24-nx-Kh1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -40,6 +48,8 @@
                             <constraint firstItem="LXI-fX-HN6" firstAttribute="top" secondItem="BAP-16-5Qx" secondAttribute="bottom" id="DUB-lN-9m6"/>
                             <constraint firstItem="BAP-16-5Qx" firstAttribute="top" secondItem="3nB-By-7PK" secondAttribute="top" id="Vuv-Vj-bYu"/>
                             <constraint firstItem="BAP-16-5Qx" firstAttribute="trailing" secondItem="3nB-By-7PK" secondAttribute="trailing" id="lhy-so-KW0"/>
+                            <constraint firstItem="3nB-By-7PK" firstAttribute="trailing" secondItem="gAq-uq-JmA" secondAttribute="trailing" constant="16" id="sfX-lE-rya"/>
+                            <constraint firstItem="LXI-fX-HN6" firstAttribute="top" secondItem="gAq-uq-JmA" secondAttribute="bottom" constant="16" id="vVP-eH-4f5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3nB-By-7PK"/>
                     </view>
@@ -69,6 +79,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="BAP-16-5Qx" id="goV-Tf-ctF"/>
+                        <outlet property="multipleSelectButton" destination="gAq-uq-JmA" id="4i6-Ky-X1b"/>
                         <outlet property="pickerView" destination="LXI-fX-HN6" id="GyR-zv-7gO"/>
                     </connections>
                 </viewController>
@@ -77,4 +88,8 @@
             <point key="canvasLocation" x="2000.8" y="-1556.6716641679161"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_multiple_images" width="44" height="44"/>
+        <image name="ic_multiple_images_selected" width="44" height="44"/>
+    </resources>
 </document>

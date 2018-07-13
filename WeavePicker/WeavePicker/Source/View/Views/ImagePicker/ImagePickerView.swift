@@ -6,6 +6,7 @@ import Photos
 
 protocol ImagePickerViewDelegate: class {
     func imagePickerView(_ imagePickerView: ImagePickerView, didSelect image: Image?)
+    func imagePickerView(_ imagePickerView: ImagePickerView, didDeselect image: Image?)
 }
 
 // MARK: ImagePickerView
@@ -22,7 +23,6 @@ class ImagePickerView: View {
     
     // MARK: Variables
 
-    var selectedImages: [Image] = []
     var assetSession = AssetSession()
     var assets = [PHAsset]()
     
@@ -47,10 +47,13 @@ class ImagePickerView: View {
     
     func selectImage(at index: Int) {
         assetSession.fetchImageAt(index: index, in: assets) { image in
-            if let image = image {
-                self.selectedImages = [image]
-                self.delegate?.imagePickerView(self, didSelect: image)
-            }
+            self.delegate?.imagePickerView(self, didSelect: image)
+        }
+    }
+    
+    func deselectImage(at index: Int) {
+        assetSession.fetchImageAt(index: index, in: assets) { image in
+            self.delegate?.imagePickerView(self, didDeselect: image)
         }
     }
     
@@ -81,6 +84,10 @@ extension ImagePickerView: UICollectionViewDataSource, UICollectionViewDelegate 
     
     @objc func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectImage(at: indexPath.row)
+    }
+    
+    @objc func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        deselectImage(at: indexPath.row)
     }
 }
 

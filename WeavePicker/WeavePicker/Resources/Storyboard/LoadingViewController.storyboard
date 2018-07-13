@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,41 +19,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdG-4w-TFe" userLabel="Loading View">
-                                <rect key="frame" x="138.5" y="285" width="98.5" height="98.5"/>
+                                <rect key="frame" x="118" y="263.5" width="140" height="140"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="26i-D0-1uH" userLabel="Container View">
-                                        <rect key="frame" x="20" y="15.5" width="58.5" height="67"/>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="26i-D0-1uH" userLabel="Container View">
+                                        <rect key="frame" x="41" y="33" width="58.5" height="74"/>
                                         <subviews>
-                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="etJ-q8-6cR">
-                                                <rect key="frame" x="10" y="0.0" width="37" height="37"/>
-                                            </activityIndicatorView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ba-8y-edt">
+                                                <rect key="frame" x="7" y="0.0" width="44" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="44" id="f50-67-4nB"/>
+                                                    <constraint firstAttribute="height" constant="44" id="quA-wY-owm"/>
+                                                </constraints>
+                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h76-YX-eAK">
-                                                <rect key="frame" x="0.0" y="45" width="58.5" height="22"/>
+                                                <rect key="frame" x="0.0" y="52" width="58.5" height="22"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="etJ-q8-6cR" firstAttribute="centerX" secondItem="26i-D0-1uH" secondAttribute="centerX" id="04c-Uv-v4Q"/>
                                             <constraint firstAttribute="trailing" secondItem="h76-YX-eAK" secondAttribute="trailing" id="1bA-85-vQC"/>
+                                            <constraint firstItem="6Ba-8y-edt" firstAttribute="centerX" secondItem="26i-D0-1uH" secondAttribute="centerX" id="42r-yB-BTb"/>
                                             <constraint firstAttribute="bottom" secondItem="h76-YX-eAK" secondAttribute="bottom" id="AIe-tN-Wja"/>
                                             <constraint firstItem="h76-YX-eAK" firstAttribute="leading" secondItem="26i-D0-1uH" secondAttribute="leading" id="MMp-Rc-GhQ"/>
-                                            <constraint firstItem="h76-YX-eAK" firstAttribute="top" secondItem="etJ-q8-6cR" secondAttribute="bottom" constant="8" id="WRv-ca-d9H"/>
-                                            <constraint firstItem="etJ-q8-6cR" firstAttribute="top" secondItem="26i-D0-1uH" secondAttribute="top" id="vYO-hq-RoO"/>
+                                            <constraint firstItem="6Ba-8y-edt" firstAttribute="top" secondItem="26i-D0-1uH" secondAttribute="top" id="VhG-Ig-oJP"/>
+                                            <constraint firstItem="h76-YX-eAK" firstAttribute="top" secondItem="6Ba-8y-edt" secondAttribute="bottom" constant="8" id="uxE-sf-kXA"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="jdG-4w-TFe" secondAttribute="height" multiplier="1:1" id="UbL-bT-73Y"/>
-                                    <constraint firstItem="26i-D0-1uH" firstAttribute="leading" secondItem="jdG-4w-TFe" secondAttribute="leading" constant="20" id="Uzy-x2-TUm"/>
-                                    <constraint firstAttribute="trailing" secondItem="26i-D0-1uH" secondAttribute="trailing" constant="20" id="WuL-Eb-uXz"/>
+                                    <constraint firstItem="26i-D0-1uH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jdG-4w-TFe" secondAttribute="leading" constant="16" id="CO2-3o-X5J"/>
+                                    <constraint firstItem="26i-D0-1uH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jdG-4w-TFe" secondAttribute="top" constant="16" id="ZIT-Kk-g5a"/>
+                                    <constraint firstAttribute="width" constant="140" id="aHV-FO-yf2"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="26i-D0-1uH" secondAttribute="bottom" constant="16" id="akN-EW-Mxf"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="26i-D0-1uH" secondAttribute="trailing" constant="16" id="glv-Bd-SxQ"/>
                                     <constraint firstItem="26i-D0-1uH" firstAttribute="centerY" secondItem="jdG-4w-TFe" secondAttribute="centerY" id="lBF-P2-kPz"/>
+                                    <constraint firstAttribute="height" constant="140" id="p1A-qM-sju"/>
+                                    <constraint firstItem="26i-D0-1uH" firstAttribute="centerX" secondItem="jdG-4w-TFe" secondAttribute="centerX" id="yJh-PF-ZGe"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="6"/>
+                                        <integer key="value" value="70"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -66,13 +73,13 @@
                         <viewLayoutGuide key="safeArea" id="tiF-Zt-BeE"/>
                     </view>
                     <connections>
-                        <outlet property="loadingActivityView" destination="etJ-q8-6cR" id="KdU-gv-6cI"/>
                         <outlet property="loadingLabel" destination="h76-YX-eAK" id="EVI-bK-NXa"/>
+                        <outlet property="loadingSpinnerView" destination="6Ba-8y-edt" id="avP-bx-v3T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbI-SW-cEG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="133"/>
+            <point key="canvasLocation" x="133.59999999999999" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>

@@ -47,7 +47,8 @@ class AssetSession {
                                                       contentMode: .aspectFill,
                                                       options: options) { (result, _) in
                     DispatchQueue.main.async {
-                        completion(Image(originalImage: result,
+                        completion(Image(index: index,
+                                         originalImage: result,
                                          coordinate: asset.location?.coordinate))
                     }
                 }

@@ -27,7 +27,7 @@ class ImagePickerViewController: UIViewController, LoadingViewControllerPresente
     
     var startIndex: Int?
     var loadingViewController: LoadingViewController?
-    var selectedImage: Image? {
+    var selectedImages: [Image] = [] {
         didSet {
             setMainImage()
         }
@@ -40,6 +40,14 @@ class ImagePickerViewController: UIViewController, LoadingViewControllerPresente
 
         checkPhotoLibraryPermission()
         setupPickerView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        pickerView.collectionView.selectItem(at: IndexPath(row: 0, section: 0),
+                                             animated: true,
+                                             scrollPosition: .bottom)
     }
     
     // MARK: Cell Methods
@@ -81,7 +89,7 @@ class ImagePickerViewController: UIViewController, LoadingViewControllerPresente
         DispatchQueue.main.async {
             let imageEditViewController: ImageEditViewController = UIStoryboard.instantiateViewController()
             imageEditViewController.delegate = self.navigationController as? ImageEditViewControllerDelegate
-            imageEditViewController.images = self.pickerView.selectedImages
+            imageEditViewController.images = self.selectedImages
             self.show(imageEditViewController, sender: self)
         }
     }
@@ -117,7 +125,7 @@ class ImagePickerViewController: UIViewController, LoadingViewControllerPresente
     
     private func setMainImage() {
         DispatchQueue.main.async {
-            self.imageView.image = self.selectedImage?.originalImage
+            self.imageView.image = self.selectedImages.last?.originalImage
         }
     }
 }
@@ -126,7 +134,16 @@ class ImagePickerViewController: UIViewController, LoadingViewControllerPresente
 
 extension ImagePickerViewController: ImagePickerViewDelegate {
     func imagePickerView(_ imagePickerView: ImagePickerView, didSelect image: Image?) {
-        selectedImage = image
+        if let image = image {
+            selectedImages.append(image)
+        }
+    }
+    
+    func imagePickerView(_ imagePickerView: ImagePickerView, didDeselect image: Image?) {
+        if let image = image,
+           let index = selectedImages.index(of: image) {
+            selectedImages.remove(at: index)
+        }
     }
 }
 
