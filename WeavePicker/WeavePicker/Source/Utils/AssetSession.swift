@@ -21,6 +21,7 @@ class AssetSession {
         } else {
             fetchedAssets = PHAsset.fetchAssets(with: .image, options: nil)
         }
+        
         fetchedAssets.enumerateObjects({ (object, _, _) in
             assets.append(object)
         })
@@ -31,7 +32,6 @@ class AssetSession {
     func fetchImageAt(index: Int,
                       in assets: [PHAsset],
                       completion: @escaping(_ image: Image?) -> Void) {
-        // Check that we have some image assets
         if assets.count > 0 {
             let asset = assets[index]
             
@@ -40,8 +40,8 @@ class AssetSession {
             DispatchQueue.global(qos: .userInitiated).async {
                 // Make photo request for image
                 let options = PHImageRequestOptions()
-                options.isNetworkAccessAllowed = true
                 options.isSynchronous = true
+                options.isNetworkAccessAllowed = true
                 PHImageManager.default().requestImage(for: asset,
                                                       targetSize: PHImageManagerMaximumSize,
                                                       contentMode: .aspectFill,
@@ -56,17 +56,19 @@ class AssetSession {
         }
     }
     
-    func fetchAlbums() -> [Album] {
+    func fetchAlbums(targetSize: CGSize,
+                     completion: @escaping(_ albums: [Album]) -> Void) {
         if let cachedAlbums = cachedAlbums {
-            return cachedAlbums
+            completion(cachedAlbums)
+            return
         }
         
         var albums = [Album]()
         let options = PHFetchOptions()
         
         let smartAlbumsResult = PHAssetCollection.fetchAssetCollections(with: .smartAlbum,
-                                                                        subtype: .any,
-                                                                        options: options)
+                                                    subtype: .any,
+                                                    options: options)
         let albumsResult = PHAssetCollection.fetchAssetCollections(with: .album,
                                                                    subtype: .any,
                                                                    options: options)
@@ -74,14 +76,13 @@ class AssetSession {
             result.enumerateObjects({ assetCollection, _, _ in
                 var album = Album()
                 album.title = assetCollection.localizedTitle ?? ""
-                album.count = self.mediaCountFor(collection: assetCollection)
+                album.count = self.mediaCount(for: assetCollection)
                 if album.count > 0 {
                     let fetchResult = PHAsset.fetchKeyAssets(in: assetCollection, options: nil)
                     if let first = fetchResult?.firstObject {
-                        let targetSize = CGSize(width: 78*2, height: 78*2)
                         let options = PHImageRequestOptions()
                         options.isSynchronous = true
-                        options.deliveryMode = .fastFormat
+                        options.deliveryMode = .opportunistic
                         PHImageManager.default().requestImage(for: first,
                                                               targetSize: targetSize,
                                                               contentMode: .aspectFit,
@@ -100,12 +101,12 @@ class AssetSession {
             })
         }
         cachedAlbums = albums
-        return albums
+        completion(albums)
     }
     
     // MARK: Helper Methods
     
-    private func mediaCountFor(collection: PHAssetCollection) -> Int {
+    private func mediaCount(for collection: PHAssetCollection) -> Int {
         let options = PHFetchOptions()
         options.predicate = NSPredicate(format: "mediaType = %d",
                                         PHAssetMediaType.image.rawValue)

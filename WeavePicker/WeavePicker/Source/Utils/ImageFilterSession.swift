@@ -2,6 +2,40 @@
 
 import CoreImage
 
+// MARK: Filter
+
+public struct Filter {
+    let title: String
+    let filterType: FilterType
+}
+
+// MARK: FilterType
+
+public enum FilterType: String {
+    case original = "original"
+    case chrome = "CIPhotoEffectChrome"
+    case fade = "CIPhotoEffectFade"
+    case instant = "CIPhotoEffectInstant"
+    case noir = "CIPhotoEffectNoir"
+    case process = "CIPhotoEffectProcess"
+    case tonal = "CIPhotoEffectTonal"
+    case transfer = "CIPhotoEffectTransfer"
+    case sepia = "CISepiaTone"
+}
+
+// MARK: Filters
+
+public let filters: [Filter] = [
+    Filter(title: NSLocalizedString("Original", comment: ""), filterType: .original),
+    Filter(title: NSLocalizedString("Chrome", comment: ""), filterType: .chrome),
+    Filter(title: NSLocalizedString("Fade", comment: ""), filterType: .fade),
+    Filter(title: NSLocalizedString("Instant", comment: ""), filterType: .instant),
+    Filter(title: NSLocalizedString("Noir", comment: ""), filterType: .noir),
+    Filter(title: NSLocalizedString("Process", comment: ""), filterType: .process),
+    Filter(title: NSLocalizedString("Tonal", comment: ""), filterType: .tonal),
+    Filter(title: NSLocalizedString("Transfer", comment: ""), filterType: .transfer),
+    Filter(title: NSLocalizedString("Sepia", comment: ""), filterType: .sepia)]
+
 // MARK: ImageFilterSessionDelegate
 
 protocol ImageFilterSessionDelegate: class {
@@ -17,12 +51,7 @@ class ImageFilterSession {
     
     weak var delegate: ImageFilterSessionDelegate?
     
-    // MARK: Variables
     
-    var editSteps: [EditStep] = []
-    var cachedImage: UIImage?
-    var image: Image?
-
     // MARK: Constants
     
     static let kCIColorControls: String = "CIColorControls"
@@ -31,6 +60,12 @@ class ImageFilterSession {
     static let kCIExposureAdjust: String = "CIExposureAdjust"
     static let kInputEV: String = "inputEV"
     let context: CIContext!
+    
+    // MARK: Variables
+    
+    var editSteps: [EditStep] = []
+    var cachedImage: UIImage?
+    var image: Image?
 
     // MARK: Init Methods
     
@@ -44,13 +79,14 @@ class ImageFilterSession {
     
     // MARK: Helper Methods
 
-    func addStep(newEditStep: EditStep) {
-        if editSteps.contains(where: { $0.type == newEditStep.type }) {
-            editSteps = editSteps.filter({$0.type != newEditStep.type})
-            editSteps.append(newEditStep)
+    func addStep(editStep: EditStep) {
+        let previousEditStepCount: Int = editSteps.count
+        editSteps = editSteps.filter({$0.type != editStep.type})
+        editSteps.append(editStep)
+        
+        if previousEditStepCount == editSteps.count {
             processLastEditStep()
         } else {
-            editSteps.append(newEditStep)
             processAllEditSteps()
         }
     }

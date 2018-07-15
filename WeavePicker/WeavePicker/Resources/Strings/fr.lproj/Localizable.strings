@@ -1,7 +1,29 @@
-/* 
-  Strings.strings
-  WeavePicker
+"Albums" = "Albums";
+"Cancel" = "Annuler";
+"Edit Photo" = "Modifier la photo";
+"Go to settings and allow Weave to access photos to continue." = "Accédez aux paramètres et autorisez Weave à accéder aux photos pour continuer.";
+"Loading" = "Chargement";
+"Nothing to see here" = "Rien à voir ici";
+"Photo Permission Warning" = "Avertissement d'autorisation de photo";
+"Settings" = "Paramètres";
+"Something went wrong and no photo albums could be found." = "Quelque chose s'est mal passé et aucun album photo n'a pu être trouvé.";
 
-  Created by Ryan on 7/07/18.
-  Copyright © 2018 RTK. All rights reserved.
-*/
+// Adjustments
+
+"Brightness" = "Luminosité";
+"Contrast" = "Contraste";
+"Hue" = "Teinte";
+"Saturation" = "Saturation";
+"Sharpness" = "Netteté";
+
+// Filters
+
+"Chrome" = "Chrome";
+"Fade" = "Fondu";
+"Instant" = "Instant";
+"Noir" = "Noir";
+"Original" = "Original";
+"Process" = "Process";
+"Tonal" = "Tonal";
+"Transfer" = "Transfer";
+"Sepia" = "Sepia";

@@ -1,0 +1,29 @@
+"Albums" = "Álbumes";
+"Cancel" = "Cancelar";
+"Edit Photo" = "Editar foto";
+"Go to settings and allow Weave to access photos to continue." = "Vaya a la configuración y permita que Weave acceda a las fotos para continuar";
+"Loading" = "Cargando";
+"Nothing to see here" = "No hay nada que ver aquí";
+"Photo Permission Warning" = "Advertencia de permiso de fotografía";
+"Settings" = "Configuración";
+"Something went wrong and no photo albums could be found." = "Algo salió mal y no se encontraron álbumes de fotos";
+
+// Adjustments
+
+"Brightness" = "Brillo";
+"Contrast" = "Contraste";
+"Hue" = "Hue";
+"Saturation" = "Saturación";
+"Sharpness" = "Nitidez";
+
+// Filters
+
+"Chrome" = "Chrome";
+"Fade" = "Fundido";
+"Instant" = "Instantáneo";
+"Noir" = "Noir";
+"Original" = "Original";
+"Process" = "Proceso";
+"Tonal" = "Tonal";
+"Transfer" = "Transferir";
+"Sepia" = "Sepia";

@@ -108,36 +108,36 @@ extension ImageEditViewController: FilterOptionsViewDelegate {
     func filterOptionsView(_ filterOptionsView: FilterOptionsView, didAdjust filterType: FilterType) {
         let filterStep: EditStep = EditStep(type: .filter,
                                           value: filterType)
-        imageFilterSession.addStep(newEditStep: filterStep)
+        imageFilterSession.addStep(editStep: filterStep)
     }
     
     func filterOptionsView(_ filterOptionsView: FilterOptionsView, didAdjustBrightness brightness: Float) {
         let brightnessStep: EditStep = EditStep(type: .brightness,
                                             value: brightness)
-        imageFilterSession.addStep(newEditStep: brightnessStep)
+        imageFilterSession.addStep(editStep: brightnessStep)
     }
     
     func filterOptionsView(_ filterOptionsView: FilterOptionsView, didAdjustContrast contrast: Float) {
         let contrastStep: EditStep = EditStep(type: .contrast,
                                             value: contrast)
-        imageFilterSession.addStep(newEditStep: contrastStep)
+        imageFilterSession.addStep(editStep: contrastStep)
     }
     
     func filterOptionsView(_ filterOptionsView: FilterOptionsView, didAdjustExposure exposure: Float) {
         let exposureStep: EditStep = EditStep(type: .exposure,
                                             value: exposure)
-        imageFilterSession.addStep(newEditStep: exposureStep)
+        imageFilterSession.addStep(editStep: exposureStep)
     }
     
     func filterOptionsView(_ filterOptionsView: FilterOptionsView, didAdjustHue hue: Float) {
         let hueStep: EditStep = EditStep(type: .hue,
                                             value: hue)
-        imageFilterSession.addStep(newEditStep: hueStep)
+        imageFilterSession.addStep(editStep: hueStep)
     }
     
     func filterOptionsView(_ filterOptionsView: FilterOptionsView, didAdjustSaturation saturation: Float) {
         let saturationStep: EditStep = EditStep(type: .saturation,
                                             value: saturation)
-        imageFilterSession.addStep(newEditStep: saturationStep)
+        imageFilterSession.addStep(editStep: saturationStep)
     }
 }

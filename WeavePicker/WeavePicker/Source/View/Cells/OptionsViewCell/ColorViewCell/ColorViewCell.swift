@@ -57,6 +57,7 @@ class ColorViewCell: UICollectionViewCell, NibLoadable, ReusableCell {
     }
     
     private func setFonts() {
+        hueLabel.font = .bodyScaled
         saturationLabel.font = .bodyScaled
     }
 }

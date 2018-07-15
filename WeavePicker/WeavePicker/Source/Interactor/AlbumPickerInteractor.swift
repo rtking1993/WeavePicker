@@ -1,16 +1,6 @@
-// MARK: AlbumPickerInteractorDelegate
-
-protocol AlbumPickerInteractorDelegate: class {
-    func albumPickerInteractor(_ albumPickerInteractor: AlbumPickerInteractor, didObserve albums: [Album])
-}
-
 // MARK: AlbumPickerInteractor
 
 class AlbumPickerInteractor {
-    
-    // MARK: Delegate
-    
-    weak var delegate: AlbumPickerInteractorDelegate?
     
     // MARK: Variables
     
@@ -18,8 +8,10 @@ class AlbumPickerInteractor {
 
     // MARK: Helper Methods
     
-    func observeAlbums() {
-        let albums = assetSession.fetchAlbums()
-        delegate?.albumPickerInteractor(self, didObserve: albums)
+    func observeAlbums(completion: @escaping(_ albums: [Album]) -> Void) {
+        let targetSize :CGSize = CGSize(width: UIScreen.main.scale * 74,
+                                        height: UIScreen.main.scale * 74)
+        assetSession.fetchAlbums(targetSize: targetSize,
+                                 completion: completion)
     }
 }

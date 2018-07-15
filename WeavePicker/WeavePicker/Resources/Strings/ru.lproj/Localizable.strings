@@ -1,0 +1,29 @@
+"Albums" = "Альбомы";
+"Cancel" = "Отмена";
+"Edit Photo" = "Редактировать фотографию";
+"Go to settings and allow Weave to access photos to continue." = "Перейдите в настройки и разрешите Weave получать доступ к фотографиям для продолжения";
+"Loading" = "Загрузка";
+"Nothing to see here" = "Ничего не видно здесь";
+"Photo Permission Warning" = "Предупреждение о разрешении фотографий";
+"Settings" = "Настройки";
+"Something went wrong and no photo albums could be found." = "Что-то пошло не так, и никаких фотоальбомов не найдено";
+
+// Adjustments
+
+"Brightness" = "Яркость";
+"Contrast" = "Контраст";
+"Hue" = "Хюэ";
+"Saturation" = "Насыщенность";
+"Sharpness" = "Резкость";
+
+// Filters
+
+"Chrome" = "Chrome";
+"Fade" = "Fade";
+"Instant" = "Instant";
+"Noir" = "Noir";
+"Original" = "Original";
+"Process" = "Process";
+"Tonal" = "Tonal";
+"Transfer" = "Transfer";
+"Sepia" = "Sepia";

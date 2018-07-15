@@ -25,7 +25,7 @@ class AlbumPickerViewController: UIViewController, LoadingViewControllerPresente
     // MARK: Variables
     
     var loadingViewController: LoadingViewController?
-    var albumPickerPresenter: AlbumPickerPresenter!
+    var albumPickerInteractor = AlbumPickerInteractor()
     var albums: [Album] = [] {
         didSet {
             refreshCollectionView()
@@ -38,16 +38,15 @@ class AlbumPickerViewController: UIViewController, LoadingViewControllerPresente
         super.viewDidLoad()
         
         setupViewController()
-
-        albumPickerPresenter = AlbumPickerPresenter()
-        albumPickerPresenter.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         presentLoadingViewController {
-            self.albumPickerPresenter.albumPickerInteractor.observeAlbums()
+            self.albumPickerInteractor.observeAlbums(completion: { albums in
+                self.dismissLoadingViewController(completionHandler: nil)
+            })
         }
     }
     
@@ -122,14 +121,5 @@ extension AlbumPickerViewController: UICollectionViewDelegateFlowLayout {
     
     @objc func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
-    }
-}
-
-// MARK: AlbumPickerPresenterDelegate
-
-extension AlbumPickerViewController: AlbumPickerPresenterDelegate {
-    func albumPickerPresenter(_ albumPickerPresenter: AlbumPickerPresenter, show albums: [Album]) {
-        dismissLoadingViewController(completionHandler: nil)
-        self.albums = albums
     }
 }

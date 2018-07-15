@@ -1,0 +1,29 @@
+"Albums" = "एल्बम";
+"Cancel" = "रद्द करें";
+"Edit Photo" = "फोटो संपादित करें";
+"Go to settings and allow Weave to access photos to continue." = "सेटिंग्स पर जाएं और वीव को जारी रखने के लिए फ़ोटो तक पहुंचने दें।";
+"Loading" = "लोड हो रहा है";
+"Nothing to see here" = "यहां देखने के लिए कुछ नहीं";
+"Photo Permission Warning" = "फोटो अनुमति चेतावनी";
+"Settings" = "सेटिंग्स";
+"Something went wrong and no photo albums could be found." = "कुछ गड़बड़ हुई और कोई फोटो एलबम नहीं मिला।";
+
+// Adjustments
+
+"Brightness" = "चमक";
+"Contrast" = "कंट्रास्ट";
+"Hue" = "ह्यू";
+"Saturation" = "संतृप्ति";
+"Sharpness" = "तीव्रता";
+
+// Filters
+
+"Chrome" = "क्रोम";
+"Fade" = "फीका";
+"Instant" = "तत्काल";
+"Noir" = "नोयर";
+"Original" = "मूल";
+"Process" = "प्रक्रिया";
+"Tonal" = "टोनल";
+"Transfer" = "स्थानांतरण";
+"Sepia" = "सेपिया";
