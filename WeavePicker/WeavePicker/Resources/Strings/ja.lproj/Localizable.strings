@@ -18,12 +18,12 @@
 
 // Filters
 
-"Chrome" = "Chrome";
+"Chrome" = "輝く";
 "Fade" = "フェード";
 "Instant" = "インスタント";
 "Noir" = "ノワール";
-"Original" = "Original";
+"Original" = "元の";
 "Process" = "プロセス";
-"Tonal" = "Tonal";
-"Transfer" = "Transfer";
+"Tonal" = "トーン";
+"Transfer" = "転送";
 "Sepia" = "セピア";
