@@ -13,7 +13,6 @@
 		BDD35E0120E8CACB00AF71C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD35DFF20E8CACB00AF71C4 /* Main.storyboard */; };
 		BDD35E0320E8CACC00AF71C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD35E0220E8CACC00AF71C4 /* Assets.xcassets */; };
 		BDD35E0620E8CACC00AF71C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD35E0420E8CACC00AF71C4 /* LaunchScreen.storyboard */; };
-		BDD35E1120E8CACC00AF71C4 /* WeavePickerExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E1020E8CACC00AF71C4 /* WeavePickerExampleTests.swift */; };
 		BDD35F0120E8DB1200AF71C4 /* WeavePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD35EFB20E8D90100AF71C4 /* WeavePicker.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,13 +23,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = BDD35E5620E8CD7F00AF71C4;
 			remoteInfo = WeavePicker;
-		};
-		BDD35E0D20E8CACC00AF71C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BDD35DF020E8CACB00AF71C4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BDD35DF720E8CACB00AF71C4;
-			remoteInfo = WeavePickerExample;
 		};
 		BDD35EFA20E8D90100AF71C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -70,9 +62,6 @@
 		BDD35E0220E8CACC00AF71C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDD35E0520E8CACC00AF71C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDD35E0720E8CACC00AF71C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BDD35E0C20E8CACC00AF71C4 /* WeavePickerExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeavePickerExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BDD35E1020E8CACC00AF71C4 /* WeavePickerExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeavePickerExampleTests.swift; sourceTree = "<group>"; };
-		BDD35E1220E8CACC00AF71C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDD35EF520E8D90100AF71C4 /* WeavePicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WeavePicker.xcodeproj; path = WeavePicker/WeavePicker.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,13 +74,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BDD35E0920E8CACC00AF71C4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -100,7 +82,6 @@
 			children = (
 				BDD35EF520E8D90100AF71C4 /* WeavePicker.xcodeproj */,
 				BDD35DFA20E8CACB00AF71C4 /* WeavePickerExample */,
-				BDD35E0F20E8CACC00AF71C4 /* WeavePickerExampleTests */,
 				BDD35DF920E8CACB00AF71C4 /* Products */,
 				BDD35EEB20E8D85900AF71C4 /* Frameworks */,
 			);
@@ -110,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				BDD35DF820E8CACB00AF71C4 /* WeavePickerExample.app */,
-				BDD35E0C20E8CACC00AF71C4 /* WeavePickerExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,15 +106,6 @@
 				BDD35E0720E8CACC00AF71C4 /* Info.plist */,
 			);
 			path = WeavePickerExample;
-			sourceTree = "<group>";
-		};
-		BDD35E0F20E8CACC00AF71C4 /* WeavePickerExampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				BDD35E1020E8CACC00AF71C4 /* WeavePickerExampleTests.swift */,
-				BDD35E1220E8CACC00AF71C4 /* Info.plist */,
-			);
-			path = WeavePickerExampleTests;
 			sourceTree = "<group>";
 		};
 		BDD35EEB20E8D85900AF71C4 /* Frameworks */ = {
@@ -175,24 +146,6 @@
 			productReference = BDD35DF820E8CACB00AF71C4 /* WeavePickerExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BDD35E0B20E8CACC00AF71C4 /* WeavePickerExampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BDD35E1820E8CACC00AF71C4 /* Build configuration list for PBXNativeTarget "WeavePickerExampleTests" */;
-			buildPhases = (
-				BDD35E0820E8CACC00AF71C4 /* Sources */,
-				BDD35E0920E8CACC00AF71C4 /* Frameworks */,
-				BDD35E0A20E8CACC00AF71C4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BDD35E0E20E8CACC00AF71C4 /* PBXTargetDependency */,
-			);
-			name = WeavePickerExampleTests;
-			productName = WeavePickerExampleTests;
-			productReference = BDD35E0C20E8CACC00AF71C4 /* WeavePickerExampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -205,10 +158,6 @@
 				TargetAttributes = {
 					BDD35DF720E8CACB00AF71C4 = {
 						CreatedOnToolsVersion = 9.4.1;
-					};
-					BDD35E0B20E8CACC00AF71C4 = {
-						CreatedOnToolsVersion = 9.4.1;
-						TestTargetID = BDD35DF720E8CACB00AF71C4;
 					};
 				};
 			};
@@ -232,7 +181,6 @@
 			projectRoot = "";
 			targets = (
 				BDD35DF720E8CACB00AF71C4 /* WeavePickerExample */,
-				BDD35E0B20E8CACC00AF71C4 /* WeavePickerExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -265,13 +213,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BDD35E0A20E8CACC00AF71C4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -284,14 +225,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BDD35E0820E8CACC00AF71C4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BDD35E1120E8CACC00AF71C4 /* WeavePickerExampleTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -299,11 +232,6 @@
 			isa = PBXTargetDependency;
 			name = WeavePicker;
 			targetProxy = BD3CF21620EDF72F009C5BAB /* PBXContainerItemProxy */;
-		};
-		BDD35E0E20E8CACC00AF71C4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BDD35DF720E8CACB00AF71C4 /* WeavePickerExample */;
-			targetProxy = BDD35E0D20E8CACC00AF71C4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -479,48 +407,6 @@
 			};
 			name = Release;
 		};
-		BDD35E1920E8CACC00AF71C4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NNHRRF86PU;
-				INFOPLIST_FILE = WeavePickerExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.RTK.WeavePickerExampleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeavePickerExample.app/WeavePickerExample";
-			};
-			name = Debug;
-		};
-		BDD35E1A20E8CACC00AF71C4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NNHRRF86PU;
-				INFOPLIST_FILE = WeavePickerExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.RTK.WeavePickerExampleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeavePickerExample.app/WeavePickerExample";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -538,15 +424,6 @@
 			buildConfigurations = (
 				BDD35E1620E8CACC00AF71C4 /* Debug */,
 				BDD35E1720E8CACC00AF71C4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BDD35E1820E8CACC00AF71C4 /* Build configuration list for PBXNativeTarget "WeavePickerExampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BDD35E1920E8CACC00AF71C4 /* Debug */,
-				BDD35E1A20E8CACC00AF71C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
