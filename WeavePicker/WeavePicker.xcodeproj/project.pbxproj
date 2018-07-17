@@ -7,11 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BD3CF21B20EFD798009C5BAB /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3CF21A20EFD798009C5BAB /* LoadingViewController.swift */; };
-		BD3CF21D20EFD7BA009C5BAB /* LoadingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD3CF21C20EFD7BA009C5BAB /* LoadingViewController.storyboard */; };
-		BD3CF22720F02BCD009C5BAB /* EditStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3CF22620F02BCD009C5BAB /* EditStep.swift */; };
-		BD3CF22B20F14C6B009C5BAB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD3CF22D20F14C6B009C5BAB /* Localizable.strings */; };
-		BD3CF23020F53B55009C5BAB /* WeavePhotoAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3CF22F20F53B55009C5BAB /* WeavePhotoAlbum.swift */; };
+		BD28ABF920FDB82E007CBBF1 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28AB9E20FDB82E007CBBF1 /* UIFont+Extension.swift */; };
+		BD28ABFA20FDB82E007CBBF1 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28AB9F20FDB82E007CBBF1 /* UIImage+Extension.swift */; };
+		BD28ABFB20FDB82E007CBBF1 /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABA020FDB82E007CBBF1 /* UIStoryboard+Extension.swift */; };
+		BD28ABFC20FDB82E007CBBF1 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABA320FDB82E007CBBF1 /* View.swift */; };
+		BD28ABFD20FDB82E007CBBF1 /* ImageFilterSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABA420FDB82E007CBBF1 /* ImageFilterSession.swift */; };
+		BD28ABFE20FDB82E007CBBF1 /* WeavePhotoAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABA520FDB82E007CBBF1 /* WeavePhotoAlbum.swift */; };
+		BD28ABFF20FDB82E007CBBF1 /* AssetSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABA620FDB82E007CBBF1 /* AssetSession.swift */; };
+		BD28AC0020FDB82E007CBBF1 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABA820FDB82E007CBBF1 /* ConfigurableCell.swift */; };
+		BD28AC0120FDB82E007CBBF1 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABA920FDB82E007CBBF1 /* ReusableCell.swift */; };
+		BD28AC0220FDB82E007CBBF1 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABAA20FDB82E007CBBF1 /* ReusableView.swift */; };
+		BD28AC0320FDB82E007CBBF1 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABAB20FDB82E007CBBF1 /* NibLoadable.swift */; };
+		BD28AC0420FDB82E007CBBF1 /* ImageEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABAD20FDB82E007CBBF1 /* ImageEditViewController.swift */; };
+		BD28AC0520FDB82E007CBBF1 /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABAE20FDB82E007CBBF1 /* ImagePickerViewController.swift */; };
+		BD28AC0620FDB82E007CBBF1 /* WeavePickerNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABAF20FDB82E007CBBF1 /* WeavePickerNavigationController.swift */; };
+		BD28AC0720FDB82E007CBBF1 /* AlbumPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABB020FDB82E007CBBF1 /* AlbumPickerViewController.swift */; };
+		BD28AC0820FDB82E007CBBF1 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABB120FDB82E007CBBF1 /* LoadingViewController.swift */; };
+		BD28AC0920FDB82E007CBBF1 /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABB420FDB82E007CBBF1 /* AlbumViewModel.swift */; };
+		BD28AC0A20FDB82E007CBBF1 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABB620FDB82E007CBBF1 /* Album.swift */; };
+		BD28AC0B20FDB82E007CBBF1 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABB720FDB82E007CBBF1 /* Image.swift */; };
+		BD28AC0C20FDB82E007CBBF1 /* EditStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABB820FDB82E007CBBF1 /* EditStep.swift */; };
+		BD28AC0D20FDB82E007CBBF1 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD28ABBC20FDB82E007CBBF1 /* ImageCell.xib */; };
+		BD28AC0E20FDB82E007CBBF1 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABBD20FDB82E007CBBF1 /* ImageCell.swift */; };
+		BD28AC0F20FDB82E007CBBF1 /* AssetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABBF20FDB82E007CBBF1 /* AssetCell.swift */; };
+		BD28AC1020FDB82E007CBBF1 /* AssetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD28ABC020FDB82E007CBBF1 /* AssetCell.xib */; };
+		BD28AC1120FDB82E007CBBF1 /* ColorViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABC320FDB82E007CBBF1 /* ColorViewCell.swift */; };
+		BD28AC1220FDB82E007CBBF1 /* ColorViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD28ABC420FDB82E007CBBF1 /* ColorViewCell.xib */; };
+		BD28AC1320FDB82E007CBBF1 /* AdjustmentsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD28ABC720FDB82E007CBBF1 /* AdjustmentsViewCell.xib */; };
+		BD28AC1420FDB82E007CBBF1 /* AdjustmentsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABC820FDB82E007CBBF1 /* AdjustmentsViewCell.swift */; };
+		BD28AC1520FDB82E007CBBF1 /* FilterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABCA20FDB82E007CBBF1 /* FilterViewCell.swift */; };
+		BD28AC1620FDB82E007CBBF1 /* FilterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD28ABCB20FDB82E007CBBF1 /* FilterViewCell.xib */; };
+		BD28AC1720FDB82E007CBBF1 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABCD20FDB82E007CBBF1 /* FilterCell.swift */; };
+		BD28AC1820FDB82E007CBBF1 /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD28ABCE20FDB82E007CBBF1 /* FilterCell.xib */; };
+		BD28AC1920FDB82E007CBBF1 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABD020FDB82E007CBBF1 /* AlbumCell.swift */; };
+		BD28AC1A20FDB82E007CBBF1 /* AlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD28ABD120FDB82E007CBBF1 /* AlbumCell.xib */; };
+		BD28AC1B20FDB82E007CBBF1 /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD28ABD420FDB82E007CBBF1 /* EmptyView.xib */; };
+		BD28AC1C20FDB82E007CBBF1 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABD520FDB82E007CBBF1 /* EmptyView.swift */; };
+		BD28AC1D20FDB82E007CBBF1 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABD720FDB82E007CBBF1 /* ImagePickerView.swift */; };
+		BD28AC1E20FDB82E007CBBF1 /* ImagePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD28ABD820FDB82E007CBBF1 /* ImagePickerView.xib */; };
+		BD28AC1F20FDB82E007CBBF1 /* FilterOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABDA20FDB82E007CBBF1 /* FilterOptionsView.swift */; };
+		BD28AC2020FDB82E007CBBF1 /* FilterOptionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD28ABDB20FDB82E007CBBF1 /* FilterOptionsView.xib */; };
+		BD28AC2120FDB82E007CBBF1 /* FilteredImagesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD28ABDD20FDB82E007CBBF1 /* FilteredImagesView.xib */; };
+		BD28AC2220FDB82E007CBBF1 /* FilteredImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABDE20FDB82E007CBBF1 /* FilteredImagesView.swift */; };
+		BD28AC2320FDB82E007CBBF1 /* AlbumPickerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABE020FDB82E007CBBF1 /* AlbumPickerInteractor.swift */; };
+		BD28AC2420FDB82E007CBBF1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD28ABE320FDB82E007CBBF1 /* Localizable.strings */; };
+		BD28AC2520FDB82E007CBBF1 /* ImagePickerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD28ABEF20FDB82E007CBBF1 /* ImagePickerViewController.storyboard */; };
+		BD28AC2620FDB82E007CBBF1 /* LoadingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD28ABF020FDB82E007CBBF1 /* LoadingViewController.storyboard */; };
+		BD28AC2720FDB82E007CBBF1 /* ImageEditViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD28ABF120FDB82E007CBBF1 /* ImageEditViewController.storyboard */; };
+		BD28AC2820FDB82E007CBBF1 /* AlbumPickerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD28ABF220FDB82E007CBBF1 /* AlbumPickerViewController.storyboard */; };
+		BD28AC2920FDB82E007CBBF1 /* UIAlertController+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABF420FDB82E007CBBF1 /* UIAlertController+Constants.swift */; };
+		BD28AC2A20FDB82E007CBBF1 /* UIFont+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28ABF520FDB82E007CBBF1 /* UIFont+Constants.swift */; };
+		BD28AC2B20FDB82E007CBBF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD28ABF620FDB82E007CBBF1 /* Assets.xcassets */; };
+		BD28AC2C20FDB82E007CBBF1 /* WeavePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = BD28ABF720FDB82E007CBBF1 /* WeavePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD28AC2D20FDB82E007CBBF1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD28ABF820FDB82E007CBBF1 /* Info.plist */; };
 		BD552C1B20F9DDF7004FD654 /* ImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD552C1A20F9DDF7004FD654 /* ImageTests.swift */; };
 		BD552C1D20F9DF01004FD654 /* EditStepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD552C1C20F9DF01004FD654 /* EditStepTests.swift */; };
 		BD552C1F20F9DF87004FD654 /* AlbumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD552C1E20F9DF87004FD654 /* AlbumTests.swift */; };
@@ -19,53 +67,6 @@
 		BD552C2520F9E103004FD654 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD552C2420F9E103004FD654 /* Assets.xcassets */; };
 		BD552C2A20F9E541004FD654 /* ImageFilterSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD552C2920F9E541004FD654 /* ImageFilterSessionTests.swift */; };
 		BDD35E6120E8CD7F00AF71C4 /* WeavePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD35E5720E8CD7F00AF71C4 /* WeavePicker.framework */; };
-		BDD35E6820E8CD7F00AF71C4 /* WeavePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = BDD35E5A20E8CD7F00AF71C4 /* WeavePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDD35E7420E8CE4500AF71C4 /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E7220E8CE4400AF71C4 /* ImagePickerViewController.swift */; };
-		BDD35E7520E8CE4500AF71C4 /* ImageEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E7320E8CE4500AF71C4 /* ImageEditViewController.swift */; };
-		BDD35E7920E8CE7800AF71C4 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E7820E8CE7800AF71C4 /* Image.swift */; };
-		BDD35E7D20E8CE8B00AF71C4 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E7B20E8CE8B00AF71C4 /* ImagePickerView.swift */; };
-		BDD35E7E20E8CE8B00AF71C4 /* ImagePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD35E7C20E8CE8B00AF71C4 /* ImagePickerView.xib */; };
-		BDD35E8120E8CECE00AF71C4 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E8020E8CECE00AF71C4 /* View.swift */; };
-		BDD35E8320E8CEDB00AF71C4 /* AssetSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E8220E8CEDB00AF71C4 /* AssetSession.swift */; };
-		BDD35E8520E8CF3900AF71C4 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E8420E8CF3900AF71C4 /* Album.swift */; };
-		BDD35E8720E8CF4300AF71C4 /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E8620E8CF4300AF71C4 /* AlbumViewModel.swift */; };
-		BDD35E8B20E8CF6600AF71C4 /* AlbumPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E8A20E8CF6600AF71C4 /* AlbumPickerViewController.swift */; };
-		BDD35E8E20E8CF8700AF71C4 /* AlbumPickerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E8D20E8CF8700AF71C4 /* AlbumPickerInteractor.swift */; };
-		BDD35E9720E8CFD000AF71C4 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E9520E8CFD000AF71C4 /* AlbumCell.swift */; };
-		BDD35E9820E8CFD000AF71C4 /* AlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD35E9620E8CFD000AF71C4 /* AlbumCell.xib */; };
-		BDD35E9C20E8D00500AF71C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD35E9B20E8D00500AF71C4 /* Assets.xcassets */; };
-		BDD35EA020E8D1C100AF71C4 /* AssetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35E9E20E8D1C100AF71C4 /* AssetCell.swift */; };
-		BDD35EA120E8D1C100AF71C4 /* AssetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD35E9F20E8D1C100AF71C4 /* AssetCell.xib */; };
-		BDD35EA720E8D2EB00AF71C4 /* AlbumPickerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD35EA420E8D2EB00AF71C4 /* AlbumPickerViewController.storyboard */; };
-		BDD35EA820E8D2EB00AF71C4 /* ImagePickerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD35EA520E8D2EB00AF71C4 /* ImagePickerViewController.storyboard */; };
-		BDD35EA920E8D2EB00AF71C4 /* ImageEditViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD35EA620E8D2EB00AF71C4 /* ImageEditViewController.storyboard */; };
-		BDD35EB120E8D32400AF71C4 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35EAD20E8D32400AF71C4 /* NibLoadable.swift */; };
-		BDD35EB220E8D32400AF71C4 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35EAE20E8D32400AF71C4 /* ConfigurableCell.swift */; };
-		BDD35EB320E8D32400AF71C4 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35EAF20E8D32400AF71C4 /* ReusableView.swift */; };
-		BDD35EB420E8D32400AF71C4 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35EB020E8D32400AF71C4 /* ReusableCell.swift */; };
-		BDD35EB820E8D45600AF71C4 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35EB620E8D45600AF71C4 /* FilterCell.swift */; };
-		BDD35EB920E8D45600AF71C4 /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD35EB720E8D45600AF71C4 /* FilterCell.xib */; };
-		BDD35EBD20E8D46600AF71C4 /* FilterOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35EBB20E8D46600AF71C4 /* FilterOptionsView.swift */; };
-		BDD35EBE20E8D46600AF71C4 /* FilterOptionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD35EBC20E8D46600AF71C4 /* FilterOptionsView.xib */; };
-		BDD35EC120E8D49000AF71C4 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35EC020E8D49000AF71C4 /* UIFont+Extension.swift */; };
-		BDD35EC320E8D49A00AF71C4 /* UIFont+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35EC220E8D49A00AF71C4 /* UIFont+Constants.swift */; };
-		BDD35EC820E8D54600AF71C4 /* FilteredImagesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD35EC620E8D54500AF71C4 /* FilteredImagesView.xib */; };
-		BDD35EC920E8D54600AF71C4 /* FilteredImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35EC720E8D54500AF71C4 /* FilteredImagesView.swift */; };
-		BDD35ECD20E8D56700AF71C4 /* FilterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35ECB20E8D56700AF71C4 /* FilterViewCell.swift */; };
-		BDD35ECE20E8D56700AF71C4 /* FilterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD35ECC20E8D56700AF71C4 /* FilterViewCell.xib */; };
-		BDD35ED220E8D57200AF71C4 /* ColorViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35ED020E8D57200AF71C4 /* ColorViewCell.swift */; };
-		BDD35ED320E8D57200AF71C4 /* ColorViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD35ED120E8D57200AF71C4 /* ColorViewCell.xib */; };
-		BDD35EE020E8D70C00AF71C4 /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD35EDE20E8D70C00AF71C4 /* EmptyView.xib */; };
-		BDD35EE120E8D70C00AF71C4 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35EDF20E8D70C00AF71C4 /* EmptyView.swift */; };
-		BDD35EE320E8D72200AF71C4 /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35EE220E8D72200AF71C4 /* UIStoryboard+Extension.swift */; };
-		BDD35EE520E8D74100AF71C4 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35EE420E8D74100AF71C4 /* UIImage+Extension.swift */; };
-		BDD35EE920E8D75900AF71C4 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD35EE720E8D75900AF71C4 /* ImageCell.xib */; };
-		BDD35EEA20E8D75900AF71C4 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35EE820E8D75900AF71C4 /* ImageCell.swift */; };
-		BDD35F0320E8DC7300AF71C4 /* WeavePickerNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35F0220E8DC7300AF71C4 /* WeavePickerNavigationController.swift */; };
-		BDD35F0520E9222500AF71C4 /* UIAlertController+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35F0420E9222500AF71C4 /* UIAlertController+Constants.swift */; };
-		BDD35F0C20E943E400AF71C4 /* AdjustmentsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35F0B20E943E400AF71C4 /* AdjustmentsViewCell.swift */; };
-		BDD35F0E20E943EF00AF71C4 /* AdjustmentsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDD35F0D20E943EF00AF71C4 /* AdjustmentsViewCell.xib */; };
-		BDD35F1620ECB10200AF71C4 /* ImageFilterSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD35F1520ECB10200AF71C4 /* ImageFilterSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,20 +80,68 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BD3CF21A20EFD798009C5BAB /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
-		BD3CF21C20EFD7BA009C5BAB /* LoadingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoadingViewController.storyboard; sourceTree = "<group>"; };
-		BD3CF22620F02BCD009C5BAB /* EditStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStep.swift; sourceTree = "<group>"; };
-		BD3CF22C20F14C6B009C5BAB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		BD3CF22E20F14C8F009C5BAB /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		BD3CF22F20F53B55009C5BAB /* WeavePhotoAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeavePhotoAlbum.swift; sourceTree = "<group>"; };
-		BD3CF23120F94CD0009C5BAB /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
-		BD3CF23220F94CE8009C5BAB /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		BD3CF23320F94CFC009C5BAB /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		BD3CF23420F94D09009C5BAB /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
-		BD3CF23520F94D10009C5BAB /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		BD3CF23620F94D1E009C5BAB /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		BD3CF23720F94D27009C5BAB /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
-		BD3CF23820F94D2D009C5BAB /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BD28AB9E20FDB82E007CBBF1 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		BD28AB9F20FDB82E007CBBF1 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		BD28ABA020FDB82E007CBBF1 /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		BD28ABA320FDB82E007CBBF1 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		BD28ABA420FDB82E007CBBF1 /* ImageFilterSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilterSession.swift; sourceTree = "<group>"; };
+		BD28ABA520FDB82E007CBBF1 /* WeavePhotoAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeavePhotoAlbum.swift; sourceTree = "<group>"; };
+		BD28ABA620FDB82E007CBBF1 /* AssetSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetSession.swift; sourceTree = "<group>"; };
+		BD28ABA820FDB82E007CBBF1 /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
+		BD28ABA920FDB82E007CBBF1 /* ReusableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
+		BD28ABAA20FDB82E007CBBF1 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		BD28ABAB20FDB82E007CBBF1 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		BD28ABAD20FDB82E007CBBF1 /* ImageEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageEditViewController.swift; sourceTree = "<group>"; };
+		BD28ABAE20FDB82E007CBBF1 /* ImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
+		BD28ABAF20FDB82E007CBBF1 /* WeavePickerNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeavePickerNavigationController.swift; sourceTree = "<group>"; };
+		BD28ABB020FDB82E007CBBF1 /* AlbumPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumPickerViewController.swift; sourceTree = "<group>"; };
+		BD28ABB120FDB82E007CBBF1 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		BD28ABB420FDB82E007CBBF1 /* AlbumViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
+		BD28ABB620FDB82E007CBBF1 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		BD28ABB720FDB82E007CBBF1 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		BD28ABB820FDB82E007CBBF1 /* EditStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditStep.swift; sourceTree = "<group>"; };
+		BD28ABBC20FDB82E007CBBF1 /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		BD28ABBD20FDB82E007CBBF1 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		BD28ABBF20FDB82E007CBBF1 /* AssetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetCell.swift; sourceTree = "<group>"; };
+		BD28ABC020FDB82E007CBBF1 /* AssetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssetCell.xib; sourceTree = "<group>"; };
+		BD28ABC320FDB82E007CBBF1 /* ColorViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewCell.swift; sourceTree = "<group>"; };
+		BD28ABC420FDB82E007CBBF1 /* ColorViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorViewCell.xib; sourceTree = "<group>"; };
+		BD28ABC720FDB82E007CBBF1 /* AdjustmentsViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdjustmentsViewCell.xib; sourceTree = "<group>"; };
+		BD28ABC820FDB82E007CBBF1 /* AdjustmentsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdjustmentsViewCell.swift; sourceTree = "<group>"; };
+		BD28ABCA20FDB82E007CBBF1 /* FilterViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewCell.swift; sourceTree = "<group>"; };
+		BD28ABCB20FDB82E007CBBF1 /* FilterViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterViewCell.xib; sourceTree = "<group>"; };
+		BD28ABCD20FDB82E007CBBF1 /* FilterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
+		BD28ABCE20FDB82E007CBBF1 /* FilterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
+		BD28ABD020FDB82E007CBBF1 /* AlbumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
+		BD28ABD120FDB82E007CBBF1 /* AlbumCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumCell.xib; sourceTree = "<group>"; };
+		BD28ABD420FDB82E007CBBF1 /* EmptyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
+		BD28ABD520FDB82E007CBBF1 /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		BD28ABD720FDB82E007CBBF1 /* ImagePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		BD28ABD820FDB82E007CBBF1 /* ImagePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagePickerView.xib; sourceTree = "<group>"; };
+		BD28ABDA20FDB82E007CBBF1 /* FilterOptionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterOptionsView.swift; sourceTree = "<group>"; };
+		BD28ABDB20FDB82E007CBBF1 /* FilterOptionsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterOptionsView.xib; sourceTree = "<group>"; };
+		BD28ABDD20FDB82E007CBBF1 /* FilteredImagesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilteredImagesView.xib; sourceTree = "<group>"; };
+		BD28ABDE20FDB82E007CBBF1 /* FilteredImagesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredImagesView.swift; sourceTree = "<group>"; };
+		BD28ABE020FDB82E007CBBF1 /* AlbumPickerInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumPickerInteractor.swift; sourceTree = "<group>"; };
+		BD28ABE420FDB82E007CBBF1 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BD28ABE520FDB82E007CBBF1 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BD28ABE620FDB82E007CBBF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BD28ABE720FDB82E007CBBF1 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BD28ABE820FDB82E007CBBF1 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BD28ABE920FDB82E007CBBF1 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		BD28ABEA20FDB82E007CBBF1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BD28ABEB20FDB82E007CBBF1 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BD28ABEC20FDB82E007CBBF1 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		BD28ABED20FDB82E007CBBF1 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BD28ABEF20FDB82E007CBBF1 /* ImagePickerViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImagePickerViewController.storyboard; sourceTree = "<group>"; };
+		BD28ABF020FDB82E007CBBF1 /* LoadingViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoadingViewController.storyboard; sourceTree = "<group>"; };
+		BD28ABF120FDB82E007CBBF1 /* ImageEditViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageEditViewController.storyboard; sourceTree = "<group>"; };
+		BD28ABF220FDB82E007CBBF1 /* AlbumPickerViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AlbumPickerViewController.storyboard; sourceTree = "<group>"; };
+		BD28ABF420FDB82E007CBBF1 /* UIAlertController+Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Constants.swift"; sourceTree = "<group>"; };
+		BD28ABF520FDB82E007CBBF1 /* UIFont+Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Constants.swift"; sourceTree = "<group>"; };
+		BD28ABF620FDB82E007CBBF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BD28ABF720FDB82E007CBBF1 /* WeavePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeavePicker.h; sourceTree = "<group>"; };
+		BD28ABF820FDB82E007CBBF1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD552C1A20F9DDF7004FD654 /* ImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTests.swift; sourceTree = "<group>"; };
 		BD552C1C20F9DF01004FD654 /* EditStepTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStepTests.swift; sourceTree = "<group>"; };
 		BD552C1E20F9DF87004FD654 /* AlbumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTests.swift; sourceTree = "<group>"; };
@@ -100,56 +149,8 @@
 		BD552C2420F9E103004FD654 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD552C2920F9E541004FD654 /* ImageFilterSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFilterSessionTests.swift; sourceTree = "<group>"; };
 		BDD35E5720E8CD7F00AF71C4 /* WeavePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeavePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BDD35E5A20E8CD7F00AF71C4 /* WeavePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeavePicker.h; sourceTree = "<group>"; };
-		BDD35E5B20E8CD7F00AF71C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDD35E6020E8CD7F00AF71C4 /* WeavePickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeavePickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD35E6720E8CD7F00AF71C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BDD35E7220E8CE4400AF71C4 /* ImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
-		BDD35E7320E8CE4500AF71C4 /* ImageEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageEditViewController.swift; sourceTree = "<group>"; };
-		BDD35E7820E8CE7800AF71C4 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
-		BDD35E7B20E8CE8B00AF71C4 /* ImagePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
-		BDD35E7C20E8CE8B00AF71C4 /* ImagePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagePickerView.xib; sourceTree = "<group>"; };
-		BDD35E8020E8CECE00AF71C4 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		BDD35E8220E8CEDB00AF71C4 /* AssetSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetSession.swift; sourceTree = "<group>"; };
-		BDD35E8420E8CF3900AF71C4 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
-		BDD35E8620E8CF4300AF71C4 /* AlbumViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
-		BDD35E8A20E8CF6600AF71C4 /* AlbumPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumPickerViewController.swift; sourceTree = "<group>"; };
-		BDD35E8D20E8CF8700AF71C4 /* AlbumPickerInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumPickerInteractor.swift; sourceTree = "<group>"; };
-		BDD35E9520E8CFD000AF71C4 /* AlbumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
-		BDD35E9620E8CFD000AF71C4 /* AlbumCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumCell.xib; sourceTree = "<group>"; };
-		BDD35E9B20E8D00500AF71C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BDD35E9E20E8D1C100AF71C4 /* AssetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetCell.swift; sourceTree = "<group>"; };
-		BDD35E9F20E8D1C100AF71C4 /* AssetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssetCell.xib; sourceTree = "<group>"; };
-		BDD35EA420E8D2EB00AF71C4 /* AlbumPickerViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AlbumPickerViewController.storyboard; sourceTree = "<group>"; };
-		BDD35EA520E8D2EB00AF71C4 /* ImagePickerViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImagePickerViewController.storyboard; sourceTree = "<group>"; };
-		BDD35EA620E8D2EB00AF71C4 /* ImageEditViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageEditViewController.storyboard; sourceTree = "<group>"; };
-		BDD35EAD20E8D32400AF71C4 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
-		BDD35EAE20E8D32400AF71C4 /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
-		BDD35EAF20E8D32400AF71C4 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
-		BDD35EB020E8D32400AF71C4 /* ReusableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
-		BDD35EB620E8D45600AF71C4 /* FilterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
-		BDD35EB720E8D45600AF71C4 /* FilterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
-		BDD35EBB20E8D46600AF71C4 /* FilterOptionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterOptionsView.swift; sourceTree = "<group>"; };
-		BDD35EBC20E8D46600AF71C4 /* FilterOptionsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterOptionsView.xib; sourceTree = "<group>"; };
-		BDD35EC020E8D49000AF71C4 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
-		BDD35EC220E8D49A00AF71C4 /* UIFont+Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Constants.swift"; sourceTree = "<group>"; };
-		BDD35EC620E8D54500AF71C4 /* FilteredImagesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilteredImagesView.xib; sourceTree = "<group>"; };
-		BDD35EC720E8D54500AF71C4 /* FilteredImagesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredImagesView.swift; sourceTree = "<group>"; };
-		BDD35ECB20E8D56700AF71C4 /* FilterViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewCell.swift; sourceTree = "<group>"; };
-		BDD35ECC20E8D56700AF71C4 /* FilterViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterViewCell.xib; sourceTree = "<group>"; };
-		BDD35ED020E8D57200AF71C4 /* ColorViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewCell.swift; sourceTree = "<group>"; };
-		BDD35ED120E8D57200AF71C4 /* ColorViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorViewCell.xib; sourceTree = "<group>"; };
-		BDD35EDE20E8D70C00AF71C4 /* EmptyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
-		BDD35EDF20E8D70C00AF71C4 /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
-		BDD35EE220E8D72200AF71C4 /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
-		BDD35EE420E8D74100AF71C4 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
-		BDD35EE720E8D75900AF71C4 /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
-		BDD35EE820E8D75900AF71C4 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
-		BDD35F0220E8DC7300AF71C4 /* WeavePickerNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeavePickerNavigationController.swift; sourceTree = "<group>"; };
-		BDD35F0420E9222500AF71C4 /* UIAlertController+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Constants.swift"; sourceTree = "<group>"; };
-		BDD35F0B20E943E400AF71C4 /* AdjustmentsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustmentsViewCell.swift; sourceTree = "<group>"; };
-		BDD35F0D20E943EF00AF71C4 /* AdjustmentsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdjustmentsViewCell.xib; sourceTree = "<group>"; };
-		BDD35F1520ECB10200AF71C4 /* ImageFilterSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFilterSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,21 +172,295 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BD28AB9B20FD3ADA007CBBF1 /* Classes */ = {
+		BD28AB9C20FDB82E007CBBF1 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				BDD35E9A20E8CFE500AF71C4 /* Resources */,
-				BDD35E9920E8CFE100AF71C4 /* Source */,
+				BD28AB9D20FDB82E007CBBF1 /* Extension */,
+				BD28ABA120FDB82E007CBBF1 /* Presenter */,
+				BD28ABA220FDB82E007CBBF1 /* Utils */,
+				BD28ABA720FDB82E007CBBF1 /* Protocol */,
+				BD28ABAC20FDB82E007CBBF1 /* Controller */,
+				BD28ABB220FDB82E007CBBF1 /* Model */,
+				BD28ABB920FDB82E007CBBF1 /* View */,
+				BD28ABDF20FDB82E007CBBF1 /* Interactor */,
 			);
-			path = Classes;
+			path = Source;
 			sourceTree = "<group>";
 		};
-		BD3CF22820F14AAE009C5BAB /* Strings */ = {
+		BD28AB9D20FDB82E007CBBF1 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				BD3CF22D20F14C6B009C5BAB /* Localizable.strings */,
+				BD28AB9E20FDB82E007CBBF1 /* UIFont+Extension.swift */,
+				BD28AB9F20FDB82E007CBBF1 /* UIImage+Extension.swift */,
+				BD28ABA020FDB82E007CBBF1 /* UIStoryboard+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		BD28ABA120FDB82E007CBBF1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BD28ABA220FDB82E007CBBF1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BD28ABA320FDB82E007CBBF1 /* View.swift */,
+				BD28ABA420FDB82E007CBBF1 /* ImageFilterSession.swift */,
+				BD28ABA520FDB82E007CBBF1 /* WeavePhotoAlbum.swift */,
+				BD28ABA620FDB82E007CBBF1 /* AssetSession.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BD28ABA720FDB82E007CBBF1 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				BD28ABA820FDB82E007CBBF1 /* ConfigurableCell.swift */,
+				BD28ABA920FDB82E007CBBF1 /* ReusableCell.swift */,
+				BD28ABAA20FDB82E007CBBF1 /* ReusableView.swift */,
+				BD28ABAB20FDB82E007CBBF1 /* NibLoadable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		BD28ABAC20FDB82E007CBBF1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BD28ABAD20FDB82E007CBBF1 /* ImageEditViewController.swift */,
+				BD28ABAE20FDB82E007CBBF1 /* ImagePickerViewController.swift */,
+				BD28ABAF20FDB82E007CBBF1 /* WeavePickerNavigationController.swift */,
+				BD28ABB020FDB82E007CBBF1 /* AlbumPickerViewController.swift */,
+				BD28ABB120FDB82E007CBBF1 /* LoadingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BD28ABB220FDB82E007CBBF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BD28ABB320FDB82E007CBBF1 /* View Model */,
+				BD28ABB520FDB82E007CBBF1 /* Data Model */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BD28ABB320FDB82E007CBBF1 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				BD28ABB420FDB82E007CBBF1 /* AlbumViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		BD28ABB520FDB82E007CBBF1 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				BD28ABB620FDB82E007CBBF1 /* Album.swift */,
+				BD28ABB720FDB82E007CBBF1 /* Image.swift */,
+				BD28ABB820FDB82E007CBBF1 /* EditStep.swift */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
+		BD28ABB920FDB82E007CBBF1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD28ABBA20FDB82E007CBBF1 /* Cells */,
+				BD28ABD220FDB82E007CBBF1 /* Views */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD28ABBA20FDB82E007CBBF1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BD28ABBB20FDB82E007CBBF1 /* ImageCell */,
+				BD28ABBE20FDB82E007CBBF1 /* AssetCell */,
+				BD28ABC120FDB82E007CBBF1 /* OptionsViewCell */,
+				BD28ABCC20FDB82E007CBBF1 /* FilterCell */,
+				BD28ABCF20FDB82E007CBBF1 /* AlbumCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BD28ABBB20FDB82E007CBBF1 /* ImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				BD28ABBC20FDB82E007CBBF1 /* ImageCell.xib */,
+				BD28ABBD20FDB82E007CBBF1 /* ImageCell.swift */,
+			);
+			path = ImageCell;
+			sourceTree = "<group>";
+		};
+		BD28ABBE20FDB82E007CBBF1 /* AssetCell */ = {
+			isa = PBXGroup;
+			children = (
+				BD28ABBF20FDB82E007CBBF1 /* AssetCell.swift */,
+				BD28ABC020FDB82E007CBBF1 /* AssetCell.xib */,
+			);
+			path = AssetCell;
+			sourceTree = "<group>";
+		};
+		BD28ABC120FDB82E007CBBF1 /* OptionsViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BD28ABC220FDB82E007CBBF1 /* ColorViewCell */,
+				BD28ABC520FDB82E007CBBF1 /* ContrastViewCell */,
+				BD28ABC620FDB82E007CBBF1 /* AdjustmentsViewCell */,
+				BD28ABC920FDB82E007CBBF1 /* FilterViewCell */,
+			);
+			path = OptionsViewCell;
+			sourceTree = "<group>";
+		};
+		BD28ABC220FDB82E007CBBF1 /* ColorViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BD28ABC320FDB82E007CBBF1 /* ColorViewCell.swift */,
+				BD28ABC420FDB82E007CBBF1 /* ColorViewCell.xib */,
+			);
+			path = ColorViewCell;
+			sourceTree = "<group>";
+		};
+		BD28ABC520FDB82E007CBBF1 /* ContrastViewCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ContrastViewCell;
+			sourceTree = "<group>";
+		};
+		BD28ABC620FDB82E007CBBF1 /* AdjustmentsViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BD28ABC720FDB82E007CBBF1 /* AdjustmentsViewCell.xib */,
+				BD28ABC820FDB82E007CBBF1 /* AdjustmentsViewCell.swift */,
+			);
+			path = AdjustmentsViewCell;
+			sourceTree = "<group>";
+		};
+		BD28ABC920FDB82E007CBBF1 /* FilterViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BD28ABCA20FDB82E007CBBF1 /* FilterViewCell.swift */,
+				BD28ABCB20FDB82E007CBBF1 /* FilterViewCell.xib */,
+			);
+			path = FilterViewCell;
+			sourceTree = "<group>";
+		};
+		BD28ABCC20FDB82E007CBBF1 /* FilterCell */ = {
+			isa = PBXGroup;
+			children = (
+				BD28ABCD20FDB82E007CBBF1 /* FilterCell.swift */,
+				BD28ABCE20FDB82E007CBBF1 /* FilterCell.xib */,
+			);
+			path = FilterCell;
+			sourceTree = "<group>";
+		};
+		BD28ABCF20FDB82E007CBBF1 /* AlbumCell */ = {
+			isa = PBXGroup;
+			children = (
+				BD28ABD020FDB82E007CBBF1 /* AlbumCell.swift */,
+				BD28ABD120FDB82E007CBBF1 /* AlbumCell.xib */,
+			);
+			path = AlbumCell;
+			sourceTree = "<group>";
+		};
+		BD28ABD220FDB82E007CBBF1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD28ABD320FDB82E007CBBF1 /* Empty */,
+				BD28ABD620FDB82E007CBBF1 /* ImagePicker */,
+				BD28ABD920FDB82E007CBBF1 /* FilterOptions */,
+				BD28ABDC20FDB82E007CBBF1 /* FilteredImages */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BD28ABD320FDB82E007CBBF1 /* Empty */ = {
+			isa = PBXGroup;
+			children = (
+				BD28ABD420FDB82E007CBBF1 /* EmptyView.xib */,
+				BD28ABD520FDB82E007CBBF1 /* EmptyView.swift */,
+			);
+			path = Empty;
+			sourceTree = "<group>";
+		};
+		BD28ABD620FDB82E007CBBF1 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				BD28ABD720FDB82E007CBBF1 /* ImagePickerView.swift */,
+				BD28ABD820FDB82E007CBBF1 /* ImagePickerView.xib */,
+			);
+			path = ImagePicker;
+			sourceTree = "<group>";
+		};
+		BD28ABD920FDB82E007CBBF1 /* FilterOptions */ = {
+			isa = PBXGroup;
+			children = (
+				BD28ABDA20FDB82E007CBBF1 /* FilterOptionsView.swift */,
+				BD28ABDB20FDB82E007CBBF1 /* FilterOptionsView.xib */,
+			);
+			path = FilterOptions;
+			sourceTree = "<group>";
+		};
+		BD28ABDC20FDB82E007CBBF1 /* FilteredImages */ = {
+			isa = PBXGroup;
+			children = (
+				BD28ABDD20FDB82E007CBBF1 /* FilteredImagesView.xib */,
+				BD28ABDE20FDB82E007CBBF1 /* FilteredImagesView.swift */,
+			);
+			path = FilteredImages;
+			sourceTree = "<group>";
+		};
+		BD28ABDF20FDB82E007CBBF1 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				BD28ABE020FDB82E007CBBF1 /* AlbumPickerInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		BD28ABE120FDB82E007CBBF1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BD28ABE220FDB82E007CBBF1 /* Strings */,
+				BD28ABEE20FDB82E007CBBF1 /* Storyboard */,
+				BD28ABF320FDB82E007CBBF1 /* Constants */,
+				BD28ABF620FDB82E007CBBF1 /* Assets.xcassets */,
+				BD28ABF720FDB82E007CBBF1 /* WeavePicker.h */,
+				BD28ABF820FDB82E007CBBF1 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BD28ABE220FDB82E007CBBF1 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				BD28ABE320FDB82E007CBBF1 /* Localizable.strings */,
 			);
 			path = Strings;
+			sourceTree = "<group>";
+		};
+		BD28ABEE20FDB82E007CBBF1 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BD28ABEF20FDB82E007CBBF1 /* ImagePickerViewController.storyboard */,
+				BD28ABF020FDB82E007CBBF1 /* LoadingViewController.storyboard */,
+				BD28ABF120FDB82E007CBBF1 /* ImageEditViewController.storyboard */,
+				BD28ABF220FDB82E007CBBF1 /* AlbumPickerViewController.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		BD28ABF320FDB82E007CBBF1 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				BD28ABF420FDB82E007CBBF1 /* UIAlertController+Constants.swift */,
+				BD28ABF520FDB82E007CBBF1 /* UIFont+Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		BD552C1920F9DDC5004FD654 /* Model */ = {
@@ -262,7 +537,8 @@
 		BDD35E5920E8CD7F00AF71C4 /* WeavePicker */ = {
 			isa = PBXGroup;
 			children = (
-				BD28AB9B20FD3ADA007CBBF1 /* Classes */,
+				BD28ABE120FDB82E007CBBF1 /* Resources */,
+				BD28AB9C20FDB82E007CBBF1 /* Source */,
 			);
 			path = WeavePicker;
 			sourceTree = "<group>";
@@ -276,273 +552,6 @@
 			path = WeavePickerTests;
 			sourceTree = "<group>";
 		};
-		BDD35E7120E8CE3400AF71C4 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				BDD35E8A20E8CF6600AF71C4 /* AlbumPickerViewController.swift */,
-				BDD35E7320E8CE4500AF71C4 /* ImageEditViewController.swift */,
-				BDD35E7220E8CE4400AF71C4 /* ImagePickerViewController.swift */,
-				BD3CF21A20EFD798009C5BAB /* LoadingViewController.swift */,
-				BDD35F0220E8DC7300AF71C4 /* WeavePickerNavigationController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		BDD35E7620E8CE5800AF71C4 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				BDD35E8920E8CF4D00AF71C4 /* Data Model */,
-				BDD35E8820E8CF4600AF71C4 /* View Model */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		BDD35E7720E8CE6500AF71C4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				BDD35E9320E8CFB900AF71C4 /* Views */,
-				BDD35E9220E8CFB400AF71C4 /* Cells */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		BDD35E7A20E8CE8B00AF71C4 /* ImagePicker */ = {
-			isa = PBXGroup;
-			children = (
-				BDD35E7B20E8CE8B00AF71C4 /* ImagePickerView.swift */,
-				BDD35E7C20E8CE8B00AF71C4 /* ImagePickerView.xib */,
-			);
-			path = ImagePicker;
-			sourceTree = "<group>";
-		};
-		BDD35E7F20E8CEB300AF71C4 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				BD3CF22F20F53B55009C5BAB /* WeavePhotoAlbum.swift */,
-				BDD35F1520ECB10200AF71C4 /* ImageFilterSession.swift */,
-				BDD35E8220E8CEDB00AF71C4 /* AssetSession.swift */,
-				BDD35E8020E8CECE00AF71C4 /* View.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		BDD35E8820E8CF4600AF71C4 /* View Model */ = {
-			isa = PBXGroup;
-			children = (
-				BDD35E8620E8CF4300AF71C4 /* AlbumViewModel.swift */,
-			);
-			path = "View Model";
-			sourceTree = "<group>";
-		};
-		BDD35E8920E8CF4D00AF71C4 /* Data Model */ = {
-			isa = PBXGroup;
-			children = (
-				BD3CF22620F02BCD009C5BAB /* EditStep.swift */,
-				BDD35E8420E8CF3900AF71C4 /* Album.swift */,
-				BDD35E7820E8CE7800AF71C4 /* Image.swift */,
-			);
-			path = "Data Model";
-			sourceTree = "<group>";
-		};
-		BDD35E8C20E8CF7300AF71C4 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				BDD35E8D20E8CF8700AF71C4 /* AlbumPickerInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		BDD35E9220E8CFB400AF71C4 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				BDD35F0820E9439F00AF71C4 /* OptionsViewCell */,
-				BDD35E9420E8CFD000AF71C4 /* AlbumCell */,
-				BDD35E9D20E8D1C100AF71C4 /* AssetCell */,
-				BDD35EB520E8D45600AF71C4 /* FilterCell */,
-				BDD35EE620E8D75900AF71C4 /* ImageCell */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		BDD35E9320E8CFB900AF71C4 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				BDD35EDD20E8D70C00AF71C4 /* Empty */,
-				BDD35EC520E8D54500AF71C4 /* FilteredImages */,
-				BDD35EBA20E8D46600AF71C4 /* FilterOptions */,
-				BDD35E7A20E8CE8B00AF71C4 /* ImagePicker */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		BDD35E9420E8CFD000AF71C4 /* AlbumCell */ = {
-			isa = PBXGroup;
-			children = (
-				BDD35E9520E8CFD000AF71C4 /* AlbumCell.swift */,
-				BDD35E9620E8CFD000AF71C4 /* AlbumCell.xib */,
-			);
-			path = AlbumCell;
-			sourceTree = "<group>";
-		};
-		BDD35E9920E8CFE100AF71C4 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				BDD35E7120E8CE3400AF71C4 /* Controller */,
-				BDD35EC420E8D4A200AF71C4 /* Extension */,
-				BDD35E8C20E8CF7300AF71C4 /* Interactor */,
-				BDD35E7620E8CE5800AF71C4 /* Model */,
-				BDD35EAC20E8D30F00AF71C4 /* Protocol */,
-				BDD35E7F20E8CEB300AF71C4 /* Utils */,
-				BDD35E7720E8CE6500AF71C4 /* View */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		BDD35E9A20E8CFE500AF71C4 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				BD3CF22820F14AAE009C5BAB /* Strings */,
-				BDD35EBF20E8D47800AF71C4 /* Constants */,
-				BDD35EA320E8D23500AF71C4 /* Storyboard */,
-				BDD35E5A20E8CD7F00AF71C4 /* WeavePicker.h */,
-				BDD35E5B20E8CD7F00AF71C4 /* Info.plist */,
-				BDD35E9B20E8D00500AF71C4 /* Assets.xcassets */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		BDD35E9D20E8D1C100AF71C4 /* AssetCell */ = {
-			isa = PBXGroup;
-			children = (
-				BDD35E9E20E8D1C100AF71C4 /* AssetCell.swift */,
-				BDD35E9F20E8D1C100AF71C4 /* AssetCell.xib */,
-			);
-			path = AssetCell;
-			sourceTree = "<group>";
-		};
-		BDD35EA320E8D23500AF71C4 /* Storyboard */ = {
-			isa = PBXGroup;
-			children = (
-				BDD35EA420E8D2EB00AF71C4 /* AlbumPickerViewController.storyboard */,
-				BDD35EA620E8D2EB00AF71C4 /* ImageEditViewController.storyboard */,
-				BDD35EA520E8D2EB00AF71C4 /* ImagePickerViewController.storyboard */,
-				BD3CF21C20EFD7BA009C5BAB /* LoadingViewController.storyboard */,
-			);
-			path = Storyboard;
-			sourceTree = "<group>";
-		};
-		BDD35EAC20E8D30F00AF71C4 /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				BDD35EAE20E8D32400AF71C4 /* ConfigurableCell.swift */,
-				BDD35EAD20E8D32400AF71C4 /* NibLoadable.swift */,
-				BDD35EB020E8D32400AF71C4 /* ReusableCell.swift */,
-				BDD35EAF20E8D32400AF71C4 /* ReusableView.swift */,
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
-		BDD35EB520E8D45600AF71C4 /* FilterCell */ = {
-			isa = PBXGroup;
-			children = (
-				BDD35EB620E8D45600AF71C4 /* FilterCell.swift */,
-				BDD35EB720E8D45600AF71C4 /* FilterCell.xib */,
-			);
-			path = FilterCell;
-			sourceTree = "<group>";
-		};
-		BDD35EBA20E8D46600AF71C4 /* FilterOptions */ = {
-			isa = PBXGroup;
-			children = (
-				BDD35EBB20E8D46600AF71C4 /* FilterOptionsView.swift */,
-				BDD35EBC20E8D46600AF71C4 /* FilterOptionsView.xib */,
-			);
-			path = FilterOptions;
-			sourceTree = "<group>";
-		};
-		BDD35EBF20E8D47800AF71C4 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				BDD35EC220E8D49A00AF71C4 /* UIFont+Constants.swift */,
-				BDD35F0420E9222500AF71C4 /* UIAlertController+Constants.swift */,
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
-		BDD35EC420E8D4A200AF71C4 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				BDD35EC020E8D49000AF71C4 /* UIFont+Extension.swift */,
-				BDD35EE220E8D72200AF71C4 /* UIStoryboard+Extension.swift */,
-				BDD35EE420E8D74100AF71C4 /* UIImage+Extension.swift */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
-		BDD35EC520E8D54500AF71C4 /* FilteredImages */ = {
-			isa = PBXGroup;
-			children = (
-				BDD35EC720E8D54500AF71C4 /* FilteredImagesView.swift */,
-				BDD35EC620E8D54500AF71C4 /* FilteredImagesView.xib */,
-			);
-			path = FilteredImages;
-			sourceTree = "<group>";
-		};
-		BDD35ECA20E8D56700AF71C4 /* FilterViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				BDD35ECB20E8D56700AF71C4 /* FilterViewCell.swift */,
-				BDD35ECC20E8D56700AF71C4 /* FilterViewCell.xib */,
-			);
-			path = FilterViewCell;
-			sourceTree = "<group>";
-		};
-		BDD35ECF20E8D57200AF71C4 /* ColorViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				BDD35ED020E8D57200AF71C4 /* ColorViewCell.swift */,
-				BDD35ED120E8D57200AF71C4 /* ColorViewCell.xib */,
-			);
-			path = ColorViewCell;
-			sourceTree = "<group>";
-		};
-		BDD35EDD20E8D70C00AF71C4 /* Empty */ = {
-			isa = PBXGroup;
-			children = (
-				BDD35EDF20E8D70C00AF71C4 /* EmptyView.swift */,
-				BDD35EDE20E8D70C00AF71C4 /* EmptyView.xib */,
-			);
-			path = Empty;
-			sourceTree = "<group>";
-		};
-		BDD35EE620E8D75900AF71C4 /* ImageCell */ = {
-			isa = PBXGroup;
-			children = (
-				BDD35EE820E8D75900AF71C4 /* ImageCell.swift */,
-				BDD35EE720E8D75900AF71C4 /* ImageCell.xib */,
-			);
-			path = ImageCell;
-			sourceTree = "<group>";
-		};
-		BDD35F0820E9439F00AF71C4 /* OptionsViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				BDD35F0920E943AE00AF71C4 /* AdjustmentsViewCell */,
-				BDD35ECF20E8D57200AF71C4 /* ColorViewCell */,
-				BDD35ECA20E8D56700AF71C4 /* FilterViewCell */,
-			);
-			path = OptionsViewCell;
-			sourceTree = "<group>";
-		};
-		BDD35F0920E943AE00AF71C4 /* AdjustmentsViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				BDD35F0B20E943E400AF71C4 /* AdjustmentsViewCell.swift */,
-				BDD35F0D20E943EF00AF71C4 /* AdjustmentsViewCell.xib */,
-			);
-			path = AdjustmentsViewCell;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -550,7 +559,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDD35E6820E8CD7F00AF71C4 /* WeavePicker.h in Headers */,
+				BD28AC2C20FDB82E007CBBF1 /* WeavePicker.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,23 +652,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD3CF21D20EFD7BA009C5BAB /* LoadingViewController.storyboard in Resources */,
-				BDD35ED320E8D57200AF71C4 /* ColorViewCell.xib in Resources */,
-				BDD35F0E20E943EF00AF71C4 /* AdjustmentsViewCell.xib in Resources */,
-				BDD35E7E20E8CE8B00AF71C4 /* ImagePickerView.xib in Resources */,
-				BDD35EC820E8D54600AF71C4 /* FilteredImagesView.xib in Resources */,
-				BDD35E9C20E8D00500AF71C4 /* Assets.xcassets in Resources */,
-				BDD35EA120E8D1C100AF71C4 /* AssetCell.xib in Resources */,
-				BDD35ECE20E8D56700AF71C4 /* FilterViewCell.xib in Resources */,
-				BDD35EA720E8D2EB00AF71C4 /* AlbumPickerViewController.storyboard in Resources */,
-				BDD35E9820E8CFD000AF71C4 /* AlbumCell.xib in Resources */,
-				BDD35EB920E8D45600AF71C4 /* FilterCell.xib in Resources */,
-				BD3CF22B20F14C6B009C5BAB /* Localizable.strings in Resources */,
-				BDD35EE920E8D75900AF71C4 /* ImageCell.xib in Resources */,
-				BDD35EE020E8D70C00AF71C4 /* EmptyView.xib in Resources */,
-				BDD35EA920E8D2EB00AF71C4 /* ImageEditViewController.storyboard in Resources */,
-				BDD35EBE20E8D46600AF71C4 /* FilterOptionsView.xib in Resources */,
-				BDD35EA820E8D2EB00AF71C4 /* ImagePickerViewController.storyboard in Resources */,
+				BD28AC1B20FDB82E007CBBF1 /* EmptyView.xib in Resources */,
+				BD28AC2420FDB82E007CBBF1 /* Localizable.strings in Resources */,
+				BD28AC2D20FDB82E007CBBF1 /* Info.plist in Resources */,
+				BD28AC2620FDB82E007CBBF1 /* LoadingViewController.storyboard in Resources */,
+				BD28AC1E20FDB82E007CBBF1 /* ImagePickerView.xib in Resources */,
+				BD28AC1220FDB82E007CBBF1 /* ColorViewCell.xib in Resources */,
+				BD28AC2120FDB82E007CBBF1 /* FilteredImagesView.xib in Resources */,
+				BD28AC2B20FDB82E007CBBF1 /* Assets.xcassets in Resources */,
+				BD28AC2520FDB82E007CBBF1 /* ImagePickerViewController.storyboard in Resources */,
+				BD28AC1320FDB82E007CBBF1 /* AdjustmentsViewCell.xib in Resources */,
+				BD28AC1620FDB82E007CBBF1 /* FilterViewCell.xib in Resources */,
+				BD28AC2820FDB82E007CBBF1 /* AlbumPickerViewController.storyboard in Resources */,
+				BD28AC2020FDB82E007CBBF1 /* FilterOptionsView.xib in Resources */,
+				BD28AC2720FDB82E007CBBF1 /* ImageEditViewController.storyboard in Resources */,
+				BD28AC1820FDB82E007CBBF1 /* FilterCell.xib in Resources */,
+				BD28AC1020FDB82E007CBBF1 /* AssetCell.xib in Resources */,
+				BD28AC0D20FDB82E007CBBF1 /* ImageCell.xib in Resources */,
+				BD28AC1A20FDB82E007CBBF1 /* AlbumCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,40 +688,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDD35F0320E8DC7300AF71C4 /* WeavePickerNavigationController.swift in Sources */,
-				BDD35ECD20E8D56700AF71C4 /* FilterViewCell.swift in Sources */,
-				BDD35F0C20E943E400AF71C4 /* AdjustmentsViewCell.swift in Sources */,
-				BDD35EE320E8D72200AF71C4 /* UIStoryboard+Extension.swift in Sources */,
-				BDD35EEA20E8D75900AF71C4 /* ImageCell.swift in Sources */,
-				BDD35EC120E8D49000AF71C4 /* UIFont+Extension.swift in Sources */,
-				BDD35EB820E8D45600AF71C4 /* FilterCell.swift in Sources */,
-				BDD35F1620ECB10200AF71C4 /* ImageFilterSession.swift in Sources */,
-				BDD35E7D20E8CE8B00AF71C4 /* ImagePickerView.swift in Sources */,
-				BDD35ED220E8D57200AF71C4 /* ColorViewCell.swift in Sources */,
-				BD3CF22720F02BCD009C5BAB /* EditStep.swift in Sources */,
-				BDD35F0520E9222500AF71C4 /* UIAlertController+Constants.swift in Sources */,
-				BDD35EB320E8D32400AF71C4 /* ReusableView.swift in Sources */,
-				BDD35E7520E8CE4500AF71C4 /* ImageEditViewController.swift in Sources */,
-				BDD35EB220E8D32400AF71C4 /* ConfigurableCell.swift in Sources */,
-				BDD35EA020E8D1C100AF71C4 /* AssetCell.swift in Sources */,
-				BDD35EB120E8D32400AF71C4 /* NibLoadable.swift in Sources */,
-				BDD35E8120E8CECE00AF71C4 /* View.swift in Sources */,
-				BD3CF23020F53B55009C5BAB /* WeavePhotoAlbum.swift in Sources */,
-				BDD35E8320E8CEDB00AF71C4 /* AssetSession.swift in Sources */,
-				BDD35EE120E8D70C00AF71C4 /* EmptyView.swift in Sources */,
-				BDD35EB420E8D32400AF71C4 /* ReusableCell.swift in Sources */,
-				BDD35E8E20E8CF8700AF71C4 /* AlbumPickerInteractor.swift in Sources */,
-				BDD35EBD20E8D46600AF71C4 /* FilterOptionsView.swift in Sources */,
-				BD3CF21B20EFD798009C5BAB /* LoadingViewController.swift in Sources */,
-				BDD35E8720E8CF4300AF71C4 /* AlbumViewModel.swift in Sources */,
-				BDD35E7920E8CE7800AF71C4 /* Image.swift in Sources */,
-				BDD35EC920E8D54600AF71C4 /* FilteredImagesView.swift in Sources */,
-				BDD35E8520E8CF3900AF71C4 /* Album.swift in Sources */,
-				BDD35E8B20E8CF6600AF71C4 /* AlbumPickerViewController.swift in Sources */,
-				BDD35EE520E8D74100AF71C4 /* UIImage+Extension.swift in Sources */,
-				BDD35EC320E8D49A00AF71C4 /* UIFont+Constants.swift in Sources */,
-				BDD35E7420E8CE4500AF71C4 /* ImagePickerViewController.swift in Sources */,
-				BDD35E9720E8CFD000AF71C4 /* AlbumCell.swift in Sources */,
+				BD28AC2320FDB82E007CBBF1 /* AlbumPickerInteractor.swift in Sources */,
+				BD28AC0F20FDB82E007CBBF1 /* AssetCell.swift in Sources */,
+				BD28AC1420FDB82E007CBBF1 /* AdjustmentsViewCell.swift in Sources */,
+				BD28AC0420FDB82E007CBBF1 /* ImageEditViewController.swift in Sources */,
+				BD28AC2220FDB82E007CBBF1 /* FilteredImagesView.swift in Sources */,
+				BD28ABFC20FDB82E007CBBF1 /* View.swift in Sources */,
+				BD28AC0220FDB82E007CBBF1 /* ReusableView.swift in Sources */,
+				BD28AC1720FDB82E007CBBF1 /* FilterCell.swift in Sources */,
+				BD28AC0820FDB82E007CBBF1 /* LoadingViewController.swift in Sources */,
+				BD28ABF920FDB82E007CBBF1 /* UIFont+Extension.swift in Sources */,
+				BD28AC1920FDB82E007CBBF1 /* AlbumCell.swift in Sources */,
+				BD28AC0E20FDB82E007CBBF1 /* ImageCell.swift in Sources */,
+				BD28AC0A20FDB82E007CBBF1 /* Album.swift in Sources */,
+				BD28AC1F20FDB82E007CBBF1 /* FilterOptionsView.swift in Sources */,
+				BD28AC0720FDB82E007CBBF1 /* AlbumPickerViewController.swift in Sources */,
+				BD28AC1C20FDB82E007CBBF1 /* EmptyView.swift in Sources */,
+				BD28AC0C20FDB82E007CBBF1 /* EditStep.swift in Sources */,
+				BD28AC0020FDB82E007CBBF1 /* ConfigurableCell.swift in Sources */,
+				BD28ABFA20FDB82E007CBBF1 /* UIImage+Extension.swift in Sources */,
+				BD28AC0920FDB82E007CBBF1 /* AlbumViewModel.swift in Sources */,
+				BD28AC1120FDB82E007CBBF1 /* ColorViewCell.swift in Sources */,
+				BD28AC0320FDB82E007CBBF1 /* NibLoadable.swift in Sources */,
+				BD28AC0520FDB82E007CBBF1 /* ImagePickerViewController.swift in Sources */,
+				BD28ABFD20FDB82E007CBBF1 /* ImageFilterSession.swift in Sources */,
+				BD28AC0B20FDB82E007CBBF1 /* Image.swift in Sources */,
+				BD28AC1520FDB82E007CBBF1 /* FilterViewCell.swift in Sources */,
+				BD28AC2920FDB82E007CBBF1 /* UIAlertController+Constants.swift in Sources */,
+				BD28AC1D20FDB82E007CBBF1 /* ImagePickerView.swift in Sources */,
+				BD28ABFF20FDB82E007CBBF1 /* AssetSession.swift in Sources */,
+				BD28ABFB20FDB82E007CBBF1 /* UIStoryboard+Extension.swift in Sources */,
+				BD28AC2A20FDB82E007CBBF1 /* UIFont+Constants.swift in Sources */,
+				BD28ABFE20FDB82E007CBBF1 /* WeavePhotoAlbum.swift in Sources */,
+				BD28AC0620FDB82E007CBBF1 /* WeavePickerNavigationController.swift in Sources */,
+				BD28AC0120FDB82E007CBBF1 /* ReusableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -738,19 +748,19 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BD3CF22D20F14C6B009C5BAB /* Localizable.strings */ = {
+		BD28ABE320FDB82E007CBBF1 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BD3CF22C20F14C6B009C5BAB /* en */,
-				BD3CF22E20F14C8F009C5BAB /* fr */,
-				BD3CF23120F94CD0009C5BAB /* de */,
-				BD3CF23220F94CE8009C5BAB /* es */,
-				BD3CF23320F94CFC009C5BAB /* pt-PT */,
-				BD3CF23420F94D09009C5BAB /* it */,
-				BD3CF23520F94D10009C5BAB /* ru */,
-				BD3CF23620F94D1E009C5BAB /* zh-Hant */,
-				BD3CF23720F94D27009C5BAB /* ja */,
-				BD3CF23820F94D2D009C5BAB /* hi */,
+				BD28ABE420FDB82E007CBBF1 /* de */,
+				BD28ABE520FDB82E007CBBF1 /* ja */,
+				BD28ABE620FDB82E007CBBF1 /* en */,
+				BD28ABE720FDB82E007CBBF1 /* es */,
+				BD28ABE820FDB82E007CBBF1 /* it */,
+				BD28ABE920FDB82E007CBBF1 /* zh-Hant */,
+				BD28ABEA20FDB82E007CBBF1 /* ru */,
+				BD28ABEB20FDB82E007CBBF1 /* fr */,
+				BD28ABEC20FDB82E007CBBF1 /* pt-PT */,
+				BD28ABED20FDB82E007CBBF1 /* hi */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -890,7 +900,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/WeavePicker/Classes/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/WeavePicker/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -915,7 +925,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/WeavePicker/Classes/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/WeavePicker/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
