@@ -171,6 +171,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD28AB9B20FD3ADA007CBBF1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BDD35E9A20E8CFE500AF71C4 /* Resources */,
+				BDD35E9920E8CFE100AF71C4 /* Source */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		BD3CF22820F14AAE009C5BAB /* Strings */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,8 +262,7 @@
 		BDD35E5920E8CD7F00AF71C4 /* WeavePicker */ = {
 			isa = PBXGroup;
 			children = (
-				BDD35E9A20E8CFE500AF71C4 /* Resources */,
-				BDD35E9920E8CFE100AF71C4 /* Source */,
+				BD28AB9B20FD3ADA007CBBF1 /* Classes */,
 			);
 			path = WeavePicker;
 			sourceTree = "<group>";
@@ -882,7 +890,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/WeavePicker/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/WeavePicker/Classes/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -907,7 +915,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/WeavePicker/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/WeavePicker/Classes/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
